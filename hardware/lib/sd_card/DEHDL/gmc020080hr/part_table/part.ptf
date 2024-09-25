@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'GMC020080HR'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Amphenol", "GMC020080HR" (!) = "", "GMC020080HR", "Other", "523-GMC020080HR", "https://www.mouser.co.uk/ProductDetail/Amphenol-Commercial-Products/GMC020080HR?qs=W0yvOO0ixfGUck2%252BUqFamw%3D%3D", "Memory Card Connectors 2 In 1 Connector Sd+mmc", "https://componentsearchengine.com/Datasheets/1/GMC020080HR.pdf", "2.87 mm"
+END_PART
+
+END.

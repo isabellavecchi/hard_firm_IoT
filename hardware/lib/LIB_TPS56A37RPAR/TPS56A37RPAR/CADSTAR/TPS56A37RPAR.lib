@@ -1,0 +1,16 @@
+.TPS56A37RPAR :1 ;Switching Voltage Regulators 4.5V to 28V input, 10A synchronous buck converter
+TPS56A37RPAR
+*STM IC
+*NGS
+*PLB 1="EN" 2="FB" 3="AGND" 4="PG" 5="SS" 6="SW" 7="BOOT" 8="VIN_1" 9="PGND" 10="MODE" 11="VIN_2" 12="VIN_3" 13="VIN_4"
+*MXP 13
+*DFN TPS56A37RPAR
+~!Mouser Part Number (595-TPS56A37RPAR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS56A37RPAR?qs=dbcCsuKDzFV3BmG4b9YeGQ%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPS56A37RPAR)
+~!Link Datasheet (https://www.ti.com/lit/ds/symlink/tps56a37.pdf?ts=1708310049261&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS56A37)
+~!Height (1mm)
+~!3D_Model (TPS56A37RPAR)
+TPS56A37RPAR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 

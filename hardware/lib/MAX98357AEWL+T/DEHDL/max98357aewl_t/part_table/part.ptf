@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'MAX98357AEWL_T'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Analog Devices", "MAX98357AEWL+T" (!) = "", "BGA9C40P3X3_144X135X69", "BGA", "700-MAX98357AEWL+T", "https://www.mouser.co.uk/ProductDetail/Analog-Devices-Maxim-Integrated/MAX98357AEWL%2bT?qs=ZrtEiRxEuI4mjqOyZP4d0A%3D%3D", "Audio Amplifiers MAX98357AEWL+T", "https://datasheets.maximintegrated.com/en/ds/MAX98357A-MAX98357B.pdf", "0.69 mm"
+END_PART
+
+END.

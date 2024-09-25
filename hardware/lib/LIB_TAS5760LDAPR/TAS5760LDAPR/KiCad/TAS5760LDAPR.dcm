@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TAS5760LDAPR
+D Closed Loop I2S Input Amplifier with Power Limiter, PVDDmax of 16.5V
+K
+F http://www.ti.com/lit/gpn/tas5760l
+$ENDCMP
+#
+#End Doc Library

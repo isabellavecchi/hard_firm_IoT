@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TAS5760LDAPR
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=33
+Version=1.1
+Released=2021-12-03 07:23:43
+Downloaded=2024-09-14 23:25:13
+3D=Y

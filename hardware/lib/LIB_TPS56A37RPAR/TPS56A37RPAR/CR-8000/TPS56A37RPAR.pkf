@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "TPS56A37RPAR"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "TPS56A37RPAR")
+        (spec "default")
+    )
+)

@@ -1,0 +1,17 @@
+.MAX98357AEWL-plus-T :1 ;Audio Amplifiers MAX98357AEWL+T
+BGA9C40P3X3_144X135X69
+*STM IC
+*NGS
+*PNM 1=A1 2=A2 3=A3 4=B1 5=B2 6=B3 7=C1 8=C2 9=C3
+*PLB 1="'SD_MODE'" 2="VDD" 3="OUTP" 4="DIN" 5="GAIN_SLOT" 6="OUTN" 7="BCLK" 8="GND" 9="LRCLK"
+*MXP 9
+*DFN MAX98357AEWL-plus-T
+~!Mouser Part Number (700-MAX98357AEWL+T)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Analog-Devices-Maxim-Integrated/MAX98357AEWL%2bT?qs=ZrtEiRxEuI4mjqOyZP4d0A%3D%3D)
+~!Manufacturer_Name (Analog Devices)
+~!Manufacturer_Part_Number (MAX98357AEWL+T)
+~!Link Datasheet (https://datasheets.maximintegrated.com/en/ds/MAX98357A-MAX98357B.pdf)
+~!Height (0.69mm)
+~!3D_Model (MAX98357AEWL+T)
+MAX98357AEWL-plus-T
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 

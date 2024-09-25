@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPA3118D2DAPR
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=33
+Version=1.1
+Released=2023-06-02 06:55:12
+Downloaded=2024-09-07 21:39:24
+3D=Y

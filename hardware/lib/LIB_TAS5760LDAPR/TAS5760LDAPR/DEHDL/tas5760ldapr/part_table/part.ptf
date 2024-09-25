@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TAS5760LDAPR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TAS5760LDAPR" (!) = "", "SOP65P810X120-33N", "Small Outline Packages", "595-TAS5760LDAPR", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TAS5760LDAPR?qs=ZLZ8689ywa3IfleZRfchzQ%3D%3D", "Closed Loop I2S Input Amplifier with Power Limiter, PVDDmax of 16.5V", "http://www.ti.com/lit/gpn/tas5760l", "1.2 mm"
+END_PART
+
+END.
