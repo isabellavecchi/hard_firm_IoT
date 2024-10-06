@@ -11643,7 +11643,7 @@
 	)
 	(global_label "LRCK"
 		(shape input)
-		(at 99.06 203.2 180)
+		(at 99.06 177.8 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11653,7 +11653,7 @@
 		)
 		(uuid "0b031e35-9616-4c89-a168-e247b120ae89")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.2367 203.2 0)
+			(at 91.2367 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11687,7 +11687,7 @@
 	)
 	(global_label "SDIN"
 		(shape input)
-		(at 99.06 200.66 180)
+		(at 99.06 180.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11697,7 +11697,7 @@
 		)
 		(uuid "10fcd481-4141-4646-8b94-7e77d868bad3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.66 200.66 0)
+			(at 91.66 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12017,7 +12017,7 @@
 	)
 	(global_label "I2C_CLK"
 		(shape input)
-		(at 99.06 198.12 180)
+		(at 99.06 182.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12027,7 +12027,7 @@
 		)
 		(uuid "3bf97f71-d90e-4da6-803a-56600593f1fc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 88.4548 198.12 0)
+			(at 88.4548 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12259,7 +12259,7 @@
 	)
 	(global_label "AUDIO_CLK"
 		(shape input)
-		(at 99.06 195.58 180)
+		(at 99.06 185.42 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12269,7 +12269,7 @@
 		)
 		(uuid "5566e548-08bc-4c6b-981f-f8720cf329c9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 85.9147 195.58 0)
+			(at 85.9147 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12281,7 +12281,7 @@
 	)
 	(global_label "BOOT"
 		(shape input)
-		(at 99.06 180.34 180)
+		(at 99.06 200.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12291,7 +12291,7 @@
 		)
 		(uuid "55c651e1-2829-4c43-8cd4-4ae37bbb5070")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.1762 180.34 0)
+			(at 91.1762 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12391,7 +12391,7 @@
 	)
 	(global_label "AUDIO_EN"
 		(shape input)
-		(at 99.06 185.42 180)
+		(at 99.06 195.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12401,7 +12401,7 @@
 		)
 		(uuid "5f607103-2dc7-42bb-b454-27064aa922f7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 87.0033 185.42 0)
+			(at 87.0033 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12501,7 +12501,7 @@
 	)
 	(global_label "EN"
 		(shape input)
-		(at 99.06 177.8 180)
+		(at 99.06 203.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12511,7 +12511,7 @@
 		)
 		(uuid "6c3c237e-cb90-4a29-8fb4-cc1981750067")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 93.5953 177.8 0)
+			(at 93.5953 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12655,7 +12655,7 @@
 	)
 	(global_label "AUDIO_FAULT"
 		(shape input)
-		(at 99.06 182.88 180)
+		(at 99.06 198.12 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12665,7 +12665,7 @@
 		)
 		(uuid "898f9b36-8e8e-44b6-9679-57fcf9ba8623")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 83.9794 182.88 0)
+			(at 83.9794 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12874,7 +12874,7 @@
 	)
 	(global_label "JTAG"
 		(shape input)
-		(at 99.06 187.96 180)
+		(at 99.06 193.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12884,7 +12884,7 @@
 		)
 		(uuid "a1932b72-c2fe-4326-96dc-0b37f19f56d5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.781 187.96 0)
+			(at 91.781 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12918,7 +12918,7 @@
 	)
 	(global_label "AUDIO_MUTE"
 		(shape input)
-		(at 99.06 193.04 180)
+		(at 99.06 187.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12928,7 +12928,7 @@
 		)
 		(uuid "a818bd62-358b-4127-9b69-3f4290ece36c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 84.5843 193.04 0)
+			(at 84.5843 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
