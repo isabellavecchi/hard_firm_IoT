@@ -8289,6 +8289,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 60.96) (xy 59.69 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d5306cf-5dfd-46a0-8be5-404651a811e3")
+	)
+	(wire
+		(pts
 			(xy 99.06 170.18) (xy 99.06 161.29)
 		)
 		(stroke
@@ -19272,6 +19282,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 54.61 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4afb8bc5-7cf9-4c6b-bab1-53349fc1acef")
+		(property "Reference" "#PWR038"
+			(at 54.61 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 57.404 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 54.61 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "40f866db-9085-4c24-bea4-949d919968ad")
+		)
+		(instances
+			(project "hardware"
+				(path "/003dd454-4772-4bec-86cc-3b51f98a6e57"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 314.96 87.63 90)
 		(unit 1)
@@ -23357,6 +23433,72 @@
 			(project "hardware"
 				(path "/003dd454-4772-4bec-86cc-3b51f98a6e57"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 59.69 60.96 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "817626b4-9395-4744-8b63-3007e359d16f")
+		(property "Reference" "#PWR059"
+			(at 59.69 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_E"
+			(at 62.992 63.754 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4245ed0c-93fd-46b6-a62c-b8d490659f9e")
+		)
+		(instances
+			(project "hardware"
+				(path "/003dd454-4772-4bec-86cc-3b51f98a6e57"
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
