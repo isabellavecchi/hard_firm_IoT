@@ -603,6 +603,8 @@ _Python3_EXECUTABLE:INTERNAL=/home/grrr/.espressif/python_env/idf5.3_py3.8_env/b
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;10;32;;;/usr/lib/python3.8;/usr/lib/python3.8;/home/grrr/.espressif/python_env/idf5.3_py3.8_env/lib/python3.8/site-packages;/home/grrr/.espressif/python_env/idf5.3_py3.8_env/lib/python3.8/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=178399134dce487bbaebc3486caac1e6
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

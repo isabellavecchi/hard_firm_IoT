@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "hello_world",
-    "project_version":    "31a9a9e-dirty",
+    "project_version":    "d5d2510-dirty",
     "project_path":       "/home/grrr/Documentos/git/hard_firm_IoT/aulas/hello_world",
     "idf_path":           "/home/grrr/esp/esp-idf",
     "build_dir":          "/home/grrr/Documentos/git/hard_firm_IoT/aulas/hello_world/build",
@@ -1180,7 +1180,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/grrr/Documentos/git/hard_firm_IoT/aulas/hello_world/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/grrr/Documentos/git/hard_firm_IoT/aulas/hello_world/main/hello_world_main.c" ],
+            "sources": [ "/home/grrr/Documentos/git/hard_firm_IoT/aulas/hello_world/main/hello_world_main.c", "/home/grrr/Documentos/git/hard_firm_IoT/aulas/hello_world/main/app.c" ],
             "include_dirs": []
         },
         "mbedtls": {

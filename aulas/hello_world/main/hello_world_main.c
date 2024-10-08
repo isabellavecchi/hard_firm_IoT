@@ -13,6 +13,8 @@
 #include "esp_flash.h"
 #include "esp_system.h"
 
+#include "app.h"
+
 void app_main(void)
 {
     printf("Hello world!\n");
@@ -37,16 +39,17 @@ void app_main(void)
         return;
     }
 
-    printf("%" PRIu32 "MB %s flash\n", flash_size / (uint32_t)(1024 * 1024),
-           (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
+    // printf("%" PRIu32 "MB %s flash\n", flash_size / (uint32_t)(1024 * 1024),
+    //        (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
 
-    printf("Minimum free heap size: %" PRIu32 " bytes\n", esp_get_minimum_free_heap_size());
+    // printf("Minimum free heap size: %" PRIu32 " bytes\n", esp_get_minimum_free_heap_size());
 
-    for (int i = 10; i >= 0; i--) {
-        printf("Restarting in %d seconds...\n", i);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }
-    printf("Restarting now.\n");
-    fflush(stdout);
-    esp_restart();
+    // for (int i = 10; i >= 0; i--) {
+    //     printf("Restarting in %d seconds...\n", i);
+    //     vTaskDelay(1000 / portTICK_PERIOD_MS);
+    // }
+    // printf("Restarting now.\n");
+    // fflush(stdout);
+    // esp_restart();
+    app_init();
 }
