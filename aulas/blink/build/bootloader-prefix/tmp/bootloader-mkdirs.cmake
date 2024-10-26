@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/grrr/esp/esp-idf/components/bootloader/subproject"
-  "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader"
-  "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader-prefix"
-  "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader-prefix/tmp"
-  "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader-prefix/src/bootloader-stamp"
-  "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader-prefix/src"
-  "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Espressif/frameworks/esp-idf-v5.3.1-2/components/bootloader/subproject"
+  "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader"
+  "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader-prefix"
+  "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader-prefix/tmp"
+  "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader-prefix/src"
+  "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/grrr/Documentos/git/hard_firm_IoT/blink/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

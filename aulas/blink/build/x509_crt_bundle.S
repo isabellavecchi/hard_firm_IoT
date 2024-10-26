@@ -1,4 +1,4 @@
-/* * Data converted from /home/grrr/Documentos/git/hard_firm_IoT/blink/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/Luiz Carlos/Documents/Isabella/semb/git_folder/hard_firm_IoT/aulas/blink/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
