@@ -1,0 +1,72 @@
+clock - ver limite do erro
+40MHz (fixo)
+10PPM max
+
+USB (48MHz)
+
+Boot strapping -> GPIO's configuration
+ver como eh no S3, pois eh diferente
+
+pcb de 4 layers, para fazer a trilha de 50 ohms da antena
+carta de smith
+
+USB-CMOS, para uart, funciona para jtag
+
+pontos de conexao: liga ou desliga com solda.
+bom para testar, isolar testes
+
+projeto mecanico no fusion
+
+Saída de audio utilizando PDM:
+https://atomic14.substack.com/p/esp32-s3-no-dac
+https://dronebotworkshop.com/esp32-i2s/
+https://www.sciencedirect.com/topics/engineering/sinusoidal-pulse-width-modulation
+https://www.diva-portal.org/smash/get/diva2:23244/FULLTEXT01.pdf
+
+PINOUT S3:
+https://www.luisllamas.es/en/esp32-i2c/
+
+DataSheets:
+https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf#cd-pwr-supply
+https://www.esp32.com/viewtopic.php?t=36037
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-reference/peripherals/i2s.html
+https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/schematic-checklist.html
+https://www.ti.com/tool/TPA3130D2EVM
+https://www.aipcba.com/datasheet/pdf/tpa3130d2evm-cm12407521.html
+https://www.ti.com/lit/ds/symlink/tas5760l.pdf?ts=1726349858308&ref_url=https%253A%252F%252Fbr.mouser.com%252F
+https://www.ti.com/lit/ug/slou371a/slou371a.pdf?ts=1726381869935
+https://www.ti.com/lit/ds/symlink/tps40345.pdf?ts=1726328307379&ref_url=https%253A%252F%252Fbr.mouser.com%252F
+
+buck
+https://www.ti.com/lit/ds/symlink/tps56a37.pdf?ts=1726785854493&ref_url=https%253A%252F%252Fwww.google.com%252F
+
+PSRAM
+https://www.esp32.com/viewtopic.php?t=36037
+
+AliExpress
+https://pt.aliexpress.com/item/4000129796373.html?src=google
+
+Octopart - modelos cad
+
+IA de EP
+https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://webench.ti.com/power-designer/&ved=2ahUKEwiO5eqL15OIAxULs5UCHYduCVAQFnoECAgQAQ&usg=AOvVaw2lQmUyOhzBhXn4iLDehQj8
+
+jlcpcb 	-> capabilities -> furacao (aumenta muito o preco) 0.3mm eh mais barato
+
+"      	-> impedance calculator -> linha de transmissao, ver o isolamento tambem
+             	o mais barato eh o 7628 1H (sem nada). O mais importante eh a largura
+               	(microstrip) = nome da técnica de fabricacao da trilha
+       	-> para a linha de transmissao eh melhor fazer o traco curvo.wire + clic botao direito
+       	-> pad: dar 2 cliques e selecionar as 3 caixinhas (colocar o reforco da juncao)
+       	-> para consertar a impedancia, temos a carta de smith
+		https://www.will-kelsey.com/smith_chart/
+	* lembrar de calcular a distancia para o aterramento
+	* fazer uma barreira de vias de aterramento para isolar a antena
+	#conector UFL para baratear
+
+USB	-> trilha eh diferencial de 90 ohms
+		vai ter reflexao e n vai ter casamento de impedancia, mas confia que vai
+
+
+QCBOR -> Protocolo de transferencia de dados melhor que JSON
+* nos "componentes adicionais" da ESP32, pode-se encontrar bibliotecas ja implementadas, para json por ex.

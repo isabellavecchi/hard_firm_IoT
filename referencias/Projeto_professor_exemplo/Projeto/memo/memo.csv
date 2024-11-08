@@ -1,0 +1,40 @@
+Item;Qty;Reference(s);Value;LINK;PN1;Price1
+1;1;ANT1;PCB_ANT;;;
+2;2;C1, C5;TBD;;;
+3;3;C2, C6, C11;1uF;https://br.mouser.com/ProductDetail/Murata-Electronics/GRM155R61C105KA12D?qs=MNX0Jdkv8mRzFdIwfsySnw%3D%3D;GRM155R61C105KA12D;0,1
+4;2;C3, C4;10pF;https://br.mouser.com/ProductDetail/KEMET/C0402C100K5RACTU?qs=Mv7BduZupUgEdPvwNAxLRQ%3D%3D;C0402C100K5RACTU;0,13
+5;1;C7;10uF;https://www.mouser.com/ProductDetail/Murata-Electronics/GRM188R61E106KA73D?qs=5aG0NVq1C4z8ebxPkQZf9A%3D%3D;GRM188R61E106KA73D;0,3
+6;2;C8, C18;10nF;https://www.mouser.com/ProductDetail/Murata-Electronics/GRM155R71H103KA88D?qs=Dfh4SrgScWxOVlCuzd3ZyQ%3D%3D;GRM155R71H103KA88D;0,1
+7;7;C9, C10, C12, C13, C16, C20, C21;100nF;https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D;GCM155R71H104KE02J;0,13
+8;2;C14, C15;10uF;https://www.mouser.com/ProductDetail/Murata-Electronics/GRM21BR61H106KE43K?qs=xZ%2FP%252Ba9zWqbh3%252B96jyTKxw%3D%3D;GRM21BR61H106KE43K;0,4
+9;2;C17, C19;4.7uF;https://br.mouser.com/ProductDetail/Murata-Electronics/GRM188Z71C475KE21D?qs=d0WKAl%252BL4KajNOvalhHKtQ%3D%3D;GRM188Z71C475KE21D;0,31
+10;1;D1;ESD;https://br.mouser.com/ProductDetail/onsemi/SZESD9B33ST5G?qs=k6dkFvHqcvB0oAAsSAA7mQ%3D%3D;SZESD9B3.3ST5G;0,4
+11;2;D2, D4;LED;https://pt.aliexpress.com/item/32848822296.html?spm=a2g0o.productlist.0.0.64da466ay8rvc9&algo_pvid=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc&algo_exp_id=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc-1&pdp_ext_f=%7B%22sku_id%22%3A%2210000001198835222%22%7D&pdp_pi=-1%3B4.3%3B-1%3B-1%40salePrice%3BBRL%3Bsearch-mainSearch;LED;
+12;1;D3;PMEG4010EGWX;https://br.mouser.com/ProductDetail/Nexperia/PMEG4010EGWX?qs=EO%252B2iqeaG03XdPr1ZG%2Falg%3D%3D;PMEG4010EGWX;0,35
+13;1;J1;Conn_02x03_Odd_Even;;;
+14;1;J2;USB-C;https://br.mouser.com/ProductDetail/GCT/USB4105-GF-A?qs=KUoIvG%2F9IlY%2FMLlBMpStpA%3D%3D;USB4105-GF-A;0,81
+15;1;J3;BATTERY;https://pt.aliexpress.com/item/32844450282.html?gatewayAdapt=glo2bra&spm=a2g0o.cart.0.0.49203c002L4fgd&mp=1;LIPO BATTERY;
+16;1;JP1;Jumper_2_Bridged;;;
+17;1;L1;TBD;;;
+18;1;L2;2nH;https://br.mouser.com/ProductDetail/Murata-Electronics/LQG15WZ2N0C02D?qs=qkDYIeTQ%252BEnQyGawZhASJA%3D%3D;LQG15WZ2N0C02D;0,18
+19;1;L3;2.2uH;https://br.mouser.com/ProductDetail/Murata-Electronics/LQH3NPN2R2MMEL?qs=sJ5gq5MLFXqbWZz8NzZoog%3D%3D;LQH3NPN2R2MMEL;0,36
+20;2;Q1, Q2;SI2307;https://br.mouser.com/ProductDetail/Vishay-Semiconductors/SI2307CDS-T1-E3?qs=agb4oTp1Mj%252BstjRwwxO07Q%3D%3D;SI2307CDS-T1-E3;0,62
+21;2;R1, R15;1K;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW06031K00FKEAC?qs=E3Y5ESvWgWOQ7ePIWbGVFg%3D%3D;CRCW06031K00FKEAC;0,1
+22;1;R2;10K;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW060310K0FKECC?qs=wd5RIQLrsJjYJGKL%252BLOtbQ%3D%3D;CRCW060310K0FKECC;0,1
+23;5;R3, R6, R7, R8, R9;10K;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D;CRCW040210K0FKEDC;0,1
+24;1;R4;0R;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW04020000Z0EDC?qs=E3Y5ESvWgWOwcf2YlTW7ng%3D%3D;CRCW04020000Z0EDC;0,1
+25;1;R5;560R;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603560RJNEAC?qs=E3Y5ESvWgWO7841R5kDuUw%3D%3D;CRCW0603560RJNEAC;0,1
+26;1;R10;499R;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603499RFKEAC?qs=E3Y5ESvWgWOpIp%2FD8PXaeA%3D%3D;CRCW0603499RFKEAC;0,1
+27;1;R11;100K;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603100KFKEAC?qs=E3Y5ESvWgWPxzfNYyMgX1w%3D%3D;CRCW0603100KFKEAC;0,1
+28;3;R12, R13, R14;100K;https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0402100KFKEDC?qs=E3Y5ESvWgWPiKlL6PvtQMQ%3D%3D;CRCW0402100KFKEDC;0,1
+29;1;R16;2K;https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW04022K00FKEE?qs=raETa%252B32nO8lGcRW9MjUBA%3D%3D;CRCW04022K00FKEE;0,11
+30;1;R17;5K1;https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW06035K10FKTA?qs=CkW4XlcZ%2FvvxVpp6m1oBjA%3D%3D;CRCW06035K10FKTA;0,15
+31;2;SW1, SW2;SW_Push;https://www.mouser.com/ProductDetail/CK/PTS815-SJM-250-SMTR-LFS?qs=ahcBuItHZ3xKWmfV%2F2E6bA%3D%3D;PTS815 SJM 250 SMTR LFS;0,18
+32;1;SW3;ON/OFF;https://br.mouser.com/ProductDetail/CK/PCM12SMTR?qs=mfFuHy8STfL3qrPSfCHA7w%3D%3D;PCM12SMTR;0,92
+33;6;TP1, TP2, TP3, TP4, TP5, TP6;TestPoint;;;
+34;1;U1;ESP32-C3FH4;https://br.mouser.com/ProductDetail/Espressif-Systems/ESP32-C3FH4?qs=iLbezkQI%252BsgL5PSvEueYlQ%3D%3D;ESP32-C3FH4;1,42
+35;1;U2;SC4626;https://br.mouser.com/ProductDetail/Semtech/SC4626ZSKTRT?qs=rBWM4%252BvDhIceWtHdwyySww%3D%3D;SC4626ZSKTRT;1,15
+36;1;U3;MCP73831T-2ACI/OT;https://br.mouser.com/ProductDetail/Microchip-Technology/MCP73831T-2ACI-OT?qs=yUQqVecv4qvbBQBGbHx0Mw%3D%3D;MCP73831T-2ACI/OT;0,69
+37;1;U4;MPU-9250;https://pt.aliexpress.com/item/1005002525421368.html?gatewayAdapt=glo2bra&spm=a2g0o.cart.0.0.6ed73c00hlQ9yv&mp=1;MPU-9250;
+38;1;U5;USBLC6-2SC6;https://br.mouser.com/ProductDetail/STMicroelectronics/USBLC6-2SC6?qs=po45yt2pPpu%2FhNIlwQdTlg%3D%3D;USBLC6-2SC6;0,56
+39;1;Y1;ECS-400-10-36B2-CKM-TR;https://br.mouser.com/ProductDetail/ECS/ECS-400-10-36B2-CKM-TR?qs=aP1CjGhiNiEXFwPeofJtNg%3D%3D;ECS-400-10-36B2-CKM-TR;0,42

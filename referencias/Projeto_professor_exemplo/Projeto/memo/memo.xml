@@ -1,0 +1,1864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\lukgd\OneDrive\Documentos\2_TRABALHO\2_BIOLAB\5_HARDWARE_ESPC3\7_REPOSITORIO\sensor_inercial\HARDWARE\Rastreador_inercial\Rastreador_inercial.kicad_sch</source>
+    <date>30/03/2022 11:58:23</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>INERTIAL TRACKER</title>
+        <company/>
+        <rev>V1.0</rev>
+        <date>2022-02-11</date>
+        <source>Rastreador_inercial.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value="Marcelo Barros"/>
+        <comment number="3" value="Lukas Gomes"/>
+        <comment number="4" value="Biolab/FEELT/UFU"/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="ANT1">
+      <value>PCB_ANT</value>
+      <footprint>RF_Antenna:Texas_SWRA117D_2.4GHz_Left</footprint>
+      <libsource lib="Rastreador_Library" part="PCB_ANT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ef796c5c-5be0-4541-b90c-04984b1c4e37</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>TBD</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eef7610f-14b5-47a4-b212-3b98182b3605</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT 1.0UF 16V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GRM155R61C105KA12D?qs=MNX0Jdkv8mRzFdIwfsySnw%3D%3D</field>
+        <field name="PN1">GRM155R61C105KA12D</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GRM155R61C105KA12D"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT 1.0UF 16V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GRM155R61C105KA12D?qs=MNX0Jdkv8mRzFdIwfsySnw%3D%3D"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>81288083-5379-4d74-a7a0-8ab28d82fbc5</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT 50V 10pF X7R 0402 10%</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/KEMET/C0402C100K5RACTU?qs=Mv7BduZupUgEdPvwNAxLRQ%3D%3D</field>
+        <field name="PN1">C0402C100K5RACTU</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT 50V 10pF X7R 0402 10%"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/KEMET/C0402C100K5RACTU?qs=Mv7BduZupUgEdPvwNAxLRQ%3D%3D"/>
+      <property name="PN1" value="C0402C100K5RACTU"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5f9bd35e-e104-41d6-b492-dda4c891709e</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT 50V 10pF X7R 0402 10%</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/KEMET/C0402C100K5RACTU?qs=Mv7BduZupUgEdPvwNAxLRQ%3D%3D</field>
+        <field name="PN1">C0402C100K5RACTU</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT 50V 10pF X7R 0402 10%"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/KEMET/C0402C100K5RACTU?qs=Mv7BduZupUgEdPvwNAxLRQ%3D%3D"/>
+      <property name="PN1" value="C0402C100K5RACTU"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c73cf891-17bb-4017-b152-d3fc45f76cdb</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>TBD</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d1cef0c-8de1-44f5-8551-d5c48cc75f64</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT 1.0UF 16V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GRM155R61C105KA12D?qs=MNX0Jdkv8mRzFdIwfsySnw%3D%3D</field>
+        <field name="PN1">GRM155R61C105KA12D</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GRM155R61C105KA12D"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT 1.0UF 16V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GRM155R61C105KA12D?qs=MNX0Jdkv8mRzFdIwfsySnw%3D%3D"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9b9ed158-4fa8-49c7-917d-f92a3f419d21</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores cerâmicos multicamadas MLCC - SMD/SMT 10UF 25V 10% 0603</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Murata-Electronics/GRM188R61E106KA73D?qs=5aG0NVq1C4z8ebxPkQZf9A%3D%3D</field>
+        <field name="PN1">GRM188R61E106KA73D</field>
+        <field name="Price1">0,3</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores cerâmicos multicamadas MLCC - SMD/SMT 10UF 25V 10% 0603"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Murata-Electronics/GRM188R61E106KA73D?qs=5aG0NVq1C4z8ebxPkQZf9A%3D%3D"/>
+      <property name="PN1" value="GRM188R61E106KA73D"/>
+      <property name="Price1" value="0,3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>24975885-8cbe-45f1-985a-eac2bee16fad</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>10nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores cerâmicos multicamadas MLCC - SMD/SMT .01UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Murata-Electronics/GRM155R71H103KA88D?qs=Dfh4SrgScWxOVlCuzd3ZyQ%3D%3D</field>
+        <field name="PN1">GRM155R71H103KA88D</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores cerâmicos multicamadas MLCC - SMD/SMT .01UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Murata-Electronics/GRM155R71H103KA88D?qs=Dfh4SrgScWxOVlCuzd3ZyQ%3D%3D"/>
+      <property name="PN1" value="GRM155R71H103KA88D"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>17d37b9b-35f7-4f7c-a315-1e81ef967b58</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D</field>
+        <field name="PN1">GCM155R71H104KE02J</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GCM155R71H104KE02J"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>76d04573-c9a2-4717-9a77-6001c7a2e217</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D</field>
+        <field name="PN1">GCM155R71H104KE02J</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GCM155R71H104KE02J"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9843697c-9d23-4223-b365-2247c7cf283f</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT 1.0UF 16V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GRM155R61C105KA12D?qs=MNX0Jdkv8mRzFdIwfsySnw%3D%3D</field>
+        <field name="PN1">GRM155R61C105KA12D</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GRM155R61C105KA12D"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT 1.0UF 16V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GRM155R61C105KA12D?qs=MNX0Jdkv8mRzFdIwfsySnw%3D%3D"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2d4f845-5130-4acc-9d3e-5483dfb02a30</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D</field>
+        <field name="PN1">GCM155R71H104KE02J</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GCM155R71H104KE02J"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a435356-eb77-40d5-a349-db27eb5f997d</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D</field>
+        <field name="PN1">GCM155R71H104KE02J</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GCM155R71H104KE02J"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c246ec32-7533-41c8-a427-0735eeb1f9c4</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores cerâmicos multicamadas MLCC - SMD/SMT 10UF 50V 10% 0805</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Murata-Electronics/GRM21BR61H106KE43K?qs=xZ%2FP%252Ba9zWqbh3%252B96jyTKxw%3D%3D</field>
+        <field name="PN1">GRM21BR61H106KE43K</field>
+        <field name="Price1">0,4</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores cerâmicos multicamadas MLCC - SMD/SMT 10UF 50V 10% 0805"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Murata-Electronics/GRM21BR61H106KE43K?qs=xZ%2FP%252Ba9zWqbh3%252B96jyTKxw%3D%3D"/>
+      <property name="PN1" value="GRM21BR61H106KE43K"/>
+      <property name="Price1" value="0,4"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>54895172-6155-41cf-9312-0238afa45443</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores cerâmicos multicamadas MLCC - SMD/SMT 10UF 50V 10% 0805</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Murata-Electronics/GRM21BR61H106KE43K?qs=xZ%2FP%252Ba9zWqbh3%252B96jyTKxw%3D%3D</field>
+        <field name="PN1">GRM21BR61H106KE43K</field>
+        <field name="Price1">0,4</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores cerâmicos multicamadas MLCC - SMD/SMT 10UF 50V 10% 0805"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Murata-Electronics/GRM21BR61H106KE43K?qs=xZ%2FP%252Ba9zWqbh3%252B96jyTKxw%3D%3D"/>
+      <property name="PN1" value="GRM21BR61H106KE43K"/>
+      <property name="Price1" value="0,4"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8012bf36-d3e6-4163-9a53-14712274d99a</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D</field>
+        <field name="PN1">GCM155R71H104KE02J</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GCM155R71H104KE02J"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb1a21be-1990-47c7-bb4a-8a232010fffb</tstamps>
+    </comp>
+    <comp ref="C17">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT 4.7UF 16V 10% 0603</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GRM188Z71C475KE21D?qs=d0WKAl%252BL4KajNOvalhHKtQ%3D%3D</field>
+        <field name="PN1">GRM188Z71C475KE21D</field>
+        <field name="Price1">0,31</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GRM188Z71C475KE21D"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT 4.7UF 16V 10% 0603"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GRM188Z71C475KE21D?qs=d0WKAl%252BL4KajNOvalhHKtQ%3D%3D"/>
+      <property name="Price1" value="0,31"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd63030c-ab51-4821-aaca-0347f8c78aa5</tstamps>
+    </comp>
+    <comp ref="C18">
+      <value>10nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores cerâmicos multicamadas MLCC - SMD/SMT .01UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Murata-Electronics/GRM155R71H103KA88D?qs=Dfh4SrgScWxOVlCuzd3ZyQ%3D%3D</field>
+        <field name="PN1">GRM155R71H103KA88D</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores cerâmicos multicamadas MLCC - SMD/SMT .01UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Murata-Electronics/GRM155R71H103KA88D?qs=Dfh4SrgScWxOVlCuzd3ZyQ%3D%3D"/>
+      <property name="PN1" value="GRM155R71H103KA88D"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6b1d8f6-d094-4562-92f0-ccaec3957649</tstamps>
+    </comp>
+    <comp ref="C19">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT 4.7UF 16V 10% 0603</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GRM188Z71C475KE21D?qs=d0WKAl%252BL4KajNOvalhHKtQ%3D%3D</field>
+        <field name="PN1">GRM188Z71C475KE21D</field>
+        <field name="Price1">0,31</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="PN1" value="GRM188Z71C475KE21D"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT 4.7UF 16V 10% 0603"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GRM188Z71C475KE21D?qs=d0WKAl%252BL4KajNOvalhHKtQ%3D%3D"/>
+      <property name="Price1" value="0,31"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62aa4fe3-b1c7-491c-8cee-6e7be98d0802</tstamps>
+    </comp>
+    <comp ref="C20">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D</field>
+        <field name="PN1">GCM155R71H104KE02J</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"/>
+      <property name="PN1" value="GCM155R71H104KE02J"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ca9e012-95c5-4e2d-a2d6-c003e365017d</tstamps>
+    </comp>
+    <comp ref="C21">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D</field>
+        <field name="PN1">GCM155R71H104KE02J</field>
+        <field name="Price1">0,13</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description1" value="Capacitores de cerâmica multicamada MLCC - SMD/SMT .1UF 50V 10% 0402"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/GCM155R71H104KE02J?qs=hNud%2FORuBR1wlwGPFWBVDg%3D%3D"/>
+      <property name="PN1" value="GCM155R71H104KE02J"/>
+      <property name="Price1" value="0,13"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2797b018-bc1e-41bd-9729-2612c69f1044</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>ESD</value>
+      <footprint>Diode_SMD:D_SOD-923</footprint>
+      <fields>
+        <field name="Description1">Supressores de ESD / Diodos TVS SOD-923 EUT SNGL CPR PBF</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/onsemi/SZESD9B33ST5G?qs=k6dkFvHqcvB0oAAsSAA7mQ%3D%3D</field>
+        <field name="PN1">SZESD9B3.3ST5G</field>
+        <field name="Price1">0,4</field>
+      </fields>
+      <libsource lib="Rastreador_Library" part="ESD" description=""/>
+      <property name="Description1" value="Supressores de ESD / Diodos TVS SOD-923 EUT SNGL CPR PBF"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/onsemi/SZESD9B33ST5G?qs=k6dkFvHqcvB0oAAsSAA7mQ%3D%3D"/>
+      <property name="PN1" value="SZESD9B3.3ST5G"/>
+      <property name="Price1" value="0,4"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b105113-f935-471e-9300-f012e6cf9008</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <fields>
+        <field name="Aliexpress1">https://pt.aliexpress.com/item/32848822296.html?spm=a2g0o.productlist.0.0.64da466ay8rvc9&amp;algo_pvid=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc&amp;algo_exp_id=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2210000001198835222%22%7D&amp;pdp_pi=-1%3B4.3%3B-1%3B-1%40salePrice%3BBRL%3Bsearch-mainSearch</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Aliexpress1" value="https://pt.aliexpress.com/item/32848822296.html?spm=a2g0o.productlist.0.0.64da466ay8rvc9&amp;algo_pvid=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc&amp;algo_exp_id=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2210000001198835222%22%7D&amp;pdp_pi=-1%3B4.3%3B-1%3B-1%40salePrice%3BBRL%3Bsearch-mainSearch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e5f37e3e-2fce-4b9e-850b-71a45296cfca</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>PMEG4010EGWX</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="Description1">Diodos e retificadores Schottky </field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Nexperia/PMEG4010EGWX?qs=EO%252B2iqeaG03XdPr1ZG%2Falg%3D%3D</field>
+        <field name="PN1">PMEG4010EGWX</field>
+        <field name="Price1">0,35</field>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="PN1" value="PMEG4010EGWX"/>
+      <property name="Description1" value="Diodos e retificadores Schottky "/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Nexperia/PMEG4010EGWX?qs=EO%252B2iqeaG03XdPr1ZG%2Falg%3D%3D"/>
+      <property name="Price1" value="0,35"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>337a5948-b7db-48cc-b38f-5a4882405c7c</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <fields>
+        <field name="Aliexpress1">https://pt.aliexpress.com/item/32848822296.html?spm=a2g0o.productlist.0.0.64da466ay8rvc9&amp;algo_pvid=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc&amp;algo_exp_id=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2210000001198835222%22%7D&amp;pdp_pi=-1%3B4.3%3B-1%3B-1%40salePrice%3BBRL%3Bsearch-mainSearch</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Aliexpress1" value="https://pt.aliexpress.com/item/32848822296.html?spm=a2g0o.productlist.0.0.64da466ay8rvc9&amp;algo_pvid=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc&amp;algo_exp_id=9cb7f3b6-9d1a-4f99-8519-e142d2a424dc-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2210000001198835222%22%7D&amp;pdp_pi=-1%3B4.3%3B-1%3B-1%40salePrice%3BBRL%3Bsearch-mainSearch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e78da2b-a177-46ff-9948-42f756fb111b</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_02x03_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2ef1caa0-b4ba-41c3-a1b1-4d3dc8530d5d</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>USB-C</value>
+      <footprint>Connector_USB:USB_C_Receptacle_XKB_U262-16XN-4BVC11</footprint>
+      <fields>
+        <field name="Description1">Conectores USB USB Type C,2.0, Rec,SMT, 0.95mmTH Shell Stakes,G/F,RA,Top Mnt,T&amp;R</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/GCT/USB4105-GF-A?qs=KUoIvG%2F9IlY%2FMLlBMpStpA%3D%3D</field>
+        <field name="PN1">USB4105-GF-A</field>
+        <field name="Price1">0,81</field>
+      </fields>
+      <libsource lib="Rastreador_Library" part="USB-C" description=""/>
+      <property name="PN1" value="USB4105-GF-A"/>
+      <property name="Description1" value="Conectores USB USB Type C,2.0, Rec,SMT, 0.95mmTH Shell Stakes,G/F,RA,Top Mnt,T&amp;R"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/GCT/USB4105-GF-A?qs=KUoIvG%2F9IlY%2FMLlBMpStpA%3D%3D"/>
+      <property name="Price1" value="0,81"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e78dd3e-9624-4a3a-9ad9-22b24756ba87</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>BATTERY</value>
+      <footprint>Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal</footprint>
+      <fields>
+        <field name="Aliexpress1">https://pt.aliexpress.com/item/32844450282.html?gatewayAdapt=glo2bra&amp;spm=a2g0o.cart.0.0.49203c002L4fgd&amp;mp=1</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Aliexpress1" value="https://pt.aliexpress.com/item/32844450282.html?gatewayAdapt=glo2bra&amp;spm=a2g0o.cart.0.0.49203c002L4fgd&amp;mp=1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aee6f1c6-12ca-4c1b-a61f-8f4d4204f6e2</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>Jumper_2_Bridged</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="Jumper_2_Bridged" description="Jumper, 2-pole, closed/bridged"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bcd01356-0da5-4e9b-ad07-eedd2518e538</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>TBD</value>
+      <footprint>Inductor_SMD:L_0402_1005Metric</footprint>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d73a54c2-a957-453a-bf87-58d49f1e40d8</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>2nH</value>
+      <footprint>Inductor_SMD:L_0402_1005Metric</footprint>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>781eef3b-a0b7-4682-876d-6c7c30f9246b</tstamps>
+    </comp>
+    <comp ref="L3">
+      <value>2.2uH</value>
+      <footprint>Rastreador_Library_pcb:IND_LQH3NPN2R2MMEL</footprint>
+      <fields>
+        <field name="Description1">Indutores fixos 2.2 UH 20%</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Murata-Electronics/LQH3NPN2R2MMEL?qs=sJ5gq5MLFXqbWZz8NzZoog%3D%3D</field>
+        <field name="PN1">LQH3NPN2R2MMEL</field>
+        <field name="Price1">0,36</field>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="PN1" value="LQH3NPN2R2MMEL"/>
+      <property name="Description1" value="Indutores fixos 2.2 UH 20%"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Murata-Electronics/LQH3NPN2R2MMEL?qs=sJ5gq5MLFXqbWZz8NzZoog%3D%3D"/>
+      <property name="Price1" value="0,36"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>790afb9b-2d10-449f-8379-ef3c2cb70d8d</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>SI2307</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <libsource lib="Rastreador_Library" part="SI2307" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>76c4266a-f9c6-4bd7-89f3-6be8d95ded76</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>SI2307</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <libsource lib="Rastreador_Library" part="SI2307" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>65fe9422-bb58-4ec4-9451-33015cc23ad0</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de Filme Espesso - SMD 1/10Watt 1Kohms 1% Commercial Use</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW06031K00FKEAC?qs=E3Y5ESvWgWOQ7ePIWbGVFg%3D%3D</field>
+        <field name="PN1">CRCW06031K00FKEAC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de Filme Espesso - SMD 1/10Watt 1Kohms 1% Commercial Use"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW06031K00FKEAC?qs=E3Y5ESvWgWOQ7ePIWbGVFg%3D%3D"/>
+      <property name="PN1" value="CRCW06031K00FKEAC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a684ce32-5f73-45af-9649-521f87b2b61e</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/10Watt 10Kohms 1% uso comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW060310K0FKECC?qs=wd5RIQLrsJjYJGKL%252BLOtbQ%3D%3D</field>
+        <field name="PN1">CRCW060310K0FKECC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/10Watt 10Kohms 1% uso comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW060310K0FKECC?qs=wd5RIQLrsJjYJGKL%252BLOtbQ%3D%3D"/>
+      <property name="PN1" value="CRCW060310K0FKECC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>719c8bda-c616-4cae-bbaf-140ec26d6b63</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D</field>
+        <field name="PN1">CRCW040210K0FKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D"/>
+      <property name="PN1" value="CRCW040210K0FKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8e444d8-a839-4d88-8177-a5290090eb24</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>0R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 0ohm Uso comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW04020000Z0EDC?qs=E3Y5ESvWgWOwcf2YlTW7ng%3D%3D</field>
+        <field name="PN1">CRCW04020000Z0EDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 0ohm Uso comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW04020000Z0EDC?qs=E3Y5ESvWgWOwcf2YlTW7ng%3D%3D"/>
+      <property name="PN1" value="CRCW04020000Z0EDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f82d62fa-9f74-43d5-9eec-aad547ebf04f</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>560R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/10Watt 560ohms 5% Uso Comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603560RJNEAC?qs=E3Y5ESvWgWO7841R5kDuUw%3D%3D</field>
+        <field name="PN1">CRCW0603560RJNEAC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/10Watt 560ohms 5% Uso Comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603560RJNEAC?qs=E3Y5ESvWgWO7841R5kDuUw%3D%3D"/>
+      <property name="PN1" value="CRCW0603560RJNEAC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1edb604-e01f-4282-bc47-83eb1831e650</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D</field>
+        <field name="PN1">CRCW040210K0FKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D"/>
+      <property name="PN1" value="CRCW040210K0FKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06305251-e378-4891-9146-8f07d688bb2e</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D</field>
+        <field name="PN1">CRCW040210K0FKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D"/>
+      <property name="PN1" value="CRCW040210K0FKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1dae159e-5873-42ed-a132-9c98595f526b</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D</field>
+        <field name="PN1">CRCW040210K0FKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D"/>
+      <property name="PN1" value="CRCW040210K0FKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4e5bc87-9315-458f-80bc-35e7f4dade8f</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D</field>
+        <field name="PN1">CRCW040210K0FKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 10Kohms 1% uso comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=E3Y5ESvWgWPiNLcGzwCGPg%3D%3D"/>
+      <property name="PN1" value="CRCW040210K0FKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a28894d9-c556-4112-935b-5691be3705f7</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>499R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/10Watt 499ohms 1% Uso Comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603499RFKEAC?qs=E3Y5ESvWgWOpIp%2FD8PXaeA%3D%3D</field>
+        <field name="PN1">CRCW0603499RFKEAC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/10Watt 499ohms 1% Uso Comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603499RFKEAC?qs=E3Y5ESvWgWOpIp%2FD8PXaeA%3D%3D"/>
+      <property name="PN1" value="CRCW0603499RFKEAC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b9e3610f-fb72-46c2-bc58-fb810c353073</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/10Watt 100Kohms 1% Uso Comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603100KFKEAC?qs=E3Y5ESvWgWPxzfNYyMgX1w%3D%3D</field>
+        <field name="PN1">CRCW0603100KFKEAC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/10Watt 100Kohms 1% Uso Comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0603100KFKEAC?qs=E3Y5ESvWgWPxzfNYyMgX1w%3D%3D"/>
+      <property name="PN1" value="CRCW0603100KFKEAC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>834c4fd3-7fd5-444e-b451-a4ac562f0cc2</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 100Kohms 1% Uso Comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0402100KFKEDC?qs=E3Y5ESvWgWPiKlL6PvtQMQ%3D%3D</field>
+        <field name="PN1">CRCW0402100KFKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 100Kohms 1% Uso Comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0402100KFKEDC?qs=E3Y5ESvWgWPiKlL6PvtQMQ%3D%3D"/>
+      <property name="PN1" value="CRCW0402100KFKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63d4ca6a-0d86-433c-a608-346d99147b8a</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 100Kohms 1% Uso Comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0402100KFKEDC?qs=E3Y5ESvWgWPiKlL6PvtQMQ%3D%3D</field>
+        <field name="PN1">CRCW0402100KFKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 100Kohms 1% Uso Comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0402100KFKEDC?qs=E3Y5ESvWgWPiKlL6PvtQMQ%3D%3D"/>
+      <property name="PN1" value="CRCW0402100KFKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a37b12a4-f76d-4bb5-b025-54973d5e93b6</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de filme grosso - SMD 1/16watt 100Kohms 1% Uso Comercial</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0402100KFKEDC?qs=E3Y5ESvWgWPiKlL6PvtQMQ%3D%3D</field>
+        <field name="PN1">CRCW0402100KFKEDC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de filme grosso - SMD 1/16watt 100Kohms 1% Uso Comercial"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW0402100KFKEDC?qs=E3Y5ESvWgWPiKlL6PvtQMQ%3D%3D"/>
+      <property name="PN1" value="CRCW0402100KFKEDC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e8706f9-a874-45b4-96cc-68d937f65da5</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de Filme Espesso - SMD 1/10Watt 1Kohms 1% Commercial Use</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW06031K00FKEAC?qs=E3Y5ESvWgWOQ7ePIWbGVFg%3D%3D</field>
+        <field name="PN1">CRCW06031K00FKEAC</field>
+        <field name="Price1">0,1</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de Filme Espesso - SMD 1/10Watt 1Kohms 1% Commercial Use"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/Vishay-Dale/CRCW06031K00FKEAC?qs=E3Y5ESvWgWOQ7ePIWbGVFg%3D%3D"/>
+      <property name="PN1" value="CRCW06031K00FKEAC"/>
+      <property name="Price1" value="0,1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>027cda01-c0b7-474f-b6af-5c28f84ba625</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>2K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de Filme Espesso - SMD 2K OHM 1%</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW04022K00FKEE?qs=raETa%252B32nO8lGcRW9MjUBA%3D%3D</field>
+        <field name="PN1">CRCW04022K00FKEE</field>
+        <field name="Price1">0,11</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de Filme Espesso - SMD 2K OHM 1%"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW04022K00FKEE?qs=raETa%252B32nO8lGcRW9MjUBA%3D%3D"/>
+      <property name="PN1" value="CRCW04022K00FKEE"/>
+      <property name="Price1" value="0,11"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a7ebfb4-86b6-4ff5-aa07-872eb619e85d</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>5K1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description1">Resistores de Filme Espesso - SMD 1/10watt 5.1Kohms 1%</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW06035K10FKTA?qs=CkW4XlcZ%2FvvxVpp6m1oBjA%3D%3D</field>
+        <field name="PN1">CRCW06035K10FKTA</field>
+        <field name="Price1">0,15</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description1" value="Resistores de Filme Espesso - SMD 1/10watt 5.1Kohms 1%"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Vishay-Dale/CRCW06035K10FKTA?qs=CkW4XlcZ%2FvvxVpp6m1oBjA%3D%3D"/>
+      <property name="PN1" value="CRCW06035K10FKTA"/>
+      <property name="Price1" value="0,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9d98852-2d87-447f-96d2-9dd0a5a8127c</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push</value>
+      <footprint>Button_Switch_SMD:SW_SPST_PTS810</footprint>
+      <fields>
+        <field name="Description1">Interruptor tátil Tact Switch, 12 VDC, 50 mA, 4.2x3.2, 2.5mm H, 180gf, J leads</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/CK/PTS815-SJM-250-SMTR-LFS?qs=ahcBuItHZ3xKWmfV%2F2E6bA%3D%3D</field>
+        <field name="PN1">PTS815 SJM 250 SMTR LFS</field>
+        <field name="Price1">0,18</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Description1" value="Interruptor tátil Tact Switch, 12 VDC, 50 mA, 4.2x3.2, 2.5mm H, 180gf, J leads"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/CK/PTS815-SJM-250-SMTR-LFS?qs=ahcBuItHZ3xKWmfV%2F2E6bA%3D%3D"/>
+      <property name="PN1" value="PTS815 SJM 250 SMTR LFS"/>
+      <property name="Price1" value="0,18"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a746dd8-097d-424b-a44f-279d3ae5659c</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_Push</value>
+      <footprint>Button_Switch_SMD:SW_SPST_PTS810</footprint>
+      <fields>
+        <field name="Description1">Interruptor tátil Tact Switch, 12 VDC, 50 mA, 4.2x3.2, 2.5mm H, 180gf, J leads</field>
+        <field name="MOUSER1">https://www.mouser.com/ProductDetail/CK/PTS815-SJM-250-SMTR-LFS?qs=ahcBuItHZ3xKWmfV%2F2E6bA%3D%3D</field>
+        <field name="PN1">PTS815 SJM 250 SMTR LFS</field>
+        <field name="Price1">0,18</field>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Description1" value="Interruptor tátil Tact Switch, 12 VDC, 50 mA, 4.2x3.2, 2.5mm H, 180gf, J leads"/>
+      <property name="MOUSER1" value="https://www.mouser.com/ProductDetail/CK/PTS815-SJM-250-SMTR-LFS?qs=ahcBuItHZ3xKWmfV%2F2E6bA%3D%3D"/>
+      <property name="PN1" value="PTS815 SJM 250 SMTR LFS"/>
+      <property name="Price1" value="0,18"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c863f3e5-1de1-48a1-b3a6-ad2a1da52877</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>ON/OFF</value>
+      <footprint>Button_Switch_SMD:SW_SPDT_PCM12</footprint>
+      <fields>
+        <field name="Description1">Chaves deslizantes 0.3A SPDT ON-ON</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/CK/PCM12SMTR?qs=mfFuHy8STfL3qrPSfCHA7w%3D%3D</field>
+        <field name="PN1">PCM12SMTR</field>
+        <field name="Price1">0,92</field>
+      </fields>
+      <libsource lib="Switch" part="SW_DPDT_x2" description="Switch, dual pole double throw, separate symbols"/>
+      <property name="PN1" value="PCM12SMTR"/>
+      <property name="Description1" value="Chaves deslizantes 0.3A SPDT ON-ON"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/CK/PCM12SMTR?qs=mfFuHy8STfL3qrPSfCHA7w%3D%3D"/>
+      <property name="Price1" value="0,92"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9bf9401c-e83f-4a02-a795-78f7c6407f9e</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e72b93d-21a2-4e97-b033-9476cc971e17</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eaaea3ad-1ab3-4594-894e-63ea792629a9</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c8f70bd2-0946-4360-8eaf-d24fd5081473</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d020f42-063c-4b41-8dd0-dca93027de3e</tstamps>
+    </comp>
+    <comp ref="TP5">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c5c3e8ff-4faf-4d2f-9f70-b08aa5a931c8</tstamps>
+    </comp>
+    <comp ref="TP6">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ebc0442-57c2-40b3-abfa-3467fa8da589</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32-C3FH4</value>
+      <footprint>Rastreador_Library_pcb:ESP32-C3FH4</footprint>
+      <fields>
+        <field name="Description1">Systems on a Chip (sistemas em chip) RF - SoC SMD IC ESP32-C3FH4, single-core MCU, 2.4G Wi-Fi &amp; BLE 5.0 combo, QFN 32-pin, 5*5 mm, 4 MB flash inside, -40C +105C</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Espressif-Systems/ESP32-C3FH4?qs=iLbezkQI%252BsgL5PSvEueYlQ%3D%3D</field>
+        <field name="PN1">ESP32-C3FH4</field>
+        <field name="Price1">1,42</field>
+      </fields>
+      <libsource lib="Rastreador_Library" part="ESP32-C3FH4" description=""/>
+      <property name="PN1" value="ESP32-C3FH4"/>
+      <property name="Description1" value="Systems on a Chip (sistemas em chip) RF - SoC SMD IC ESP32-C3FH4, single-core MCU, 2.4G Wi-Fi &amp; BLE 5.0 combo, QFN 32-pin, 5*5 mm, 4 MB flash inside, -40C +105C"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Espressif-Systems/ESP32-C3FH4?qs=iLbezkQI%252BsgL5PSvEueYlQ%3D%3D"/>
+      <property name="Price1" value="1,42"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>541df573-cdad-449d-a1cb-9f7d67d9b08c</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>SC4626</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <fields>
+        <field name="Description1">Reguladores de tensão de comutação SINGLE 1.5A WIMAX SWITCHER</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Semtech/SC4626ZSKTRT?qs=rBWM4%252BvDhIceWtHdwyySww%3D%3D</field>
+        <field name="PN1">SC4626ZSKTRT</field>
+        <field name="Price1">1,15</field>
+      </fields>
+      <libsource lib="Rastreador_Library" part="SC4626" description=""/>
+      <property name="Description1" value="Reguladores de tensão de comutação SINGLE 1.5A WIMAX SWITCHER"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Semtech/SC4626ZSKTRT?qs=rBWM4%252BvDhIceWtHdwyySww%3D%3D"/>
+      <property name="PN1" value="SC4626ZSKTRT"/>
+      <property name="Price1" value="1,15"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60abe6e3-5b58-4325-8c14-e3ecf619ce79</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>MCP73831T-2ACI/OT</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <fields>
+        <field name="Description1">Gerenciadores de bateria Charge mgnt</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/Microchip-Technology/MCP73831T-2ACI-OT?qs=yUQqVecv4qvbBQBGbHx0Mw%3D%3D</field>
+        <field name="PN1">MCP73831T-2ACI/OT</field>
+        <field name="Price1">0,69</field>
+      </fields>
+      <libsource lib="Rastreador_Library" part="MCP73831-2-OT" description=""/>
+      <property name="Description1" value="Gerenciadores de bateria Charge mgnt"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/Microchip-Technology/MCP73831T-2ACI-OT?qs=yUQqVecv4qvbBQBGbHx0Mw%3D%3D"/>
+      <property name="PN1" value="MCP73831T-2ACI/OT"/>
+      <property name="Price1" value="0,69"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8c14628-c0c6-4898-abec-e6f83f4099c6</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>MPU-9250</value>
+      <footprint>Sensor_Motion:InvenSense_QFN-24_3x3mm_P0.4mm</footprint>
+      <datasheet>https://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf</datasheet>
+      <fields>
+        <field name="Aliexpress1">https://pt.aliexpress.com/item/1005002525421368.html?gatewayAdapt=glo2bra&amp;spm=a2g0o.cart.0.0.6ed73c00hlQ9yv&amp;mp=1</field>
+        <field name="PN1">MPU-9250</field>
+      </fields>
+      <libsource lib="Sensor_Motion" part="MPU-9250" description="InvenSense 9-Axis Motion Sensor, Accelerometer, Gyroscope, Compass, I2C/SPI"/>
+      <property name="Aliexpress1" value="https://pt.aliexpress.com/item/1005002525421368.html?gatewayAdapt=glo2bra&amp;spm=a2g0o.cart.0.0.6ed73c00hlQ9yv&amp;mp=1"/>
+      <property name="PN1" value="MPU-9250"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f149e40e-62c2-4a0c-8a78-3ea1dc49d9b6</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>USBLC6-2SC6</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</datasheet>
+      <fields>
+        <field name="Description1">Supressores de ESD / Diodos TVS ESD Protection Low Cap</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/STMicroelectronics/USBLC6-2SC6?qs=po45yt2pPpu%2FhNIlwQdTlg%3D%3D</field>
+        <field name="PN1">USBLC6-2SC6</field>
+        <field name="Price1">0,56</field>
+      </fields>
+      <libsource lib="Power_Protection" part="USBLC6-2SC6" description="Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"/>
+      <property name="Description1" value="Supressores de ESD / Diodos TVS ESD Protection Low Cap"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/STMicroelectronics/USBLC6-2SC6?qs=po45yt2pPpu%2FhNIlwQdTlg%3D%3D"/>
+      <property name="Price1" value="0,56"/>
+      <property name="PN1" value="USBLC6-2SC6"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae1bd372-42da-4f1d-8ee2-bdba6c6579a2</tstamps>
+    </comp>
+    <comp ref="Y1">
+      <value>ECS-400-10-36B2-CKM-TR</value>
+      <footprint>Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm</footprint>
+      <fields>
+        <field name="Description1">Cristais ESR 30,FREQ 40,STABILITY +/-10ppm,TOLERANCE +/-10ppm,CL 10pF,AGING +/-2 ppm ,-20 +70 C,100uW in typical (Max 200uW), 2.50mm x 2.00mm</field>
+        <field name="MOUSER1">https://br.mouser.com/ProductDetail/ECS/ECS-400-10-36B2-CKM-TR?qs=aP1CjGhiNiEXFwPeofJtNg%3D%3D</field>
+        <field name="PN1">ECS-400-10-36B2-CKM-TR</field>
+        <field name="Price1">0,42</field>
+      </fields>
+      <libsource lib="Device" part="Crystal_GND24" description="Four pin crystal, GND on pins 2 and 4"/>
+      <property name="PN1" value="ECS-400-10-36B2-CKM-TR"/>
+      <property name="Description1" value="Cristais ESR 30,FREQ 40,STABILITY +/-10ppm,TOLERANCE +/-10ppm,CL 10pF,AGING +/-2 ppm ,-20 +70 C,100uW in typical (Max 200uW), 2.50mm x 2.00mm"/>
+      <property name="MOUSER1" value="https://br.mouser.com/ProductDetail/ECS/ECS-400-10-36B2-CKM-TR?qs=aP1CjGhiNiEXFwPeofJtNg%3D%3D"/>
+      <property name="Price1" value="0,42"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Rastreador_inercial.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>20f0ac39-526b-4d90-b9b0-aadb3de2a5ff</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x03_Odd_Even">
+      <description>Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal_GND24">
+      <description>Four pin crystal, GND on pins 2 and 4</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_GND24</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="Jumper_2_Bridged">
+      <description>Jumper, 2-pole, closed/bridged</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*2Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_2_Bridged</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Power_Protection" part="USBLC6-2SC6">
+      <description>Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</description>
+      <docs>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/usblc6-2.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I/O1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="I/O2" type="passive"/>
+        <pin num="4" name="I/O2" type="passive"/>
+        <pin num="5" name="VBUS" type="passive"/>
+        <pin num="6" name="I/O1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rastreador_Library" part="ESD">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ESD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rastreador_Library" part="ESP32-C3FH4">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-C3FH4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="LNA_IN" type="bidirectional"/>
+        <pin num="2" name="VDD3P3" type="power_in"/>
+        <pin num="3" name="VDD3P3" type="power_in"/>
+        <pin num="4" name="XTAL_32K_P" type="bidirectional"/>
+        <pin num="5" name="XTAL_32K_N" type="bidirectional"/>
+        <pin num="6" name="GPIO2" type="bidirectional"/>
+        <pin num="7" name="CHIP_EN" type="input"/>
+        <pin num="8" name="GPIO3" type="bidirectional"/>
+        <pin num="9" name="MTMS" type="bidirectional"/>
+        <pin num="10" name="MTDI" type="bidirectional"/>
+        <pin num="11" name="VDD3P3_RTC" type="power_in"/>
+        <pin num="12" name="MTCK" type="bidirectional"/>
+        <pin num="13" name="MTDO" type="bidirectional"/>
+        <pin num="14" name="GPIO8" type="bidirectional"/>
+        <pin num="15" name="GPIO9" type="bidirectional"/>
+        <pin num="16" name="GPIO10" type="bidirectional"/>
+        <pin num="17" name="VDD3P3_CPU" type="power_in"/>
+        <pin num="18" name="VDD_SPI" type="power_in"/>
+        <pin num="19" name="SPIHD" type="bidirectional"/>
+        <pin num="20" name="SPIWP" type="bidirectional"/>
+        <pin num="21" name="SPICSO" type="bidirectional"/>
+        <pin num="22" name="SPICLK" type="bidirectional"/>
+        <pin num="23" name="SPID" type="bidirectional"/>
+        <pin num="24" name="SPIQ" type="bidirectional"/>
+        <pin num="25" name="GPIO18" type="bidirectional"/>
+        <pin num="26" name="GPIO19" type="bidirectional"/>
+        <pin num="27" name="U0RXD" type="bidirectional"/>
+        <pin num="28" name="U0TXD" type="bidirectional"/>
+        <pin num="29" name="XTAL_N" type="output"/>
+        <pin num="30" name="XTAL_P" type="input"/>
+        <pin num="31" name="VDDA" type="power_in"/>
+        <pin num="32" name="VDDA" type="power_in"/>
+        <pin num="33" name="GND" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rastreador_Library" part="MCP73831-2-OT">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP73831-2-OT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="STAT" type="output"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="VBAT" type="power_out"/>
+        <pin num="4" name="VIN" type="power_in"/>
+        <pin num="5" name="PROG" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rastreador_Library" part="PCB_ANT">
+      <fields>
+        <field name="Reference">ANT</field>
+        <field name="Value">PCB_ANT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="bidirectional"/>
+        <pin num="2" name="" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rastreador_Library" part="SC4626">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SC4626</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="VOUT" type="power_out"/>
+        <pin num="5" name="LX" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rastreador_Library" part="SI2307">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">SI2307</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Rastreador_Library" part="USB-C">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB-C</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="Dp1+" type="bidirectional"/>
+        <pin num="A7" name="Dn1-" type="bidirectional"/>
+        <pin num="A8" name="SBUS1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="Dp2+" type="bidirectional"/>
+        <pin num="B7" name="Dn2-" type="bidirectional"/>
+        <pin num="B8" name="SBUS2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="S1" name="SHELL_GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Motion" part="MPU-9250">
+      <description>InvenSense 9-Axis Motion Sensor, Accelerometer, Gyroscope, Compass, I2C/SPI</description>
+      <docs>https://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf</docs>
+      <footprints>
+        <fp>*QFN*3x3mm*P0.4mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MPU-9250</field>
+        <field name="Footprint">Sensor_Motion:InvenSense_QFN-24_3x3mm_P0.4mm</field>
+        <field name="Datasheet">https://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RESV_VDDIO" type="input"/>
+        <pin num="7" name="AUX_SCL" type="output"/>
+        <pin num="8" name="VDDIO" type="power_in"/>
+        <pin num="9" name="AD0/MISO" type="bidirectional"/>
+        <pin num="10" name="REGOUT" type="passive"/>
+        <pin num="11" name="FSYNC" type="input"/>
+        <pin num="12" name="INT" type="output"/>
+        <pin num="13" name="VDD" type="power_in"/>
+        <pin num="18" name="GND" type="power_in"/>
+        <pin num="20" name="RESV_GND" type="power_in"/>
+        <pin num="21" name="AUX_SDA" type="bidirectional"/>
+        <pin num="22" name="~{CS}" type="input"/>
+        <pin num="23" name="SCL/SCLK" type="input"/>
+        <pin num="24" name="SDA/MOSI" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_DPDT_x2">
+      <description>Switch, dual pole double throw, separate symbols</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SW*DPDT*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_DPDT_x2</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+        <pin num="4" name="A" type="passive"/>
+        <pin num="5" name="B" type="passive"/>
+        <pin num="6" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Power_Protection">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Power_Protection.kicad_sym</uri>
+    </library>
+    <library logical="Rastreador_Library">
+      <uri>C:\Users\lukgd\OneDrive\Documentos\2_TRABALHO\2_BIOLAB\5_HARDWARE_ESPC3\7_REPOSITORIO\sensor_inercial\HARDWARE\Rastreador_inercial/Rastreador_Library.kicad_sym</uri>
+    </library>
+    <library logical="Sensor_Motion">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Sensor_Motion.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="L3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="VDD3P3_RTC" pintype="power_in"/>
+      <node ref="U1" pin="17" pinfunction="VDD3P3_CPU" pintype="power_in"/>
+      <node ref="U1" pin="31" pinfunction="VDDA" pintype="power_in"/>
+      <node ref="U1" pin="32" pinfunction="VDDA" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="VOUT" pintype="power_out"/>
+      <node ref="U4" pin="1" pinfunction="RESV_VDDIO" pintype="input"/>
+      <node ref="U4" pin="13" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U4" pin="8" pinfunction="VDDIO" pintype="power_in"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="JP1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="VIN" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="3" name="+5VD">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="4" name="+BATT">
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="VBAT" pintype="power_out"/>
+    </net>
+    <net code="5" name="/BATLV">
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="XTAL_32K_N" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/CC1">
+      <node ref="J2" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
+      <node ref="J2" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="/D+">
+      <node ref="J2" pin="A6" pinfunction="Dp1+" pintype="bidirectional"/>
+      <node ref="J2" pin="B6" pinfunction="Dp2+" pintype="bidirectional"/>
+      <node ref="U5" pin="6" pinfunction="I/O1" pintype="passive"/>
+    </net>
+    <net code="8" name="/D-">
+      <node ref="J2" pin="A7" pinfunction="Dn1-" pintype="bidirectional"/>
+      <node ref="J2" pin="B7" pinfunction="Dn2-" pintype="bidirectional"/>
+      <node ref="U5" pin="4" pinfunction="I/O2" pintype="passive"/>
+    </net>
+    <net code="9" name="/EN_BATLV">
+      <node ref="Q2" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="XTAL_32K_P" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/GPIO8">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="GPIO8" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="/GPIO9">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="GPIO9" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/INT_IN">
+      <node ref="U1" pin="10" pinfunction="MTDI" pintype="bidirectional"/>
+      <node ref="U4" pin="12" pinfunction="INT" pintype="output"/>
+    </net>
+    <net code="13" name="/LED1">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="MTMS" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/LNA_IN">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="LNA_IN" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="/RF_ANT">
+      <node ref="ANT1" pin="1" pintype="bidirectional"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/SPICSO">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="SPICSO" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/SPI_CS">
+      <node ref="U1" pin="16" pinfunction="GPIO10" pintype="bidirectional"/>
+      <node ref="U4" pin="22" pinfunction="~{CS}" pintype="input"/>
+    </net>
+    <net code="18" name="/SPI_MISO">
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="GPIO2" pintype="bidirectional"/>
+      <node ref="U4" pin="9" pinfunction="AD0/MISO" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/SPI_MOSI">
+      <node ref="U1" pin="13" pinfunction="MTDO" pintype="bidirectional"/>
+      <node ref="U4" pin="24" pinfunction="SDA/MOSI" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="/SPI_SCLK">
+      <node ref="U1" pin="12" pinfunction="MTCK" pintype="bidirectional"/>
+      <node ref="U4" pin="23" pinfunction="SCL/SCLK" pintype="input"/>
+    </net>
+    <net code="21" name="/U0RTXD">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="U0TXD" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="/U0RXD">
+      <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="U0RXD" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="/USB_DN">
+      <node ref="U1" pin="25" pinfunction="GPIO18" pintype="bidirectional"/>
+      <node ref="U5" pin="3" pinfunction="I/O2" pintype="passive"/>
+    </net>
+    <net code="24" name="/USB_DP">
+      <node ref="U1" pin="26" pinfunction="GPIO19" pintype="bidirectional"/>
+      <node ref="U5" pin="1" pinfunction="I/O1" pintype="passive"/>
+    </net>
+    <net code="25" name="/VDD3P3ESP">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="L2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="VDD3P3" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="VDD3P3" pintype="power_in"/>
+    </net>
+    <net code="26" name="GND">
+      <node ref="ANT1" pin="2" pintype="bidirectional"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J2" pin="A1" pinfunction="GND" pintype="passive"/>
+      <node ref="J2" pin="A12" pinfunction="GND" pintype="passive"/>
+      <node ref="J2" pin="B1" pinfunction="GND" pintype="passive"/>
+      <node ref="J2" pin="B12" pinfunction="GND" pintype="passive"/>
+      <node ref="J2" pin="S1" pinfunction="SHELL_GND" pintype="power_in"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="33" pinfunction="GND" pintype="bidirectional"/>
+      <node ref="U2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U4" pin="18" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="20" pinfunction="RESV_GND" pintype="power_in"/>
+      <node ref="U5" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Y1" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="CHIP_EN" pintype="input"/>
+    </net>
+    <net code="28" name="Net-(C3-Pad2)">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="29" pinfunction="XTAL_N" pintype="output"/>
+      <node ref="Y1" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(C11-Pad1)">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="VDD_SPI" pintype="power_in"/>
+    </net>
+    <net code="31" name="Net-(C21-Pad1)">
+      <node ref="C21" pin="1" pintype="passive"/>
+      <node ref="U4" pin="10" pinfunction="REGOUT" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(D4-Pad1)">
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(J1-Pad6)">
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(JP1-Pad1)">
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="SW3" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="38" name="Net-(L3-Pad1)">
+      <node ref="L3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="LX" pintype="input"/>
+    </net>
+    <net code="39" name="Net-(Q2-Pad3)">
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="40" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="41" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="42" name="Net-(R4-Pad2)">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="30" pinfunction="XTAL_P" pintype="input"/>
+    </net>
+    <net code="43" name="Net-(R10-Pad2)">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="44" name="Net-(R15-Pad1)">
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="STAT" pintype="output"/>
+    </net>
+    <net code="45" name="Net-(R16-Pad1)">
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="PROG" pintype="input"/>
+    </net>
+    <net code="46" name="Net-(SW2-Pad2)">
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="GPIO3" pintype="bidirectional"/>
+    </net>
+    <net code="47" name="VBUS">
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J2" pin="A4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J2" pin="A9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J2" pin="B4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J2" pin="B9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="VIN" pintype="power_in"/>
+      <node ref="U5" pin="5" pinfunction="VBUS" pintype="passive"/>
+    </net>
+    <net code="48" name="unconnected-(J2-PadA8)">
+      <node ref="J2" pin="A8" pinfunction="SBUS1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(J2-PadB8)">
+      <node ref="J2" pin="B8" pinfunction="SBUS2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(SW3-Pad3)">
+      <node ref="SW3" pin="3" pinfunction="C" pintype="passive+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U1-Pad19)">
+      <node ref="U1" pin="19" pinfunction="SPIHD" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U1-Pad20)">
+      <node ref="U1" pin="20" pinfunction="SPIWP" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U1-Pad22)">
+      <node ref="U1" pin="22" pinfunction="SPICLK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U1-Pad23)">
+      <node ref="U1" pin="23" pinfunction="SPID" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U1-Pad24)">
+      <node ref="U1" pin="24" pinfunction="SPIQ" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U4-Pad7)">
+      <node ref="U4" pin="7" pinfunction="AUX_SCL" pintype="output+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U4-Pad11)">
+      <node ref="U4" pin="11" pinfunction="FSYNC" pintype="input+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U4-Pad21)">
+      <node ref="U4" pin="21" pinfunction="AUX_SDA" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

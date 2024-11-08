@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP USBLC6-2SC6
+D TVS Diode Array Uni-Directional USBLC6-2SC6 17V, SOT-23 6-Pin
+K
+F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00050750.pdf
+$ENDCMP
+#
+$CMP XEL4030-102MEC
+D INDUCTOR, SHIELDED, 1UH, 20%, AEC-Q200
+K
+F https://www.coilcraft.com/pdfs/xel4030.pdf
+$ENDCMP
+#
+$CMP ESP32-C3FH4
+D RF System on a Chip - SoC SMD IC ESP32-C3FH4, single-core MCU, 2.4G Wi-Fi & BLE 5.0 combo, QFN 32-pin, 5*5 mm, 4 MB flash inside, -40C +105C
+K
+F https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf
+$ENDCMP
+#
+#End Doc Library
