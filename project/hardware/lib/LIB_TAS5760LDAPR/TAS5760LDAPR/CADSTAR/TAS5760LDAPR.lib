@@ -1,0 +1,16 @@
+.TAS5760LDAPR :1 ;Closed Loop I2S Input Amplifier with Power Limiter, PVDDmax of 16.5V
+SOP65P810X120-33N
+*STM IC
+*NGS
+*PLB 1="AVDD" 2="SFT_CLIP" 3="ANA_REG" 4="VCOM" 5="ANA_REF" 6="'SPK_FAULT'" 7="'SPK_SD'" 8="FREQ/SDA" 9="PBTL/SCL" 10="DVDD" 11="SPK_GAIN0" 12="SPK_GAIN1" 13="SPK_SLEEP/ADR" 14="MCLK" 15="SCLK" 16="SDIN" 17="LRCK" 18="DGND" 19="BSTRPB+" 20="SPK_OUTB+" 21="PVDD_1" 22="PGND_1" 23="SPK_OUTB-" 24="BSTRPB-" 25="BSTRPA-" 26="SPK_OUTA-" 27="PGND_2" 28="PVDD_2" 29="SPK_OUTA+" 30="BSTRPA+" 31="GGND" 32="GVDD_REG" 33="EP"
+*MXP 33
+*DFN TAS5760LDAPR
+~!Mouser Part Number (595-TAS5760LDAPR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TAS5760LDAPR?qs=ZLZ8689ywa3IfleZRfchzQ%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TAS5760LDAPR)
+~!Link Datasheet (http://www.ti.com/lit/gpn/tas5760l)
+~!Height (1.2mm)
+~!3D_Model (TAS5760LDAPR)
+TAS5760LDAPR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 33.1!U 32.1!U 31.1!U 30.1!U 29.1!U 28.1!U 27.1!U 26.1!U 25.1!U 24.1!U 23.1!U 22.1!U 21.1!U 20.1!U 19.1!U 18.1!U 17.1!U 

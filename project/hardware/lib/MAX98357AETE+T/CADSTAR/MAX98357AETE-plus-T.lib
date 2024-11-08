@@ -1,0 +1,16 @@
+.MAX98357AETE-plus-T :1 ;Audio Amplifiers Digital Input Class D Amplifier
+QFN50P300X300X80-17N
+*STM IC
+*NGS
+*PLB 1="DIN" 2="GAIN_SLOT" 3="GND_1" 4="'SD_MODE'" 5="N.C._1" 6="N.C._2" 7="VDD_1" 8="VDD_2" 9="OUTP" 10="OUTN" 11="GND_2" 12="N.C._3" 13="N.C._4" 14="LRCLK" 15="GND_3" 16="BCLK" 17="THERMAL PAD"
+*MXP 17
+*DFN MAX98357AETE-plus-T
+~!Mouser Part Number (700-MAX98357AETE+T)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Analog-Devices-Maxim-Integrated/MAX98357AETE%2bT?qs=AAveGqk956HhNpoJjF5x2g%3D%3D)
+~!Manufacturer_Name (Analog Devices)
+~!Manufacturer_Part_Number (MAX98357AETE+T)
+~!Link Datasheet (https://datasheets.maximintegrated.com/en/ds/MAX98357A-MAX98357B.pdf)
+~!Height (0.8mm)
+~!3D_Model (MAX98357AETE+T)
+MAX98357AETE-plus-T
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 12.1!U 11.1!U 10.1!U 9.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 

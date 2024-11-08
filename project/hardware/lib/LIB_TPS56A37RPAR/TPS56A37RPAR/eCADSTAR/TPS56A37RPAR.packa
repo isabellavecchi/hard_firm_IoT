@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TPS56A37RPAR"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2024-04-08-10:41:50)
+    (mountForm default
+        (footprintRef "TPS56A37RPAR")
+        (spec "System")
+    )
+)

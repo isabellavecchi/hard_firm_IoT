@@ -1,0 +1,16 @@
+.TPS40345DRCR :1 ;DC/DC Cntrlr Single-OUT Step Down 660kHz 10-Pin VSON EP T/R
+TPS61200DRCR
+*STM IC
+*NGS
+*PLB 1="VDD" 2="EN/SS" 3="PGOOD" 4="COMP" 5="FB" 6="BOOT" 7="HDRV" 8="SW" 9="LDRV/OC" 10="BP" 11="EP_1" 12="EP_2" 13="EP_3" 14="EP_4" 15="EP_5"
+*MXP 15
+*DFN TPS40345DRCR
+~!Mouser Part Number (595-TPS40345DRCR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS40345DRCR?qs=W0yvOO0ixfHYhBNpszvmBg%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPS40345DRCR)
+~!Link Datasheet (http://www.ti.com/lit/gpn/tps40303)
+~!Height (0.8mm)
+~!3D_Model (TPS40345DRCR)
+TPS40345DRCR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 

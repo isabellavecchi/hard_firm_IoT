@@ -1,0 +1,16 @@
+.TPA3118D2DAPR :1 ;Audio Amplifiers 50W Stereo Class-D Audio Amp
+SOP65P810X120-33N
+*STM IC
+*NGS
+*PLB 1="MODSEL" 2="SDZ" 3="FAULTZ" 4="RINP" 5="RINN" 6="PLIMIT" 7="GVDD" 8="GAIN/SLV" 9="GND_1" 10="LINP" 11="LINN" 12="MUTE" 13="AM2" 14="AM1" 15="AM0" 16="SYNC" 17="AVCC" 18="PVCC_1" 19="PVCC_2" 20="BSNL" 21="OUTNL" 22="GND_2" 23="OUTPL" 24="BSPL" 25="GND_3" 26="BSNR" 27="OUTNR" 28="GND_4" 29="OUTPR" 30="BSPR" 31="PVCC_3" 32="PVCC_4" 33="EP"
+*MXP 33
+*DFN TPA3118D2DAPR
+~!Mouser Part Number (595-TPA3118D2DAPR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPA3118D2DAPR?qs=3AcK5DacLbr6SZY8wY9L6g%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPA3118D2DAPR)
+~!Link Datasheet (https://www.ti.com/lit/ds/symlink/tpa3118d2.pdf?ts=1685687683742&ref_url=https%253A%252F%252Fwww.ti.com%252Fsitesearch%252Fen-us%252Fdocs%252Funiversalsearch.tsp%253FlangPref%253Den-US%2526searchTerm%253DTPA3118D2DAPR%2526nr%253D12)
+~!Height (1.2mm)
+~!3D_Model (TPA3118D2DAPR)
+TPA3118D2DAPR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 33.1!U 32.1!U 31.1!U 30.1!U 29.1!U 28.1!U 27.1!U 26.1!U 25.1!U 24.1!U 23.1!U 22.1!U 21.1!U 20.1!U 19.1!U 18.1!U 17.1!U 

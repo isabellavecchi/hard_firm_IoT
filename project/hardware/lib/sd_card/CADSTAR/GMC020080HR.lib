@@ -1,0 +1,17 @@
+.GMC020080HR :1 ;Memory Card Connectors 2 In 1 Connector Sd+mmc
+GMC020080HR
+*STM J
+*NGS
+*PNM 1=1 2=2 3=3 4=4 5=5 6=6 7=7 8=8 9=9 10=MP1 11=MP2 12=MP3 13=MP4 14=MP5 15=MP6
+*PLB 1="CD/DAT3" 2="CMD" 3="VSS1" 4="VDD" 5="CLK" 6="VSS2" 7="DAT0" 8="DAT1" 9="DAT2" 10="GND_1" 11="GND_2" 12="CD PIN" 13="WP PIN" 14="GND_3" 15="GND_4"
+*MXP 17
+*DFN GMC020080HR
+~!Mouser Part Number (523-GMC020080HR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Amphenol-Commercial-Products/GMC020080HR?qs=W0yvOO0ixfGUck2%252BUqFamw%3D%3D)
+~!Manufacturer_Name (Amphenol)
+~!Manufacturer_Part_Number (GMC020080HR)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/1/GMC020080HR.pdf)
+~!Height (2.87mm)
+~!3D_Model (GMC020080HR)
+GMC020080HR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 

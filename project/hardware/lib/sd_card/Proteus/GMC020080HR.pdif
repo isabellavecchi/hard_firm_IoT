@@ -1,0 +1,244 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "GMC020080HR"
+   (description "Memory Card Connectors 2 In 1 Connector Sd+mmc")
+   (family "CON")
+   (package "GMC020080HR")
+   (attribute "Datasheet Link" "https://componentsearchengine.com/Datasheets/1/GMC020080HR.pdf")
+   (attribute "Geometry.Height" "2.87mm")
+   (attribute "Mouser Part Number" "523-GMC020080HR")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Commercial-Products/GMC020080HR?qs=W0yvOO0ixfGUck2%252BUqFamw%3D%3D")
+   (attribute "Manufacturer_Name" "Amphenol")
+   (attribute "Manufacturer_Part_Number" "GMC020080HR")
+   (gate
+    (symbol "GMC020080HR")
+    (pin "CD/DAT3" 1 PS)
+    (pin "CMD" 2 PS)
+    (pin "VSS1" 3 PS)
+    (pin "VDD" 4 PS)
+    (pin "CLK" 5 PS)
+    (pin "VSS2" 6 PS)
+    (pin "DAT0" 7 PS)
+    (pin "DAT1" 8 PS)
+    (pin "DAT2" 9 PS)
+    (pin "GND_1" MP1 PS)
+    (pin "GND_2" MP2 PS)
+    (pin "CD_PIN" MP3 PS)
+    (pin "WP_PIN" MP4 PS)
+    (pin "GND_3" MP5 PS)
+    (pin "GND_4" MP6 PS)
+   )
+  )
+  (symbol "GMC020080HR"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1200 100) (pt 1200 -800) (pt 200 -800) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -400) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -500) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -600) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -700) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -300) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -400) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -500) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -600) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "GMC020080HR"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -12.1 -8.3)
+      (pt 12.1 -8.3)
+      (pt 12.1 8.3)
+      (pt -12.1 8.3)
+      (pt -12.1 -8.3))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -12.1 8.3)
+      (pt -12.1 8.3)
+      (pt -12.1 -5)
+      (pt -12.1 -5)
+      (pt -12.1 8.3))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 12.1 -5)
+      (pt 12.1 -5)
+      (pt 12.1 8.3)
+      (pt 12.1 8.3)
+      (pt 12.1 -5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 12.1 8.3)
+      (pt -12.1 8.3)
+      (pt -12.1 8.3)
+      (pt 12.1 8.3)
+      (pt 12.1 8.3))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -15.4 9.7)
+      (pt 15.4 9.7)
+      (pt 15.4 -11.15)
+      (pt -15.4 -11.15)
+      (pt -15.4 9.7))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -7 -10.1)
+      (arc (pt -7.000 -10.100) (pt -7.000 -10.150) (pt -6.900 -10.050) (start 180.0) (sweep 180.0))
+      (pt -6.9 -10.1)
+      (arc (pt -6.900 -10.100) (pt -7.000 -10.150) (pt -6.900 -10.050) (start 180.0) (sweep .0))
+      (pt -7 -10.1)
+      (arc (pt -7.000 -10.100) (pt -7.000 -10.150) (pt -6.900 -10.050) (start 180.0) (sweep 180.0))
+      (pt -6.9 -10.1))))
+   (leg 1 (pt -6.870 -9.000) (padstack 0))
+   (leg 2 (pt -4.370 -9.000) (padstack 0))
+   (leg 3 (pt -1.870 -9.000) (padstack 0))
+   (leg 4 (pt 0.630 -9.000) (padstack 0))
+   (leg 5 (pt 3.130 -9.000) (padstack 0))
+   (leg 6 (pt 5.630 -9.000) (padstack 0))
+   (leg 7 (pt 8.130 -9.000) (padstack 0))
+   (leg 8 (pt 9.750 -9.000) (padstack 0))
+   (leg 9 (pt -9.370 -9.000) (padstack 0))
+   (leg MH1 (pt -9.500 -6.200) (padstack 10))
+   (leg MH2 (pt 11.500 -6.200) (padstack 11))
+   (leg MP1 (pt -13.650 7.300) (padstack 12))
+   (leg MP2 (pt -11.450 -7.200) (padstack 13))
+   (leg MP3 (pt 10.970 -9.000) (padstack 14))
+   (leg MP4 (pt 12.180 -9.000) (padstack 15))
+   (leg MP5 (pt 13.650 -7.200) (padstack 16))
+   (leg MP6 (pt 13.650 7.300) (padstack 17))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1.000 1.500 0 0 90.000))
+   )
+   (padstack 10
+    (hole 1.6)
+    (plated false)
+    (pad (layer TCOP) (round 0.800))
+    (pad (layer INNER) (round 0.800))
+    (pad (layer BCOP) (round 0.800))
+   )
+   (padstack 11
+    (hole 1.1)
+    (plated false)
+    (pad (layer TCOP) (round 0.550))
+    (pad (layer INNER) (round 0.550))
+    (pad (layer BCOP) (round 0.550))
+   )
+   (padstack 12
+    (plated false)
+    (pad (layer TCOP) (rectf 1.500 2.800 0 0 90.000))
+   )
+   (padstack 13
+    (plated false)
+    (pad (layer TCOP) (rectf 1.500 2.800 0 0 90.000))
+   )
+   (padstack 14
+    (plated false)
+    (pad (layer TCOP) (rectf 0.700 1.500 0 0 90.000))
+   )
+   (padstack 15
+    (plated false)
+    (pad (layer TCOP) (rectf 0.700 1.500 0 0 90.000))
+   )
+   (padstack 16
+    (plated false)
+    (pad (layer TCOP) (rectf 1.500 2.800 0 0 90.000))
+   )
+   (padstack 17
+    (plated false)
+    (pad (layer TCOP) (rectf 1.500 2.800 0 0 90.000))
+   )
+   (model "GMC020080HR.stp"
+    (euler 90 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

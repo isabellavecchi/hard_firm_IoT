@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=CSD17575Q3T
+PartCategory=MOSFET (N-Channel)
+PackageCategory=Other
+PinCount=9
+Version=1.2
+Released=2021-04-02 12:21:33
+Downloaded=2024-09-15 09:54:23
+3D=Y

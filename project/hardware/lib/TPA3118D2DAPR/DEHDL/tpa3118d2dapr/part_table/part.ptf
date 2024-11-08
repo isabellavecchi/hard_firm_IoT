@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TPA3118D2DAPR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TPA3118D2DAPR" (!) = "", "SOP65P810X120-33N", "Small Outline Packages", "595-TPA3118D2DAPR", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPA3118D2DAPR?qs=3AcK5DacLbr6SZY8wY9L6g%3D%3D", "Audio Amplifiers 50W Stereo Class-D Audio Amp", "https://www.ti.com/lit/ds/symlink/tpa3118d2.pdf?ts=1685687683742&ref_url=https%253A%252F%252Fwww.ti.com%252Fsitesearch%252Fen-us%252Fdocs%252Funiversalsearch.tsp%253FlangPref%253Den-US%2526searchTerm%253DTPA3118D2DAPR%2526nr%253D12", "1.2 mm"
+END_PART
+
+END.

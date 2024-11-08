@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "CSD17575Q3T"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-04-02-12:21:33)
+    (mountForm default
+        (footprintRef "CSD17575Q3T")
+        (spec "System")
+    )
+)

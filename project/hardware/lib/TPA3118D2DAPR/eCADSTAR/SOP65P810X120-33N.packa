@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TPA3118D2DAPR"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-09-20-07:58:33)
+    (mountForm default
+        (footprintRef "SOP65P810X120-33N")
+        (spec "System")
+    )
+)

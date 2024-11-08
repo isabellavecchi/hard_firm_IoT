@@ -1,0 +1,16 @@
+.CSD17309Q3 :1 ;30V, N ch NexFET MOSFET, single SON3x3, 6.3mOhm
+CSD17309Q3
+*STM Q
+*NGS
+*PLB 1="S_1" 2="S_2" 3="S_3" 4="G" 5="D_1" 6="D_2" 7="D_3" 8="D_4" 9="D_5"
+*MXP 9
+*DFN CSD17309Q3
+~!Mouser Part Number (595-CSD17309Q3)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CSD17309Q3?qs=BmtUOLWBNQpJCCc0M%2FZkzw%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (CSD17309Q3)
+~!Link Datasheet (http://www.ti.com/lit/gpn/csd17309q3)
+~!Height (1mm)
+~!3D_Model (CSD17309Q3)
+CSD17309Q3
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 

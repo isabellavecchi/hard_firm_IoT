@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPS40345DRCR
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=15
+Version=3.2
+Released=2017-01-12 12:59:53
+Downloaded=2024-09-14 23:33:12
+3D=Y
