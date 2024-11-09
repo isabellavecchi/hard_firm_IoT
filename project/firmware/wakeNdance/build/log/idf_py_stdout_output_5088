@@ -1,0 +1,70 @@
+[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\IVecchiFerreira\Documents\estudos\hard_firm_IoT\project\firmware\wakeNdance\build\esp-idf\esptool_py && C:\Users\IVecchiFerreira\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/IVecchiFerreira/Documents/estudos/hard_firm_IoT/project/firmware/wakeNdance/build/partition_table/partition-table.bin C:/Users/IVecchiFerreira/Documents/estudos/hard_firm_IoT/project/firmware/wakeNdance/build/app-template.bin"
+app-template.bin binary size 0xbdb10 bytes. Smallest app partition is 0x100000 bytes. 0x424f0 bytes (26%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\IVecchiFerreira\Documents\estudos\hard_firm_IoT\project\firmware\wakeNdance\build\bootloader\esp-idf\esptool_py && C:\Users\IVecchiFerreira\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/IVecchiFerreira/Documents/estudos/hard_firm_IoT/project/firmware/wakeNdance/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5270 bytes. 0x2d90 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3\components\esptool_py && C:\Users\IVecchiFerreira\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3 -D SERIAL_TOOL=C:/Users/IVecchiFerreira/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/IVecchiFerreira/Documents/estudos/hard_firm_IoT/project/firmware/wakeNdance/build -P C:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM3
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: 34:85:18:b5:3a:48
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cdfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21104 bytes to 13061...
+Writing at 0x00000000... (100 %)
+Wrote 21104 bytes (13061 compressed) at 0x00000000 in 0.6 seconds (effective 284.6 kbit/s)...
+Hash of data verified.
+Compressed 776976 bytes to 487822...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cfcb... (6 %)
+Writing at 0x00024332... (10 %)
+Writing at 0x00029312... (13 %)
+Writing at 0x00034eb5... (16 %)
+Writing at 0x0003b117... (20 %)
+Writing at 0x00041236... (23 %)
+Writing at 0x00047536... (26 %)
+Writing at 0x0004daef... (30 %)
+Writing at 0x00053971... (33 %)
+Writing at 0x00059885... (36 %)
+Writing at 0x0005fd7a... (40 %)
+Writing at 0x00064ec7... (43 %)
+Writing at 0x00069ec8... (46 %)
+Writing at 0x0006f01d... (50 %)
+Writing at 0x00074086... (53 %)
+Writing at 0x0007936d... (56 %)
+Writing at 0x0007e823... (60 %)
+Writing at 0x000846cd... (63 %)
+Writing at 0x00089ddb... (66 %)
+Writing at 0x0008f9c6... (70 %)
+Writing at 0x000956ec... (73 %)
+Writing at 0x0009af42... (76 %)
+Writing at 0x000a0c65... (80 %)
+Writing at 0x000a69dc... (83 %)
+Writing at 0x000abcd0... (86 %)
+Writing at 0x000b569c... (90 %)
+Writing at 0x000bd66d... (93 %)
+Writing at 0x000c3407... (96 %)
+Writing at 0x000c9364... (100 %)
+Wrote 776976 bytes (487822 compressed) at 0x00010000 in 11.0 seconds (effective 565.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 502.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
