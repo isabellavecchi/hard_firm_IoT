@@ -28,21 +28,9 @@ AliExpress
 https://pt.aliexpress.com/item/4000129796373.html?src=google
 
 
+Exemplo de Web-Radio on ESP, com make
+https://esp32.com/viewtopic.php?f=17&t=1026
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+IA de EP
+https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://webench.ti.com/power-designer/&ved=2ahUKEwiO5eqL15OIAxULs5UCHYduCVAQFnoECAgQAQ&usg=AOvVaw2lQmUyOhzBhXn4iLDehQj8
