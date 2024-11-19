@@ -14,19 +14,14 @@
 #include "nvs_flash.h"
 
 // Personal libraries
-#include "wifiApp.h"
 #include "ledRGB.h"
+#include "router.h"
 
 
 
 /**************************
 **		DECLARATIONS	 **
 **************************/
-
-// Netif object for the Station and Access Point
-extern esp_netif_t * esp_netif_sta;
-extern esp_netif_t * esp_netif_ap;
-
 
 
 /**************************
@@ -48,10 +43,7 @@ void app_main(void)
 	ledRGB_ledPWM_init();
 	
 	// Web Router
-	
-	
-	// Start Wifi
-	wifiApp_start();
+	router_setup();
 }
 
 

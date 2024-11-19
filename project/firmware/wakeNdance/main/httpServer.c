@@ -34,7 +34,7 @@
 static const char TAG[] = "http_server";
 
 // WiFi connect status
-static http_server_wifi_connect_status_e g_wifi_connect_status = NONE;
+http_server_wifi_connect_status_e g_wifi_connect_status = NONE;
 
 // HTTP server task handle
 static httpd_handle_t http_server_handle = NULL; ///> used on start and stop server
@@ -63,6 +63,14 @@ static QueueHandle_t http_server_monitor_queue_handle;
 /**************************
 ** UPPERLAYER FUNCTIONS	 **
 **************************/
+
+/*
+ * Returns the g_wifi_connect_status
+ */
+http_server_wifi_connect_status_e * httpServer_get_wifiConnectStatus(void)
+{
+	return &g_wifi_connect_status;
+}
 
 /**
  * Function to get routers from another file to be declared here.

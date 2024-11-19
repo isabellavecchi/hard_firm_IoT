@@ -6,6 +6,7 @@ idf_component_register(
     		"ledRGB.c"
     		"wifiApp.c"
     		"httpServer.c"
+    		"router.c"
     INCLUDE_DIRS	"."
     EMBED_FILES	"webPage/app.css"
     			"webPage/app.js"

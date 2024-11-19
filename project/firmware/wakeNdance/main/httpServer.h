@@ -35,7 +35,7 @@
 
 #define X_MACRO_HTTP_SERVER_URI_HANDLER_LIST\
 	X(jquery_3_3_1_min_js,	"/jquery-3.3.1.min.js",	"application/javascript", _binary_jquery_3_3_1_min_js_start,	_binary_jquery_3_3_1_min_js_end	) \
-	X(index_html,			"/index.html",			"text_html"				, _binary_index_html_start, 			_binary_index_html_end			) \
+	X(index_html,			"/index.html",			"text/html"				, _binary_index_html_start, 			_binary_index_html_end			) \
 	X(app_css,				"/app.css",				"text/css"				, _binary_app_css_start, 				_binary_app_css_end				) \
 	X(app_js,				"/app.js",				"application/javascript", _binary_app_js_start, 				_binary_app_js_end				) \
 	X(favicon_ico,			"/favicon_ico",			"image/x-icon"			, _binary_favicon_ico_start, 			_binary_favicon_ico_end			)
@@ -99,6 +99,11 @@ void httpServer_stop(void);
 /**************************
 ** UPPERLAYER FUNCTIONS	 **
 **************************/
+
+/*
+ * Returns the g_wifi_connect_status
+ */
+http_server_wifi_connect_status_e * httpServer_get_wifiConnectStatus(void);
 
 /**
  * Function to get routers from another file to be declared here.

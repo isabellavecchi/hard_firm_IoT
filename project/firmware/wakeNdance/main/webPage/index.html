@@ -13,8 +13,8 @@
 	<header>
 		<h1>ESP32 Application Development</h1>
 	</header>
-		
-	<!-- <div id="OTA">
+<!-- 		
+	<div id="OTA">
 	<h2>ESP32 Firmware Update</h2>
 		<label id="latest_firmware_label">Latest Firmware: </label>
 		<div id="latest_firmware"></div> 
@@ -27,7 +27,7 @@
 		<h4 id="ota_update_status"></h4>
 	</div>
 	<hr> -->
-
+		
 	<div id="WiFiConnect">
 		<h2>ESP32 WiFi Connect</h2>
 		<section>
@@ -41,6 +41,19 @@
 		<div id="wifi_connect_credentials_errors"></div>
 		<h4 id="wifi_connect_status"></h4>
 	</div>
+
+	<div id="ConnectInfo">
+		<section>
+			<div id="connected_ap_label"></div><div id="connected_ap"></div>
+		</section>
+		<div id="ip_address_label"></div> <div id="wifi_connect_ip"></div>
+		<div id="netmask_label"></div> <div id="wifi_connect_netmask"></div>
+		<div id="gateway_label"></div> <div id="wifi_connect_gateway"></div>
+		<div class="buttons">
+			<input id="disconnect_wifi" type="button" value="Disconnect" />
+		</div>
+	</div>
+	<hr>
 		
 	</body>
 <html>

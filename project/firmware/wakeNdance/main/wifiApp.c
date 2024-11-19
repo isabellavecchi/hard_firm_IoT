@@ -141,7 +141,7 @@ static void STATE_FUNC(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_message_t * st
 	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_START_HTTP_SERVER]);
 	
 	httpServer_start();
-	ledRGB_httpServer_started();
+	ledRGB_wifi_disconnected();
 }
 
  /**
@@ -174,6 +174,23 @@ static void STATE_FUNC(WIFI_APP_STA_CONNECTED_GOT_IP)(wifi_app_queue_message_t *
 	
  	ledRGB_wifi_connected();
  	httpServer_monitor_sendMessage(HTTP_WIFI_CONNECT_SUCCESS);
+}
+
+ /**
+  * State Machine Function Definition according to sm_wifi_app_function
+  * function that defines the behavior on
+  * [WIFI_APP_USER_REQUESTED_STA_DISCONNECT] state
+  */
+static void STATE_FUNC(WIFI_APP_USER_REQUESTED_STA_DISCONNECT)(wifi_app_queue_message_t * st)
+{
+	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_STA_DISCONNECTED]);
+	
+ 	ledRGB_wifi_disconnect();
+	// so it doesn't try to reconnect when we hit the button disconnect
+	g_retry_number = MAX_CONNECTION_RETRIES;
+	
+ 	ESP_ERROR_CHECK(esp_wifi_disconnect());
+ 	ledRGB_wifi_disconnected();
 }
 
  /**

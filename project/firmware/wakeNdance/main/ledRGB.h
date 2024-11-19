@@ -78,7 +78,7 @@ void ledRGB_wifiApp_started(void);
 /**
  * Color to indicate HTTP server has started.
 */
-void ledRGB_httpServer_started(void);
+void ledRGB_wifi_disconnected(void);
 
 
 /**
@@ -89,6 +89,6 @@ void ledRGB_wifi_connected(void);
 /**
  * Color to indicate that the ESP32 has disconnected from access point.
 */
-void ledRGB_wifi_disconnected(void);
+void ledRGB_wifi_disconnect(void);
 
 #endif /* MAIN_LIB_LEDRGB_H_ */
