@@ -38,3 +38,6 @@ https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://webenc
 
 Curso na Udemy - ESP32 IOT FreeRTOS
 https://luxoft.udemy.com/course/iot-application-development-with-the-esp32-using-the-esp-idf
+
+OLED display - I2C 0.96 polegadas
+https://esp32tutorials.com/oled-esp32-esp-idf-tutorial/

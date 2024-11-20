@@ -31,7 +31,8 @@
 	X(1, HTTP_WIFI_CONNECT_SUCCESS		) \
 	X(2, HTTP_WIFI_CONNECT_FAIL			) \
 	X(3, HTTP_OTA_UPDATE_SUCCESSFULL	) \
-	X(4, HTTP_OTA_UPDATE_FAILED			)
+	X(4, HTTP_OTA_UPDATE_FAILED			) \
+	X(5, HTTP_TIME_SERVICE_INITIALIZED	)
 
 #define X_MACRO_HTTP_SERVER_URI_HANDLER_LIST\
 	X(jquery_3_3_1_min_js,	"/jquery-3.3.1.min.js",	"application/javascript", _binary_jquery_3_3_1_min_js_start,	_binary_jquery_3_3_1_min_js_end	) \

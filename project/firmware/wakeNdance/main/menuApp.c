@@ -169,7 +169,7 @@ static void menuApp_stateMachine_handler(menu_app_queue_message_t * msg)
 
 
 /**************************
-**		APP FUNCTIONS	 **
+**	   APP FUNCTIONS	 **
 **************************/
 
  /**

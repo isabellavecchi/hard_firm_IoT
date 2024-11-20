@@ -147,6 +147,11 @@ static void httpServer_freeRTOS_monitor(void * parameter)
 //					ESP_LOGI(TAG, "HTTP_OTA_UPDATE_FAILED");
 //					break;
 					
+				case HTTP_TIME_SERVICE_INITIALIZED:
+					ESP_LOGI(TAG, "HTTP_TIME_SERVICE_INITIALIZED");
+					
+					break;
+					
 				default:
 					break;
 			}
