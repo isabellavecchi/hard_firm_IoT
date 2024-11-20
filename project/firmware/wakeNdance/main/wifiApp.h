@@ -41,7 +41,7 @@
 
 
 // Macro to define the function name of each state
-#define STATE_FUNC(state) wifiApp_sm_ ## state ## fn
+#define WIFI_STATE_FUNC_NAME(state) wifiApp_sm_ ## state ## _fn
 
 /**
  * List used to create all the structures for the WiFi state machine

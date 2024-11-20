@@ -16,6 +16,8 @@
 // Personal libraries
 #include "ledRGB.h"
 #include "router.h"
+#include "menuApp.h"
+#include "menuButton.h"
 
 
 
@@ -44,6 +46,12 @@ void app_main(void)
 	
 	// Web Router
 	router_setup();
+	
+	// Menu from button Setup
+	menuApp_start();
+	
+	// Setting up the buttons handler for menu
+	menuButton_setup();
 }
 
 

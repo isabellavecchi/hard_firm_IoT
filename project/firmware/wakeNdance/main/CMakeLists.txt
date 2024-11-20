@@ -7,6 +7,8 @@ idf_component_register(
     		"wifiApp.c"
     		"httpServer.c"
     		"router.c"
+    		"menuApp.c"
+    		"menuButton.c"
     INCLUDE_DIRS	"."
     EMBED_FILES	"webPage/app.css"
     			"webPage/app.js"

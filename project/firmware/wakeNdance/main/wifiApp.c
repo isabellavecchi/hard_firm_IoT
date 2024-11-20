@@ -11,6 +11,7 @@
 **************************/
 
 // C libraries
+#include <stdint.h>
 
 // ESP libraries
 #include "esp_event.h"
@@ -31,15 +32,13 @@
 #include "esp_log.h"
 #include "esp_wifi.h"
 #include "lwip/netdb.h"
+#include "lwip/sockets.h"
 
 // Personal libraries
 #include "wifiApp.h"
 #include "httpServer.h"
 #include "ledRGB.h"
-#include "lwip/sockets.h"
-#include "portmacro.h"
 #include "tasks_common.h"
-#include <stdint.h>
 
 
 /**************************
@@ -48,12 +47,12 @@
 
 	/* Variables */
 
+// Tag used for ESP serial console messages
+static const char TAG[] = "wifi_app";
+
 // Alocating Station WiFi credencials
 char ssid[WIFI_SSID_LENGTH];
 char passwd[WIFI_PASSWORD_LENGTH];
-
-// Tag used for ESP serial console messages
-static const char TAG[] = "wifi_app";
 
 // Used for returning the WiFi configuration
 wifi_config_t wifi_config_v;
@@ -65,6 +64,7 @@ static uint8_t g_retry_number;
 esp_netif_t * esp_netif_sta = NULL;
 esp_netif_t * esp_netif_ap  = NULL;
 
+// Variable to check if the state Id is valid
 static uint8_t g_qtd_states;
 
 
@@ -77,9 +77,9 @@ static QueueHandle_t wifi_app_queue_handle_t;
 	/* Static Functions */
 	
 // STATE MACHINE
-static void STATE_FUNC(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_message_t * st);
-static void STATE_FUNC(WIFI_APP_CONNECTING_FROM_HTTP_SERVER)(wifi_app_queue_message_t * st);
-static void STATE_FUNC(WIFI_APP_STA_CONNECTED_GOT_IP)(wifi_app_queue_message_t * st);
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_message_t * st);
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_CONNECTING_FROM_HTTP_SERVER)(wifi_app_queue_message_t * st);
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_STA_CONNECTED_GOT_IP)(wifi_app_queue_message_t * st);
 static void wifiApp_stateMachine_handler(wifi_app_queue_message_t * msg);
 
 // STA & AP FUNCTIONS
@@ -131,12 +131,12 @@ char * wifiApp_getStationPassword(void)
 **		STATE MACHINE	 **
 **************************/
 
- /**
-  * State Machine Function Definition according to sm_wifi_app_function
-  * function that defines the behavior on 
-  * [WIFI_APP_START_HTTP_SERVER] state
-  */
-static void STATE_FUNC(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_message_t * st)
+/**
+ * State Machine Function Definition according to sm_wifi_app_function
+ * function that defines the behavior on 
+ * [WIFI_APP_START_HTTP_SERVER] state
+ */
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_message_t * st)
 {
 	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_START_HTTP_SERVER]);
 	
@@ -144,12 +144,12 @@ static void STATE_FUNC(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_message_t * st
 	ledRGB_wifi_disconnected();
 }
 
- /**
-  * State Machine Function Definition according to sm_wifi_app_function
-  * function that defines the behavior on
-  * [WIFI_APP_CONNECTING_FROM_HTTP_SERVER] state
-  */
-static void STATE_FUNC(WIFI_APP_CONNECTING_FROM_HTTP_SERVER)(wifi_app_queue_message_t * st)
+/**
+ * State Machine Function Definition according to sm_wifi_app_function
+ * function that defines the behavior on
+ * [WIFI_APP_CONNECTING_FROM_HTTP_SERVER] state
+ */
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_CONNECTING_FROM_HTTP_SERVER)(wifi_app_queue_message_t * st)
 {
 	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_CONNECTING_FROM_HTTP_SERVER]);
 	
@@ -163,12 +163,12 @@ static void STATE_FUNC(WIFI_APP_CONNECTING_FROM_HTTP_SERVER)(wifi_app_queue_mess
 	httpServer_monitor_sendMessage(HTTP_WIFI_CONNECT_INIT);
 }
 
- /**
-  * State Machine Function Definition according to sm_wifi_app_function
-  * function that defines the behavior on
-  * [WIFI_APP_STA_CONNECTED_GOT_IP] state
-  */
-static void STATE_FUNC(WIFI_APP_STA_CONNECTED_GOT_IP)(wifi_app_queue_message_t * st)
+/**
+ * State Machine Function Definition according to sm_wifi_app_function
+ * function that defines the behavior on
+ * [WIFI_APP_STA_CONNECTED_GOT_IP] state
+ */
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_STA_CONNECTED_GOT_IP)(wifi_app_queue_message_t * st)
 {
 	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_STA_CONNECTED_GOT_IP]);
 	
@@ -176,12 +176,12 @@ static void STATE_FUNC(WIFI_APP_STA_CONNECTED_GOT_IP)(wifi_app_queue_message_t *
  	httpServer_monitor_sendMessage(HTTP_WIFI_CONNECT_SUCCESS);
 }
 
- /**
-  * State Machine Function Definition according to sm_wifi_app_function
-  * function that defines the behavior on
-  * [WIFI_APP_USER_REQUESTED_STA_DISCONNECT] state
-  */
-static void STATE_FUNC(WIFI_APP_USER_REQUESTED_STA_DISCONNECT)(wifi_app_queue_message_t * st)
+/**
+ * State Machine Function Definition according to sm_wifi_app_function
+ * function that defines the behavior on
+ * [WIFI_APP_USER_REQUESTED_STA_DISCONNECT] state
+ */
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_USER_REQUESTED_STA_DISCONNECT)(wifi_app_queue_message_t * st)
 {
 	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_STA_DISCONNECTED]);
 	
@@ -193,12 +193,12 @@ static void STATE_FUNC(WIFI_APP_USER_REQUESTED_STA_DISCONNECT)(wifi_app_queue_me
  	ledRGB_wifi_disconnected();
 }
 
- /**
-  * State Machine Function Definition according to sm_wifi_app_function
-  * function that defines the behavior on
-  * [WIFI_APP_STA_DISCONNECTED] state
-  */
-static void STATE_FUNC(WIFI_APP_STA_DISCONNECTED)(wifi_app_queue_message_t * st)
+/**
+ * State Machine Function Definition according to sm_wifi_app_function
+ * function that defines the behavior on
+ * [WIFI_APP_STA_DISCONNECTED] state
+ */
+static void WIFI_STATE_FUNC_NAME(WIFI_APP_STA_DISCONNECTED)(wifi_app_queue_message_t * st)
 {
 	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_STA_DISCONNECTED]);
 	
@@ -210,7 +210,7 @@ static void STATE_FUNC(WIFI_APP_STA_DISCONNECTED)(wifi_app_queue_message_t * st)
 // State Machine Table Functions - to be used in the loop
 sm_wifi_table_fn_t sm_wifi_state_table[] =
 {
-#define X(ID, ENUM) { STATE_FUNC(ENUM) }, 
+#define X(ID, ENUM) { WIFI_STATE_FUNC_NAME(ENUM) }, 
 	X_MACRO_WIFI_STATE_LIST
 #undef X
 };
