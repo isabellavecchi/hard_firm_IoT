@@ -15,63 +15,21 @@
 **************************/
 
 // C libraries
+#include <stdint.h>
 
 // ESP libraries
 
 // Personal libraries
 
 
-/**************************
-**		DEFINITIONS		 **
-**************************/
-
-
-
 
 /**************************
-**		STRUCTURES		 **
+**		DEFINITIONS	 	 **
 **************************/
 
-/**
- * Message IDs for the Menu application task
- */
-typedef enum sm_menu_app_state
-{
-	#define X(STATE) STATE,
-		X_MACRO_MENU_STATE_LIST
-	#undef X
-} sm_menu_app_state_e;
-
-/**
- * Messages for each Menu application task State
- */
-static const char * sm_menu_app_state_names[] = 
-{
-#define X(STATE) #STATE,
-	X_MACRO_MENU_STATE_LIST
-#undef X
-};
-
-/**
- * Structure for the message queue
- */
-typedef struct menu_app_queue_message_s
-{
-    sm_menu_app_state_e  menu_state;
-} menu_app_queue_message_t;
-
-
-// Defining a type for every function of the Menu state machine
-typedef void (*sm_menu_app_function)(menu_app_queue_message_t * st);
-
-// Creating a struct to hold those functions later on an array
-typedef struct sm_menu_table_fn_s
-{
-	sm_menu_app_function func;
-} sm_menu_table_fn_t;
-
-
-
+#ifndef INET6_ADDRSTRLEN
+#define INET6_ADDRSTRLEN 48
+#endif
 
 /**************************
 **		FUNCTIONS		 **
@@ -92,6 +50,11 @@ void sntp_timeSync_init(void);
  * @return local time buffer.
  */
 char* sntp_timeSync_getTime(void);
+
+/**
+ * A function that informs if the localtime is informed or not.
+ */
+uint8_t router_isLocalTimeSet(void);
 
 /**
  * Starts the SNTP server synchronization task.

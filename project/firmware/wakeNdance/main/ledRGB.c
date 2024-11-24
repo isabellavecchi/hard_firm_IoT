@@ -27,6 +27,9 @@
 // RGB LED Configuration Array
 ledRGB_info_t led_channels[RGB_LED_CHANNEL_NUM];
 
+// Static function to set Led color
+static void ledRGB_setColor(uint8_t red, uint8_t green, uint8_t blue);
+
 
 
 /**************************

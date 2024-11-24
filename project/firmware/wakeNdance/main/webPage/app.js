@@ -10,6 +10,7 @@ var wifiConnectInterval = null;
  */
 $(document).ready(function(){
 	// getUpdateStatus();
+	startLocalTimeInterval();
     getConnectInfo();
 	$("#connect_wifi").on("click", function(){
 		checkCredentials();
@@ -292,4 +293,24 @@ function disconnectWifi()
 	});
 	// Update the web page
 	setTimeout("location.reload(true);", 2000);
+}
+
+/**
+ * Sets the interval for displaying local time.
+ */
+function startLocalTimeInterval()
+{
+	setInterval(getLocalTime, 10000);
+}
+
+/**
+ * Gets the local time.
+ * @note connect the ESP32 to the internet and the time will be updated.
+ */
+function getLocalTime()
+{
+	$.getJSON('localTime.json', function(data)
+	{
+		$("#local_time").text(data["time"]);
+	});
 }

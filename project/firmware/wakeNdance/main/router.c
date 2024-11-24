@@ -10,6 +10,10 @@
 **		  INCLUDES	 	 **
 **************************/
 
+// C libraries
+#include <stdio.h>
+#include <string.h>
+
 // ESP libraries
 #include "esp_err.h"
 #include "esp_http_server.h"
@@ -22,10 +26,9 @@
 #include "esp_wifi.h"
 #include "esp_wifi_types_generic.h"
 #include "httpServer.h"
+#include "sntp_timeSync.h"
 #include "wifiApp.h"
 #include "router.h"
-#include <stdio.h>
-#include <string.h>
 
 
 
@@ -42,6 +45,35 @@ static const char TAG[] = "http_app_server";
 extern esp_netif_t * esp_netif_sta;
 extern esp_netif_t * esp_netif_ap;
 
+
+/* Static Functions */
+static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_json)(httpd_req_t *req);
+static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_status_json)(httpd_req_t *req);
+static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_wifi_connect_info_json)(httpd_req_t *req);
+static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_disconnect_json)(httpd_req_t *req);
+static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_local_time_json)(httpd_req_t *req);
+static void router_uri_register(void);
+
+
+
+/**************************
+**	   APP FUNCTIONS 	 **
+**************************/
+
+void router_setup(void)
+{
+	// Setup the SNTP operating mode
+//	sntp_timeSync_setup();
+	
+	// Allocate the api routes inside the httpServer code
+	httpServer_setApiRoutes(&router_uri_register);
+	
+	// Start WiFi
+	wifiApp_start();
+	
+	// Start the SNTP
+//	sntp_timeSync_init();
+}
 
 
 
@@ -174,6 +206,28 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_disconnect_json)(httpd_req_t
 }
 
 /**
+ * localTime.json handler responds by sending the local time.
+ * @param req HTTP request for which the uri needs to be handled.
+ * @return ESP_OK
+ */
+static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_local_time_json)(httpd_req_t *req)
+{
+	ESP_LOGI(TAG, "/localTime.json requested");
+	
+	char localTimeJSON[100] = {0};
+	
+	if(router_isLocalTimeSet())
+	{
+		sprintf(localTimeJSON, "{\"time\":\"%s\"}", sntp_timeSync_getTime());
+	}
+	
+	httpd_resp_set_type(req, "application/json");
+	httpd_resp_send(req, localTimeJSON, strlen(localTimeJSON));
+	
+	return ESP_OK;
+}
+
+/**
  * A function that will make the uri's available to the server.
  */
 static void router_uri_register(void)
@@ -183,24 +237,3 @@ static void router_uri_register(void)
 		X_MACRO_API_ROUTES_LIST
 	#undef X
 }
-
-
-
-
-
-void router_setup(void)
-{
-	// Allocate the api routes inside the httpServer code
-	httpServer_setApiRoutes(&router_uri_register);
-	
-	// Start WiFi
-	wifiApp_start();
-}
-
-
-
-
-
-
-
-

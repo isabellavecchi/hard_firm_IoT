@@ -10,20 +10,26 @@
 **************************/
 
 // C libraries
+#include <string.h>
+#include <time.h>
+#include <sys/time.h>
 
 // ESP libraries
+#include "esp_system.h"
+#include "esp_event.h"
 #include "esp_log.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "lwip/apps/sntp.h"
+#include "esp_attr.h"
+#include "esp_sleep.h"
+#include "nvs_flash.h"
+#include "esp_netif_sntp.h"
+#include "lwip/ip_addr.h"
+#include "esp_sntp.h"
 
 // Personal libraries
-#include "portmacro.h"
 #include "tasks_common.h"
 #include "httpServer.h"
 #include "wifiApp.h"
 #include "sntp_timeSync.h"
-#include <time.h>
 
 
 
@@ -39,14 +45,42 @@ static const char TAG[] = "nstp_tymeSync";
 // Buffer to allocate the current time string
 static char timeBuffer[100];
 
+// Flag that inform if local time is settled or not
+static uint8_t fg_isLocalTimeSet = 0;
+
 
 	/* FreeRTOS Structure */
 
+
+	/* Static Functions */
+static void sntp_timeSync_setInterval(struct timeval *tv);
+static uint8_t sntp_timeSync_isTimeDeprecated(struct tm * timeInfo);
+static void sntp_timeSync_obtainTime(void);
+static void sntp_timeSync_task(void * pvParam);
 
 
 /**************************
 **		FUNCTIONS		 **
 **************************/
+
+/**
+ * Function to customize time sync interval.
+ * @param timeval *tv struct with the interval settings.
+ */
+static void sntp_timeSync_setInterval(struct timeval *tv)
+{
+   settimeofday(tv, NULL);
+   ESP_LOGI(TAG, "Time is synchronized from custom code");
+   sntp_set_sync_status(SNTP_SYNC_STATUS_COMPLETED);
+}
+
+/**
+ * Function that notificates a time synchronization event.
+ */
+void time_sync_notification_cb(struct timeval *tv)
+{
+    ESP_LOGI(TAG, "Notification of a time synchronization event");
+}
 
 static uint8_t sntp_timeSync_isTimeDeprecated(struct tm * timeInfo)
 {
@@ -55,6 +89,7 @@ static uint8_t sntp_timeSync_isTimeDeprecated(struct tm * timeInfo)
 	localtime_r(&now, timeInfo);
 	
 	// Check the time, in case we need to initialize/reinitialize
+    // Is time set? If not, tm_year will be (1970 - 1900).
 	if(timeInfo->tm_year < (2016 - 1900))
 	{
 		ESP_LOGI(TAG, "Time is not set yet");
@@ -112,17 +147,15 @@ void sntp_timeSync_init(void)
 {
 	ESP_LOGI(TAG, "Initializing the SNTP service");
 	
-	// Set server name from where to pull timestamp data from
-	sntp_setservername(0, "pool.ntp.org");
+	esp_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
+	esp_netif_sntp_init(&sntp_config);
 	
-	// Initialize the servers
-	sntp_init();
-	
-	// Let the http_server know service is initialized
-	httpServer_monitor_sendMessage(HTTP_TIME_SERVICE_INITIALIZED);
+//	// Let the http_server know service is initialized
+//	httpServer_monitor_sendMessage(HTTP_TIME_SERVICE_INITIALIZED);
+
 	
 	// Set the local time zone
-	setenv("TZ", "America/Sao_Paulo", 1);
+	setenv("TZ", "BRST+3BRDT+2,M10.3.0,M2.3.0", 1);
 	tzset();
 }
 
@@ -144,6 +177,14 @@ char* sntp_timeSync_getTime(void)
 	}
 	
 	return timeBuffer;
+}
+
+/**
+ * A function that informs if the localtime is informed or not.
+ */
+uint8_t router_isLocalTimeSet(void)
+{
+	return fg_isLocalTimeSet;
 }
 
 /**

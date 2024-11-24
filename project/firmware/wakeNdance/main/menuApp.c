@@ -53,17 +53,37 @@ static QueueHandle_t menu_app_queue_handle_t;
 static esp_timer_handle_t menu_timer;
 
 
+	/* Static Functions */
+
+// Timer functions
+static void menuApp_timer_callback(void *arg);
+static void menuApp_timer_setup(void);
+static void menuApp_timer_start(void);
+static void menuApp_timer_stop(void);
+
+// State Machine functions
+static void MENU_STATE_FUNC_NAME(MENU_INIT)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_HOME)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_CLOSE)(menu_app_queue_message_t * st);
+static void menuApp_stateMachine_handler(menu_app_queue_message_t * msg);
+
+// App functions
+static void menuApp_setup(void);
+static void menuApp_task(void * pvParameters);
+
+
+
 /**************************
 **	  TIMER FUNCTIONS	 **
 **************************/
 
-static void menuApp_timer_stop(void);
 /**
  * Function that handles what should happen after menu_timer timeout.
  * Which in this case is because the menu buttons aren't hit for a while...
  * So the menu is closed.
  */
-static void menuApp_timer_callback(void *arg) {
+static void menuApp_timer_callback(void *arg)
+{
 	menuApp_timer_stop();
     ESP_LOGI(TAG, "Menu App inactive for too long, closing it...\n");
     menuApp_sendMessage(MENU_CLOSE);
@@ -72,7 +92,8 @@ static void menuApp_timer_callback(void *arg) {
 /**
  * Function that creates the timer and sets its callback function.
  */
-static void menuApp_timer_setup(void) {
+static void menuApp_timer_setup(void)
+{
     // Configurar o callback do timer
     esp_timer_create_args_t args = {
         .callback = menuApp_timer_callback,

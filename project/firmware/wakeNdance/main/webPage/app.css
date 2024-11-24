@@ -37,9 +37,14 @@ h4 {
     color: red;
 }
 
+#local_time {
+	color: #1d3557;
+}
+
 #latest_firmware, #latest_firmware_label {
 	display:inline;
 }
+
 #latest_firmware {
 	color: #1d3557;
 }

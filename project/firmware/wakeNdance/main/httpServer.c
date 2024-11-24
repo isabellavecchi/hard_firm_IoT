@@ -59,6 +59,19 @@ static TaskHandle_t task_http_server_monitor = NULL;
 static QueueHandle_t http_server_monitor_queue_handle;
 
 
+	/* Static Functions */
+
+// FreeRTOS functions
+static void httpServer_freeRTOS_monitor(void * parameter);
+static void httpServer_freeRTOS_setup(void);
+static void httpServer_freeRTOS_endTask(void);
+
+//App functions
+static void httpServer_configure(httpd_config_t * config);
+static void httpServer_uri_setFilesHandlersAndRoutes(void);
+static void httpServer_uri_setRoutesFromOtherFiles(void);
+
+
 
 /**************************
 ** UPPERLAYER FUNCTIONS	 **
@@ -146,11 +159,6 @@ static void httpServer_freeRTOS_monitor(void * parameter)
 //				case HTTP_OTA_UPDATE_FAILED:
 //					ESP_LOGI(TAG, "HTTP_OTA_UPDATE_FAILED");
 //					break;
-					
-				case HTTP_TIME_SERVICE_INITIALIZED:
-					ESP_LOGI(TAG, "HTTP_TIME_SERVICE_INITIALIZED");
-					
-					break;
 					
 				default:
 					break;

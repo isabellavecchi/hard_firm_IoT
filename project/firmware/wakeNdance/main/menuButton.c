@@ -43,6 +43,14 @@ static const char TAG[] = "menu_button";
 SemaphoreHandle_t menu_button_semaphore = NULL;
 
 
+/* Static Functions */
+
+// App Function
+static void menuButton_buttonConfig(void);
+static void menuButton_updateWakeNDanceApp_task(void * pvParam);
+
+
+
 /**************************
 **		APP FUNCTIONS	 **
 **************************/
