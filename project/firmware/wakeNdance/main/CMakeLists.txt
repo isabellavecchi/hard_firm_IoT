@@ -9,7 +9,7 @@ idf_component_register(
     		"router.c"
     		"menuApp.c"
     		"menuButton.c"
-    		"sntp_timeSync"
+    		"sntp_clock.c"
     INCLUDE_DIRS	"."
     EMBED_FILES	"webPage/app.css"
     			"webPage/app.js"

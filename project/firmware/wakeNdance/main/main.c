@@ -18,9 +18,6 @@
 #include "router.h"
 #include "menuApp.h"
 #include "menuButton.h"
-#include "sntp.h"
-#include "sntp_timeSync.h"
-
 
 
 /**************************

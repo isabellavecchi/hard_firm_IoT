@@ -26,7 +26,7 @@
 #include "esp_wifi.h"
 #include "esp_wifi_types_generic.h"
 #include "httpServer.h"
-#include "sntp_timeSync.h"
+#include "sntp_clock.h"
 #include "wifiApp.h"
 #include "router.h"
 
@@ -45,8 +45,16 @@ static const char TAG[] = "http_app_server";
 extern esp_netif_t * esp_netif_sta;
 extern esp_netif_t * esp_netif_ap;
 
+// Buffer for LocalTime json string
+char localTimeJSON[100] = {0};
+
 
 /* Static Functions */
+
+//App functions
+//static void router_wifiApp_connectedEvents(void);
+
+// URI handler functions
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_json)(httpd_req_t *req);
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_status_json)(httpd_req_t *req);
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_wifi_connect_info_json)(httpd_req_t *req);
@@ -63,17 +71,31 @@ static void router_uri_register(void);
 void router_setup(void)
 {
 	// Setup the SNTP operating mode
-//	sntp_timeSync_setup();
+//	sntp_clock_setup();
 	
 	// Allocate the api routes inside the httpServer code
 	httpServer_setApiRoutes(&router_uri_register);
+	
+	// Set the wifi connected event callback function
+//	wifiApp_setCallback(router_wifiApp_connectedEvents);
 	
 	// Start WiFi
 	wifiApp_start();
 	
 	// Start the SNTP
 //	sntp_timeSync_init();
+
+	// Clean localTimeJSON buffer
+	memset(localTimeJSON, 0, 100);
+	
+	
 }
+
+//static void router_wifiApp_connectedEvents(void)
+//{
+//	ESP_LOGI(TAG, "WiFi Application Connected!");
+//	sntp_clock_init();
+//}
 
 
 
@@ -212,17 +234,15 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_disconnect_json)(httpd_req_t
  */
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_local_time_json)(httpd_req_t *req)
 {
-	ESP_LOGI(TAG, "/localTime.json requested");
-	
-	char localTimeJSON[100] = {0};
-	
-	if(router_isLocalTimeSet())
-	{
-		sprintf(localTimeJSON, "{\"time\":\"%s\"}", sntp_timeSync_getTime());
-	}
-	
-	httpd_resp_set_type(req, "application/json");
-	httpd_resp_send(req, localTimeJSON, strlen(localTimeJSON));
+//	ESP_LOGI(TAG, "/localTime.json requested");
+//	
+//	if(strlen(localTimeJSON) > 0)
+//	{
+//		sprintf(localTimeJSON, "{\"time\":\"%s\"}", sntp_clock_getTime());
+//	}
+//	
+//	httpd_resp_set_type(req, "application/json");
+//	httpd_resp_send(req, localTimeJSON, strlen(localTimeJSON));
 	
 	return ESP_OK;
 }

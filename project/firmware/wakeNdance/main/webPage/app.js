@@ -10,7 +10,7 @@ var wifiConnectInterval = null;
  */
 $(document).ready(function(){
 	// getUpdateStatus();
-	startLocalTimeInterval();
+	// startLocalTimeInterval();
     getConnectInfo();
 	$("#connect_wifi").on("click", function(){
 		checkCredentials();

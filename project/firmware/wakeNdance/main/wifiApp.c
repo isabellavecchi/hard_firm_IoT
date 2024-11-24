@@ -50,6 +50,9 @@
 // Tag used for ESP serial console messages
 static const char TAG[] = "wifi_app";
 
+// Wifi connected event callback
+//static wifi_connected_event_callback_t wifi_connected_event_cb;
+
 // Alocating Station WiFi credencials
 char ssid[WIFI_SSID_LENGTH];
 char passwd[WIFI_PASSWORD_LENGTH];
@@ -128,6 +131,36 @@ char * wifiApp_getStationPassword(void)
 
 
 /**************************
+**		APP FUNCTIONS	 **
+**************************/
+
+ /**
+  * function that sets up the WiFi environment
+  * configurating WiFi & Soft Access and initializing TCP/IP
+  */
+static void wifiApp_setup(void)
+{
+	// Initialize the event handler
+	wifiApp_eventHandler_init();
+	
+	// Initialize the TCP/IP stack and WiFi config
+	wifiApp_defaultWifi_init();
+	
+	// SoftAP config
+	wifiApp_softAP_config();
+}
+
+///**
+// * Sets the callback function
+// */
+// void wifiApp_setCallback(wifi_connected_event_callback_t callbackFunction)
+// {
+//	 wifi_connected_event_cb = callbackFunction;
+// }
+
+
+
+/**************************
 **		STATE MACHINE	 **
 **************************/
 
@@ -142,6 +175,8 @@ static void WIFI_STATE_FUNC_NAME(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_mess
 	
 	httpServer_start();
 	ledRGB_wifi_disconnected();
+	
+//	wifi_connected_event_cb();
 }
 
 /**
@@ -231,6 +266,77 @@ static void wifiApp_stateMachine_handler(wifi_app_queue_message_t * msg)
 			}
 		}
 	}
+}
+
+
+
+/**************************
+**	FreeRTOS FUNCTIONS	 **
+**************************/
+ 
+/**
+ * Main task for the WiFi application
+ * where we initialize WiFi and and receive all queue messages
+ * which determine the flow of the application
+ * @param pvParameters parameter which can be passed to the task
+ */
+static void wifiApp_task(void * pvParameters)
+{
+	wifi_app_queue_message_t msg;
+	
+	// Setup WiFi environment
+	wifiApp_setup();
+	
+	// Start WiFi
+	ESP_ERROR_CHECK(esp_wifi_start());
+	
+	// Send first event message
+	wifiApp_sendMessage(WIFI_APP_START_HTTP_SERVER);
+	
+	wifiApp_stateMachine_handler(&msg);
+}
+
+/**
+ * Sends a message to the queue
+ * @param msgId message ID from the wifi_app_message_e enum
+ * @return pdTRUE if an item was successfully sent to the queue, otherwise pdFALSE
+ * @TODO colocar um enum status pra indicar falha ou sucesso
+ */
+BaseType_t wifiApp_sendMessage(sm_wifi_app_state_e msgId)
+{
+	wifi_app_queue_message_t msg;
+	msg.wifiApp_state = msgId;
+	return xQueueGenericSend(wifi_app_queue_handle_t, &msg, portMAX_DELAY, queueSEND_TO_BACK );
+}
+
+/**
+ * Starts the WiFi RTOS task
+ */
+void wifiApp_start(void)
+{
+	ESP_LOGI(TAG, "STARTING WIFI APPLICATION");
+	
+	// Start Wifi started LED
+	ledRGB_wifiApp_started();
+	
+	// Disable default WiFi logging messages
+	esp_log_level_set("WiFi", ESP_LOG_NONE);
+	
+	// Clearing memory for the WiFi configuration
+	memset(&wifi_config_v, 0x00, sizeof(wifi_config_t)); 
+	
+	// Create message queue
+	wifi_app_queue_handle_t = xQueueCreate(3, sizeof(wifi_app_queue_message_t));
+	
+	// Start the WiFi application task
+	xTaskCreatePinnedToCore(	&wifiApp_task,
+								"wifiApp_task",
+								WIFI_APP_TASK_STACK_SIZE,
+								NULL,
+								WIFI_APP_TASK_PRIORITY,
+								NULL,
+								WIFI_APP_TASK_CORE_ID);
+							
 }
 
 
@@ -414,97 +520,4 @@ static void wifiApp_sta_disconnectedLogInfo(void * eventData_p)
 {
 	wifi_event_sta_disconnected_t *wifi_event = (wifi_event_sta_disconnected_t *)eventData_p;
     ESP_LOGI(TAG, "WiFi disconnected, reason: %d", wifi_event->reason);
-}
-
-
-
-/**************************
-**		APP FUNCTIONS	 **
-**************************/
-
- /**
-  * function that sets up the WiFi environment
-  * configurating WiFi & Soft Access and initializing TCP/IP
-  */
-static void wifiApp_setup(void)
-{
-	// Initialize the event handler
-	wifiApp_eventHandler_init();
-	
-	// Initialize the TCP/IP stack and WiFi config
-	wifiApp_defaultWifi_init();
-	
-	// SoftAP config
-	wifiApp_softAP_config();
-}
-
-
-
-/**************************
-**	FreeRTOS FUNCTIONS	 **
-**************************/
- 
-/**
- * Main task for the WiFi application
- * where we initialize WiFi and and receive all queue messages
- * which determine the flow of the application
- * @param pvParameters parameter which can be passed to the task
- */
-static void wifiApp_task(void * pvParameters)
-{
-	wifi_app_queue_message_t msg;
-	
-	// Setup WiFi environment
-	wifiApp_setup();
-	
-	// Start WiFi
-	ESP_ERROR_CHECK(esp_wifi_start());
-	
-	// Send first event message
-	wifiApp_sendMessage(WIFI_APP_START_HTTP_SERVER);
-	
-	wifiApp_stateMachine_handler(&msg);
-}
-
-/**
- * Sends a message to the queue
- * @param msgId message ID from the wifi_app_message_e enum
- * @return pdTRUE if an item was successfully sent to the queue, otherwise pdFALSE
- * @TODO colocar um enum status pra indicar falha ou sucesso
- */
-BaseType_t wifiApp_sendMessage(sm_wifi_app_state_e msgId)
-{
-	wifi_app_queue_message_t msg;
-	msg.wifiApp_state = msgId;
-	return xQueueGenericSend(wifi_app_queue_handle_t, &msg, portMAX_DELAY, queueSEND_TO_BACK );
-}
-
-/**
- * Starts the WiFi RTOS task
- */
-void wifiApp_start(void)
-{
-	ESP_LOGI(TAG, "STARTING WIFI APPLICATION");
-	
-	// Start Wifi started LED
-	ledRGB_wifiApp_started();
-	
-	// Disable default WiFi logging messages
-	esp_log_level_set("WiFi", ESP_LOG_NONE);
-	
-	// Clearing memory for the WiFi configuration
-	memset(&wifi_config_v, 0x00, sizeof(wifi_config_t)); 
-	
-	// Create message queue
-	wifi_app_queue_handle_t = xQueueCreate(3, sizeof(wifi_app_queue_message_t));
-	
-	// Start the WiFi application task
-	xTaskCreatePinnedToCore(	&wifiApp_task,
-								"wifiApp_task",
-								WIFI_APP_TASK_STACK_SIZE,
-								NULL,
-								WIFI_APP_TASK_PRIORITY,
-								NULL,
-								WIFI_APP_TASK_CORE_ID);
-							
 }
