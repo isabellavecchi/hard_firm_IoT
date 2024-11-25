@@ -683,6 +683,24 @@
           "label": "PN1",
           "name": "PN1",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Price1",
+          "name": "Price1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description1",
+          "name": "Description1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MOUSER1",
+          "name": "MOUSER1",
+          "show": false
         }
       ],
       "filter_string": "",
