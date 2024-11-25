@@ -1,0 +1,9 @@
+Manufacturer=Diodes Incorporated
+PartNumber=PAM8302AASCR
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=8
+Version=8.1
+Released=2016-02-16 13:39:12
+Downloaded=2024-08-09 19:24:10
+3D=Y

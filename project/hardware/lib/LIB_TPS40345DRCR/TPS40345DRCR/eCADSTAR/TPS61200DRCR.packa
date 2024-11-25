@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TPS40345DRCR"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-04-22-12:01:18)
+    (mountForm default
+        (footprintRef "TPS61200DRCR")
+        (spec "System")
+    )
+)

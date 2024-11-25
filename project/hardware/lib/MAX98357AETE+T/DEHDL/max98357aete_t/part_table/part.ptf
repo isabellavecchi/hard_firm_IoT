@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'MAX98357AETE_T'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Analog Devices", "MAX98357AETE+T" (!) = "", "QFN50P300X300X80-17N", "Quad Flat No-Lead", "700-MAX98357AETE+T", "https://www.mouser.co.uk/ProductDetail/Analog-Devices-Maxim-Integrated/MAX98357AETE%2bT?qs=AAveGqk956HhNpoJjF5x2g%3D%3D", "Audio Amplifiers Digital Input Class D Amplifier", "https://datasheets.maximintegrated.com/en/ds/MAX98357A-MAX98357B.pdf", "0.8 mm"
+END_PART
+
+END.

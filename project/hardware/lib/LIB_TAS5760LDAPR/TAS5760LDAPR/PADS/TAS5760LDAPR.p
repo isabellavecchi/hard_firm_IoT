@@ -1,0 +1,50 @@
+*PADS-LIBRARY-PART-TYPES-V9*
+
+TAS5760LDAPR SOP65P810X120-33N I ANA 7 1 0 0 0
+TIMESTAMP 2024.09.14.23.25.13
+"Mouser Part Number" 595-TAS5760LDAPR
+"Mouser Price/Stock" https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TAS5760LDAPR?qs=ZLZ8689ywa3IfleZRfchzQ%3D%3D
+"Manufacturer_Name" Texas Instruments
+"Manufacturer_Part_Number" TAS5760LDAPR
+"Description" Closed Loop I2S Input Amplifier with Power Limiter, PVDDmax of 16.5V
+"Datasheet Link" http://www.ti.com/lit/gpn/tas5760l
+"Geometry.Height" 1.2mm
+GATE 1 33 0
+TAS5760LDAPR
+1 0 U AVDD
+2 0 U SFT_CLIP
+3 0 U ANA_REG
+4 0 U VCOM
+5 0 U ANA_REF
+6 0 U \SPK_FAULT
+7 0 U \SPK_SD
+8 0 U FREQ/SDA
+9 0 U PBTL/SCL
+10 0 U DVDD
+11 0 U SPK_GAIN0
+12 0 U SPK_GAIN1
+13 0 U SPK_SLEEP/ADR
+14 0 U MCLK
+15 0 U SCLK
+16 0 U SDIN
+33 0 U EP
+32 0 U GVDD_REG
+31 0 U GGND
+30 0 U BSTRPA+
+29 0 U SPK_OUTA+
+28 0 U PVDD_2
+27 0 U PGND_2
+26 0 U SPK_OUTA-
+25 0 U BSTRPA-
+24 0 U BSTRPB-
+23 0 U SPK_OUTB-
+22 0 U PGND_1
+21 0 U PVDD_1
+20 0 U SPK_OUTB+
+19 0 U BSTRPB+
+18 0 U DGND
+17 0 U LRCK
+
+*END*
+*REMARK* SamacSys ECAD Model
+753274/1167680/2.50/33/3/Integrated Circuit

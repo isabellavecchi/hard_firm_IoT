@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "GMC020080HR"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "GMC020080HR")
+        (spec "default")
+    )
+)

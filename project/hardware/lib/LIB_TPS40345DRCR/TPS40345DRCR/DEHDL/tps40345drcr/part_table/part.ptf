@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TPS40345DRCR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TPS40345DRCR" (!) = "", "TPS61200DRCR", "Other", "595-TPS40345DRCR", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS40345DRCR?qs=W0yvOO0ixfHYhBNpszvmBg%3D%3D", "DC/DC Cntrlr Single-OUT Step Down 660kHz 10-Pin VSON EP T/R", "http://www.ti.com/lit/gpn/tps40303", "0.8 mm"
+END_PART
+
+END.

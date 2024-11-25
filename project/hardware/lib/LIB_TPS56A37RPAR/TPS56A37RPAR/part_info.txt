@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPS56A37RPAR
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=13
+Version=1.2
+Released=2024-04-08 10:41:50
+Downloaded=2024-09-15 11:22:29
+3D=Y

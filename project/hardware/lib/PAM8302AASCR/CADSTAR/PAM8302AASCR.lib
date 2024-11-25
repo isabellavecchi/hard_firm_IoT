@@ -1,0 +1,16 @@
+.PAM8302AASCR :1 ;Amplifier IC 1-Channel (Mono) Class D 8-MSOP
+SOP65P490X110-8N
+*STM IC
+*NGS
+*PLB 1="'SD'" 2="NC" 3="IN+" 4="IN-" 5="VO+" 6="VDD" 7="GND" 8="VO-"
+*MXP 8
+*DFN PAM8302AASCR
+~!Mouser Part Number (621-PAM8302AASCR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/PAM8302AASCR?qs=pYVYkI7xuRXTVZEQSGcDyg%3D%3D)
+~!Manufacturer_Name (Diodes Incorporated)
+~!Manufacturer_Part_Number (PAM8302AASCR)
+~!Link Datasheet (https://www.diodes.com/assets/Datasheets/PAM8302A.pdf)
+~!Height (1.1mm)
+~!3D_Model (PAM8302AASCR)
+PAM8302AASCR
+1.1!U 2.1!U 3.1!U 4.1!U 8.1!U 7.1!U 6.1!U 5.1!U 

@@ -1,0 +1,16 @@
+.CSD17575Q3T :1 ;30V, N ch NexFET MOSFET, single SON3x3, 3.2mOhm
+CSD17575Q3T
+*STM Q
+*NGS
+*PLB 1="S_1" 2="S_2" 3="S_3" 4="G" 5="D_1" 6="D_2" 7="D_3" 8="D_4" 9="D_5"
+*MXP 9
+*DFN CSD17575Q3T
+~!Mouser Part Number (595-CSD17575Q3T)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CSD17575Q3T?qs=1MXlzafEN3%252BV4dVr3K7EZA%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (CSD17575Q3T)
+~!Link Datasheet (http://www.ti.com/lit/gpn/CSD17575Q3)
+~!Height (1.1mm)
+~!3D_Model (CSD17575Q3T)
+CSD17575Q3T
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 

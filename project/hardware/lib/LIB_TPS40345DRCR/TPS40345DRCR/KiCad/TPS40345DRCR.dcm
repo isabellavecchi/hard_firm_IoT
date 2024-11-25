@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPS40345DRCR
+D DC/DC Cntrlr Single-OUT Step Down 660kHz 10-Pin VSON EP T/R
+K
+F http://www.ti.com/lit/gpn/tps40303
+$ENDCMP
+#
+#End Doc Library
