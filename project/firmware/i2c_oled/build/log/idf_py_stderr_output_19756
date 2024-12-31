@@ -1,0 +1,443 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x400490d5: usb_uart_device_rx_one_char in ROM
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m--- 0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+[0m
+[0;33m--- 0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a32: panic_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/panic.c:463
+0x4037a209: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/esp_system_chip.c:92
+0x40380b3d: abort at C:/Espressif/frameworks/esp-idf-v5.3/components/newlib/abort.c:38
+0x4037a1ff: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/esp_err.c:49
+0x4200959c: app_main at C:/Users/IVecchiFerreira/Documents/codes/estudos/hard_firm_IoT/project/firmware/i2c_oled/main/i2c_oled_example_main.c:102 (discriminator 1)
+0x420317a3: main_task at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/app_startup.c:208
+0x4037acf9: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037596c: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.3/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0m

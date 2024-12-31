@@ -13,4 +13,5 @@
 	<storageModule moduleId="org.eclipse.cdt.core.pathentry">
 		<pathentry excluding="**/CMakeFiles/**" kind="out" path="build"/>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

@@ -1,0 +1,69 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400490d5
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2dc4
+entry 0x403c8914
+[0;32mI (26) boot: ESP-IDF -128-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 12 2024 19:54:48[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=107b8h ( 67512) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=000207e0 vaddr=3fc92d00 size=02ab4h ( 10932) load[0m
+[0;32mI (115) esp_image: segment 2: paddr=0002329c vaddr=40374000 size=0cd7ch ( 52604) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=32174h (205172) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=0006219c vaddr=40380d7c size=01f08h (  7944) load[0m
+[0;32mI (175) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (175) boot: Disabling RNG early entropy source...[0m
+[0;32mI (187) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     i2c_oled[0m
+[0;32mI (205) app_init: App version:      03f4301[0m
+[0;32mI (210) app_init: Compile time:     Dec 12 2024 19:45:02[0m
+[0;32mI (216) app_init: ELF file SHA256:  74030c476...[0m
+[0;32mI (221) app_init: ESP-IDF:          -128-NOTFOUND[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (231) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (236) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (241) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FC9E478 len 0004B298 (300 KiB): RAM[0m
+[0;32mI (254) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (261) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (274) spi_flash: detected chip: gd[0m
+[0;32mI (277) spi_flash: flash io: dio[0m
+[0;33mW (281) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (309) main_task: Started on CPU0[0m
+[0;32mI (319) main_task: Calling app_main()[0m
+[0;32mI (319) example: Initialize I2C bus[0m
+[0;32mI (319) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (329) gpio: GPIO[2]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (339) example: Install panel IO[0m
+[0;32mI (339) example: Install SSD1306 panel driver[0m
+[0;32mI (343) gpio: GPIO[2]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (353) example: Install panel IO[0m
+[0;32mI (353) example: Install SSD1306 panel driver[0m
+[0;32mI (353) example: Install SSD1306 panel driver[0m
+[0;32mI (343) gpio: GPIO[2]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (353) example: Install panel IO[0m
+[0;32mI (353) example: Install SSD1306 panel driver[0m
+[0;32mI (353) example: Install SSD1306 panel driver[0m
