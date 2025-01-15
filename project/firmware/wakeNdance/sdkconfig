@@ -556,8 +556,8 @@ CONFIG_PARTITION_TABLE_MD5=y
 #
 # Wifi Configuration
 #
-CONFIG_ESP_WIFI_SSID="myssid"
-CONFIG_ESP_WIFI_PASSWORD="mypassword"
+CONFIG_ESP_WIFI_SSID="VECCHI_2G"
+CONFIG_ESP_WIFI_PASSWORD="tid884400"
 # end of Wifi Configuration
 
 #

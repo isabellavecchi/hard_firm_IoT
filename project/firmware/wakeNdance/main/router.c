@@ -18,6 +18,7 @@
 #include "esp_err.h"
 #include "esp_http_server.h"
 #include "esp_log.h"
+#include "cJSON.h"
 
 // Personal libraries
 #include "esp_netif.h"
@@ -46,7 +47,8 @@ extern esp_netif_t * esp_netif_sta;
 extern esp_netif_t * esp_netif_ap;
 
 // Buffer for LocalTime json string
-char localTimeJSON[100] = {0};
+char localJSONObjBuffer[BUFFER_MAX_SIZE] = {0};
+char localTimeJSON[BUFFER_MAX_SIZE] = {0};
 
 
 /* Static Functions */
@@ -86,7 +88,7 @@ void router_setup(void)
 //	sntp_timeSync_init();
 
 	// Clean localTimeJSON buffer
-	memset(localTimeJSON, 0, 100);
+	memset(localTimeJSON, 0, BUFFER_MAX_SIZE);
 	
 	
 }
@@ -111,35 +113,65 @@ void router_setup(void)
  */
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_json)(httpd_req_t *req)
 {	
-	size_t lenSSID = 0, lenPass = 0;
-	char * ssid_p = NULL, * pwd_p = NULL;
+	// char localJSONObjBuffer[BUFFER_MAX_SIZE];
+	size_t lenBodyJson = 0;
+	size_t lenPass;
+	size_t lenSSID;
+
+	char * ssid_p;
+	char * pwd_p;
 	wifi_config_t * wifi_config_p = NULL;
 	
 	ESP_LOGI(TAG, "/wifiConnect.json requested");
 	
-	// Get SSID header
-	lenSSID = httpd_req_get_hdr_value_len(req, "my-connect-ssid") + 1;
-	if (lenSSID > 1)
-	{
+	memset(localJSONObjBuffer,0, BUFFER_MAX_SIZE);
+
+	// Get Request Body
+	lenBodyJson = req->content_len;
+	httpd_req_recv(req, localJSONObjBuffer, lenBodyJson);
+	printf("Data sent by the client: %.*s\n",lenBodyJson, localJSONObjBuffer);
+
+	// Parse the JSON data (example using cJSON)
+	cJSON *body_json = cJSON_Parse(localJSONObjBuffer);
+	if (!body_json) {
+		ESP_LOGE(TAG, "Failed to parse JSON data");
+		cJSON_Delete(body_json);
+		return ESP_FAIL;
+	}
+
+	cJSON *ssid_json = cJSON_GetObjectItemCaseSensitive(body_json, "c_ssid");
+	cJSON *pwd_json = cJSON_GetObjectItemCaseSensitive(body_json, "c_pwd");
+
+	if (!ssid_json || !pwd_json) {
+		ESP_LOGE(TAG, "Missing 'c_ssid' or 'c_pwd' in JSON data");
+		cJSON_Delete(body_json);
+		return ESP_FAIL;
+	}
+
+	if (!cJSON_IsString(ssid_json) || !cJSON_IsString(pwd_json)) {
+		ESP_LOGE(TAG, "Invalid data type for 'c_ssid' or 'c_pwd'");
+		cJSON_Delete(body_json);
+		return ESP_FAIL;
+	}
+
+
+	// Get SSID from body
+	// if (lenSSID > 1)
+	// {
 		ssid_p = wifiApp_getStationSSID();
 		memset(ssid_p, 0x00, WIFI_SSID_LENGTH);
-		if(httpd_req_get_hdr_value_str(req, "my-connect-ssid",ssid_p, lenSSID))
-		{
-			ESP_LOGI(TAG, "router_wifi_connect_json_handler: Found header => my-connect-ssid: %s", ssid_p);
-		}
-	}
+		ssid_p = ssid_json->valuestring;
+		lenSSID = strlen(ssid_p);
+	// // }
 	
-	// Get Password header
-	lenPass = httpd_req_get_hdr_value_len(req, "my-connect-pwd") + 1;
-	if (lenPass > 1)
-	{
+	// Get Password from body
+	// if (lenPass > 1)
+	// {
 		pwd_p = wifiApp_getStationPassword();
 		memset(pwd_p, 0x00, WIFI_PASSWORD_LENGTH);
-		if(httpd_req_get_hdr_value_str(req, "my-connect-pwd",pwd_p, lenPass))
-		{
-			ESP_LOGI(TAG, "router_wifi_connect_json_handler: Found header => my-connect-pwd: %s", pwd_p);
-		}
-	}
+		pwd_p = pwd_json->valuestring;
+		lenPass = strlen(pwd_p);
+	// }
 	
 	// Update the WiFi networks configuration and let the WiFi applications know
 	wifi_config_p = wifiApp_getWifiConfig();
@@ -147,6 +179,8 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_json)(httpd_req_t *r
 	memcpy(wifi_config_p->sta.ssid, ssid_p, lenSSID);
 	memcpy(wifi_config_p->sta.password, pwd_p, lenPass);
 	wifiApp_sendMessage(WIFI_APP_CONNECTING_FROM_HTTP_SERVER);
+
+	cJSON_Delete(body_json);
 	
 	return ESP_OK;
 }
@@ -163,11 +197,11 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_status_json)(httpd_r
 {	
 	ESP_LOGI(TAG, "/wifiConnectStatus requested");
 	
-	char statusJSON[100];
+	memset(localJSONObjBuffer, 0, BUFFER_MAX_SIZE);
 	
-	sprintf(statusJSON, "{\"wifi_connect_status_json\":%d}", *httpServer_get_wifiConnectStatus());
+	sprintf(localJSONObjBuffer, "{\"wifi_connect_status_json\":%d}", *httpServer_get_wifiConnectStatus());
 	httpd_resp_set_type(req, "application/json");
-	httpd_resp_send(req, statusJSON, strlen(statusJSON));
+	httpd_resp_send(req, localJSONObjBuffer, strlen(localJSONObjBuffer));
 	
 	return ESP_OK;
 }
@@ -189,10 +223,8 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_wifi_connect_info_json)(httpd
 	char netmask[IP4ADDR_STRLEN_MAX];
 	char gateway[IP4ADDR_STRLEN_MAX];
 
-	ESP_LOGI(TAG, "EH PRA MOSTRAR OS TREM DA INTERNET AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
 	if (*httpServer_get_wifiConnectStatus() == HTTP_WIFI_STATUS_CONNECT_SUCCESS)
 	{
-		ESP_LOGI(TAG, "ERA PRA TER MOSTRADO OS TREM DA INTERNET AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
 		wifi_ap_record_t wifi_data;
 		ESP_ERROR_CHECK(esp_wifi_sta_get_ap_info(&wifi_data));
 		char * ssid = (char*)wifi_data.ssid;
