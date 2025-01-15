@@ -30,8 +30,8 @@
 #define WIFI_AP_SSID_HIDDEN		0					// AP visible = 0
 #define WIFI_AP_MAX_CONNECTIONS	5					// how many people can connect to AP
 #define WIFI_AP_BEACON_INTERVAL	100					// MAYBE IT SHOULD BE BIGGER FOR NOT GETTING IN THE WAY OF SONG
-#define WIFI_AP_IP				"192.168.0.10"		// AP default IP
-#define WIFI_AP_GATEWAY			"192.168.0.10"		// AP default gateway
+#define WIFI_AP_IP				"192.168.0.1"		// AP default IP
+#define WIFI_AP_GATEWAY			"192.168.0.1"		// AP default gateway
 #define WIFI_AP_NETMASK			"255.255.255.0"     // AP netmask
 #define WIFI_AP_BANDWIDTH		WIFI_BW_HT20		// AP bandwidth = 20 MHz, the 40 will be for station
 #define WIFI_STA_POWER_SAVE		WIFI_PS_NONE		// Power save is not being used

@@ -32,6 +32,8 @@
 **		DEFINITIONS		 **
 **************************/
 
+#define BUFFER_MAX_SIZE 100
+
 #define APP_URI_FUNCTION_HANDLER_NAME(uri) webRouter_##uri##_handler 
 
 #define X_MACRO_API_ROUTES_LIST \

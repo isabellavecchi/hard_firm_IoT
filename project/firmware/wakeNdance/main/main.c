@@ -18,6 +18,7 @@
 #include "router.h"
 #include "menuApp.h"
 #include "menuButton.h"
+#include "displayOled.h"
 
 
 /**************************
@@ -51,6 +52,8 @@ void app_main(void)
 	
 	// Setting up the buttons handler for menu
 	menuButton_setup();
+
+	displayOled_loop();
 }
 
 
