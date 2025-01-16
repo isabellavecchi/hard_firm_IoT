@@ -1,0 +1,22 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40375d95: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system/panic.c:454
+0x4037d9a5: esp_system_abort at C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system/port/esp_system_chip.c:92
+0x40385ae1: __assert_func at C:/Espressif/frameworks/esp-idf-v5.4/components/newlib/assert.c:80
+0x4037e6aa: spinlock_acquire at C:/Espressif/frameworks/esp-idf-v5.4/components/esp_hw_support/include/spinlock.h:142 (discriminator 1)
+ (inlined by) xPortEnterCriticalTimeout at C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479 (discriminator 1)
+0x4037e274: vPortEnterCritical at C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+ (inlined by) xQueueSemaphoreTake at C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/FreeRTOS-Kernel/queue.c:1727
+0x4200c561: example_wifi_sta_do_connect at C:/Espressif/frameworks/esp-idf-v5.4/examples/common_components/protocol_examples_common/wifi_connect.c:174
+0x4200c777: example_wifi_connect at C:/Espressif/frameworks/esp-idf-v5.4/examples/common_components/protocol_examples_common/wifi_connect.c:247
+0x4200bf9b: example_connect at C:/Espressif/frameworks/esp-idf-v5.4/examples/common_components/protocol_examples_common/connect.c:99
+0x4200bb84: obtain_time at C:/Users/isabe/Documents/Documentos/espressif-ide/display/hard_firm_IoT/project/firmware/sntp_idf_example/main/sntp_example_main.c:175
+0x4200bca6: app_main at C:/Users/isabe/Documents/Documentos/espressif-ide/display/hard_firm_IoT/project/firmware/sntp_idf_example/main/sntp_example_main.c:63
+0x420888f3: main_task at C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/app_startup.c:208
+0x4037e43d: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375cd4: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

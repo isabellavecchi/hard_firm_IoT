@@ -54,7 +54,7 @@ char localTimeJSON[BUFFER_MAX_SIZE] = {0};
 /* Static Functions */
 
 //App functions
-//static void router_wifiApp_connectedEvents(void);
+static void router_wifiApp_connectedEvents(void);
 
 // URI handler functions
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_json)(httpd_req_t *req);
@@ -73,19 +73,19 @@ static void router_uri_register(void);
 void router_setup(void)
 {
 	// Setup the SNTP operating mode
-//	sntp_clock_setup();
+	sntp_clock_setup();
 	
 	// Allocate the api routes inside the httpServer code
 	httpServer_setApiRoutes(&router_uri_register);
 	
 	// Set the wifi connected event callback function
-//	wifiApp_setCallback(router_wifiApp_connectedEvents);
+	// wifiApp_setCallback(router_wifiApp_connectedEvents);
 	
 	// Start WiFi
 	wifiApp_start();
 	
-	// Start the SNTP
-//	sntp_timeSync_init();
+	// // Start the SNTP
+	// sntp_clock_init();
 
 	// Clean localTimeJSON buffer
 	memset(localTimeJSON, 0, BUFFER_MAX_SIZE);
@@ -93,11 +93,11 @@ void router_setup(void)
 	
 }
 
-//static void router_wifiApp_connectedEvents(void)
-//{
-//	ESP_LOGI(TAG, "WiFi Application Connected!");
-//	sntp_clock_init();
-//}
+static void router_wifiApp_connectedEvents(void)
+{
+	ESP_LOGI(TAG, "WiFi Application Connected!");
+	sntp_clock_init();
+}
 
 
 
@@ -266,15 +266,15 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_disconnect_json)(httpd_req_t
  */
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_local_time_json)(httpd_req_t *req)
 {
-//	ESP_LOGI(TAG, "/localTime.json requested");
-//	
-//	if(strlen(localTimeJSON) > 0)
-//	{
-//		sprintf(localTimeJSON, "{\"time\":\"%s\"}", sntp_clock_getTime());
-//	}
-//	
-//	httpd_resp_set_type(req, "application/json");
-//	httpd_resp_send(req, localTimeJSON, strlen(localTimeJSON));
+	ESP_LOGI(TAG, "/localTime.json requested");
+	
+	if(strlen(localTimeJSON) > 0)
+	{
+		sprintf(localTimeJSON, "{\"time\":\"%s\"}", sntp_clock_getTime());
+	}
+	
+	httpd_resp_set_type(req, "application/json");
+	httpd_resp_send(req, localTimeJSON, strlen(localTimeJSON));
 	
 	return ESP_OK;
 }

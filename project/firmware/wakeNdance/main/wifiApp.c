@@ -51,7 +51,7 @@
 static const char TAG[] = "wifi_app";
 
 // Wifi connected event callback
-//static wifi_connected_event_callback_t wifi_connected_event_cb;
+static wifi_connected_event_callback_t wifi_connected_event_cb;
 
 // Alocating Station WiFi credencials
 char ssid[WIFI_SSID_LENGTH];
@@ -150,13 +150,13 @@ static void wifiApp_setup(void)
 	wifiApp_softAP_config();
 }
 
-///**
-// * Sets the callback function
-// */
-// void wifiApp_setCallback(wifi_connected_event_callback_t callbackFunction)
-// {
-//	 wifi_connected_event_cb = callbackFunction;
-// }
+/**
+* Sets the callback function
+*/
+void wifiApp_setCallback(wifi_connected_event_callback_t callbackFunction)
+{
+	 wifi_connected_event_cb = callbackFunction;
+}
 
 
 
@@ -176,7 +176,7 @@ static void WIFI_STATE_FUNC_NAME(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_mess
 	httpServer_start();
 	ledRGB_wifi_disconnected();
 	
-//	wifi_connected_event_cb();
+	wifi_connected_event_cb();
 }
 
 /**

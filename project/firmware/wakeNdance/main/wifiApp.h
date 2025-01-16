@@ -141,10 +141,10 @@ BaseType_t wifiApp_sendMessage(sm_wifi_app_state_e msgId);
  */
 void wifiApp_start(void);
 
-///**
-// * Sets the callback function
-// */
-// void wifiApp_setCallback(wifi_connected_event_callback_t cbFunction);
+/**
+* Sets the callback function
+*/
+void wifiApp_setCallback(wifi_connected_event_callback_t cbFunction);
 
 
 #endif /* MAIN_WIFIAPP_H_ */
