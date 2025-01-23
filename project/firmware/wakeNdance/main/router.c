@@ -27,7 +27,6 @@
 #include "esp_wifi.h"
 #include "esp_wifi_types_generic.h"
 #include "httpServer.h"
-#include "sntp_clock.h"
 #include "wifiApp.h"
 #include "router.h"
 
@@ -72,9 +71,6 @@ static void router_uri_register(void);
 
 void router_setup(void)
 {
-	// Setup the SNTP operating mode
-//	sntp_clock_setup();
-	
 	// Allocate the api routes inside the httpServer code
 	httpServer_setApiRoutes(&router_uri_register);
 	
@@ -84,9 +80,6 @@ void router_setup(void)
 	// Start WiFi
 	wifiApp_start();
 	
-	// Start the SNTP
-//	sntp_timeSync_init();
-
 	// Clean localTimeJSON buffer
 	memset(localTimeJSON, 0, BUFFER_MAX_SIZE);
 	

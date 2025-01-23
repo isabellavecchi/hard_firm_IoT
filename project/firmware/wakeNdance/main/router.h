@@ -25,7 +25,6 @@
 #include "esp_wifi_types_generic.h"
 #include "wifiApp.h"
 #include "httpServer.h"
-#include "sntp.h"
 
 
 /**************************
