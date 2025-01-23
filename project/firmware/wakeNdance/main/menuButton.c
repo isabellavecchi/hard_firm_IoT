@@ -60,6 +60,7 @@ static esp_timer_handle_t menu_timer;
 
 // App Function
 static void menuButton_buttonConfig(void);
+static void menuButton_buttonConfigISR(void);
 static void menuButton_updateWakeNDanceApp_task(void * pvParam);
 
 // Debouncing Funciton
@@ -82,8 +83,8 @@ static void menuButton_timer_reset(void);
  * ISR handler for the menu (BOOT) button
  * @param arg parameter which can be passed to the ISR handler.
  */
- void IRAM_ATTR menuButton_isr_handler(void * arg)
- {
+ void IRAM_ATTR INTERRUPT_BUTTON_PUSH_FN(MENU_BUTTON)(void * arg)
+{
 	if(menuApp_hasDebouncePeriodPassed())
 	{
 		if(!fg_isMenuActive)
@@ -100,6 +101,52 @@ static void menuButton_timer_reset(void);
 
 			// Send an OK message to menu app wake and dance state machine
 			menuApp_sendMessage(MENU_OK);
+		}
+	}
+ }
+
+/**
+ * ISR handler for the menu (LEFT_BUTTON) button
+ * @param arg parameter which can be passed to the ISR handler.
+ */
+ void IRAM_ATTR INTERRUPT_BUTTON_PUSH_FN(LEFT_BUTTON)(void * arg)
+ {
+	if(menuApp_hasDebouncePeriodPassed())
+	{
+		if(fg_isMenuActive)
+		{
+			// Reset timer
+			menuButton_timer_reset();
+
+			// Notify the button task
+			menuApp_sendMessage(MENU_N);
+		}
+		else
+		{
+			// raise volume up
+		}
+	}
+ }
+
+/**
+ * ISR handler for the menu (RIGHT_BUTTON) button
+ * @param arg parameter which can be passed to the ISR handler.
+ */
+ void IRAM_ATTR INTERRUPT_BUTTON_PUSH_FN(RIGHT_BUTTON)(void * arg)
+ {
+	if(menuApp_hasDebouncePeriodPassed())
+	{
+		if(fg_isMenuActive)
+		{
+			// Reset timer
+			menuButton_timer_reset();
+			
+			// Notify the button task
+			menuApp_sendMessage(MENU_P);
+		}
+		else
+		{
+			// lower the volume
 		}
 	}
  }
@@ -123,6 +170,24 @@ static void menuButton_buttonConfig(void)
 		};												\
 		ESP_ERROR_CHECK(gpio_config(&config_button));
 	
+	X_MACRO_APP_BUTTONS_LIST
+	
+	#undef X
+}
+
+/**
+ * Function to configure menu buttons interrupt handlers
+ */
+static void menuButton_buttonConfigISR(void)
+{
+	// Install gpio isr service
+	gpio_install_isr_service(ESP_INTR_FLAG_LOWMED);
+	
+	// Attach the interrupt service routine
+	#define X(name, pin, pullUpEn, pullDownEn, intEdge)	\
+		gpio_isr_handler_add(pin, INTERRUPT_BUTTON_PUSH_FN(name), NULL);\
+		gpio_intr_enable(pin);
+
 	X_MACRO_APP_BUTTONS_LIST
 	
 	#undef X
@@ -163,6 +228,9 @@ void menuButton_setup(void)
 	
 	// Configure all the buttons necessary for the menu
 	menuButton_buttonConfig();
+
+	// Configure and Enable Buttons press interruption
+	menuButton_buttonConfigISR();
 	
 	// Create the wifi reset button task
 	xTaskCreatePinnedToCore(&menuButton_updateWakeNDanceApp_task,
@@ -172,14 +240,6 @@ void menuButton_setup(void)
 							MENU_BUTTON_TASK_PRIORITY,
 							NULL,
 							MENU_BUTTON_TASK_CORE_ID);
-	
-	// Install gpio isr service
-	gpio_install_isr_service(ESP_INTR_FLAG_LOWMED);
-	
-	// Attach the interrupt service routine
-	gpio_isr_handler_add(MENU_BUTTON_PIN, menuButton_isr_handler, NULL);
-
-	gpio_intr_enable(MENU_BUTTON_PIN);
 }
 
 

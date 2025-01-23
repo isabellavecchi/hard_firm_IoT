@@ -103,22 +103,22 @@ static void MENU_STATE_FUNC_NAME(MENU_OK)(menu_app_queue_message_t * st)
 /**
  * State Machine Function Definition according to sm_menu_app_function
  * function that defines the behavior on 
- * [MENU_DOWN] state
+ * [MENU_P] state
  */
-static void MENU_STATE_FUNC_NAME(MENU_DOWN)(menu_app_queue_message_t * st)
+static void MENU_STATE_FUNC_NAME(MENU_P)(menu_app_queue_message_t * st)
 {	
-	ESP_LOGI(TAG, "MENU_DOWN");
+	ESP_LOGI(TAG, "MENU_P");
 	
 }
 
 /**
  * State Machine Function Definition according to sm_menu_app_function
  * function that defines the behavior on 
- * [MENU_UP] state
+ * [MENU_N] state
  */
-static void MENU_STATE_FUNC_NAME(MENU_UP)(menu_app_queue_message_t * st)
+static void MENU_STATE_FUNC_NAME(MENU_N)(menu_app_queue_message_t * st)
 {	
-	ESP_LOGI(TAG, "MENU_UP");
+	ESP_LOGI(TAG, "MENU_N");
 	
 }
 

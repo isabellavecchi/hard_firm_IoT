@@ -27,7 +27,7 @@
 #define INTERRUPT_BUTTON_PUSH_FN(BUTTON) menuButton_ ## BUTTON ## isr_handler
 
 // Interval where a button cannot be pressed after any already has been.
-#define DEBOUNCE_DELAY_MS (200) // Debounce delay in milliseconds
+#define DEBOUNCE_DELAY_MS (100) // Debounce delay in milliseconds
 
 // Default Interrupt Flag
 #define ESP_INTR_FLAG_DEFAULT	0

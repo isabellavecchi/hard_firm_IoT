@@ -32,8 +32,8 @@
 	X(MENU_INIT)\
 	X(MENU_HOME)\
 	X(MENU_OK)	\
-	X(MENU_DOWN)\
-	X(MENU_UP)	\
+	X(MENU_P)\
+	X(MENU_N)	\
 	X(MENU_CLOSE)
 
 
