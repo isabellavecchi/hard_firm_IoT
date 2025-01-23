@@ -13,6 +13,7 @@
 // C libraries
 
 // ESP libraries
+#include "esp_system.h"
 #include "esp_intr_alloc.h"
 #include "esp_rom_gpio.h"
 #include "freertos/FreeRTOS.h"
@@ -24,6 +25,7 @@
 #include "hal/gpio_types.h"
 #include "portmacro.h"
 #include "tasks_common.h"
+#include "esp_timer.h"
 
 // Personal libraries
 #include "menuApp.h"
@@ -39,8 +41,19 @@
 // Tag used for ESP serial console messages
 static const char TAG[] = "menu_button";
 
+// Flag that holds the menu state
+static uint8_t fg_isMenuActive = FALSE;
+
+// Var to check if a button can be pressed again, or if it is debouncing period
+static uint64_t lastButtonClickedInstant = 0;
+
+	/* FreeRTOS Structures */
+
 // Semaphore handle
-SemaphoreHandle_t menu_button_semaphore = NULL;
+SemaphoreHandle_t menu_button_pushed = NULL;
+
+// Timer structures
+static esp_timer_handle_t menu_timer;
 
 
 /* Static Functions */
@@ -48,6 +61,16 @@ SemaphoreHandle_t menu_button_semaphore = NULL;
 // App Function
 static void menuButton_buttonConfig(void);
 static void menuButton_updateWakeNDanceApp_task(void * pvParam);
+
+// Debouncing Funciton
+static uint8_t menuApp_hasDebouncePeriodPassed(void);
+
+// Timer functions
+static void menuButton_timer_callback(void *arg);
+static void menuButton_timer_setup(void);
+static void menuButton_timer_start(void);
+static void menuButton_timer_stop(void);
+static void menuButton_timer_reset(void);
 
 
 
@@ -61,8 +84,24 @@ static void menuButton_updateWakeNDanceApp_task(void * pvParam);
  */
  void IRAM_ATTR menuButton_isr_handler(void * arg)
  {
-	 // Notify the button task
-	 xSemaphoreGiveFromISR(menu_button_semaphore, NULL);
+	if(menuApp_hasDebouncePeriodPassed())
+	{
+		if(!fg_isMenuActive)
+		{
+			menuButton_timer_start();
+			fg_isMenuActive = TRUE;
+
+			// Send a message to begin the menu app wake and dance state machine
+			menuApp_sendMessage(MENU_HOME);
+		}
+		else
+		{
+			menuButton_timer_reset();
+
+			// Send an OK message to menu app wake and dance state machine
+			menuApp_sendMessage(MENU_OK);
+		}
+	}
  }
 
 /**
@@ -70,13 +109,19 @@ static void menuButton_updateWakeNDanceApp_task(void * pvParam);
  */
 static void menuButton_buttonConfig(void)
 {
-	#define X(pin, pinMode, intEdge) \
-	/* Configure the button and set the direction */ \
-	esp_rom_gpio_pad_select_gpio(MENU_BUTTON); \
-	gpio_set_direction(MENU_BUTTON, GPIO_MODE_INPUT); \
-	\
-	/* Enable interrupt on the negative edge */ \
-	gpio_set_intr_type(MENU_BUTTON, GPIO_INTR_NEGEDGE);
+	gpio_config_t config_button;
+	
+	/* Configure the button and set the direction */ 
+	#define X(name, pin, pullUpEn, pullDownEn, intEdge)	\
+		config_button =	(gpio_config_t)					\
+		{												\
+			.pin_bit_mask = 1UL << pin,					\
+			.mode = GPIO_MODE_INPUT,					\
+			.pull_up_en = pullUpEn,						\
+			.pull_down_en = pullDownEn,					\
+			.intr_type = intEdge,						\
+		};												\
+		ESP_ERROR_CHECK(gpio_config(&config_button));
 	
 	X_MACRO_APP_BUTTONS_LIST
 	
@@ -92,7 +137,7 @@ static void menuButton_updateWakeNDanceApp_task(void * pvParam)
 {
 	for(;;)
 	{
-		if (xSemaphoreTake(menu_button_semaphore, portMAX_DELAY) == pdTRUE)
+		if (xSemaphoreTake(menu_button_pushed, portMAX_DELAY) == pdTRUE)
 		{
 			ESP_LOGI(TAG, "MENU BUTTON INTERRUPT OCCURED");
 			
@@ -110,8 +155,11 @@ static void menuButton_updateWakeNDanceApp_task(void * pvParam)
  */
 void menuButton_setup(void)
 {	
+	// Create a timer, so we can shutdown menu after it is not being used
+	menuButton_timer_setup();
+
 	// Create the binary semaphore
-	menu_button_semaphore = xSemaphoreCreateBinary();
+	menu_button_pushed = xSemaphoreCreateBinary();
 	
 	// Configure all the buttons necessary for the menu
 	menuButton_buttonConfig();
@@ -129,5 +177,86 @@ void menuButton_setup(void)
 	gpio_install_isr_service(ESP_INTR_FLAG_LOWMED);
 	
 	// Attach the interrupt service routine
-	gpio_isr_handler_add(MENU_BUTTON, menuButton_isr_handler, NULL);
+	gpio_isr_handler_add(MENU_BUTTON_PIN, menuButton_isr_handler, NULL);
+
+	gpio_intr_enable(MENU_BUTTON_PIN);
+}
+
+
+
+/**********************************
+**	DEBOUNCE BUTTONS FUNCTION	 **
+**********************************/
+
+static uint8_t menuApp_hasDebouncePeriodPassed(void)
+{
+    uint64_t currentTime = esp_timer_get_time(); 
+    uint64_t elapsedTime = (currentTime - lastButtonClickedInstant) / 1000; // Convert to milliseconds
+
+    if (elapsedTime >= DEBOUNCE_DELAY_MS)
+	{
+        lastButtonClickedInstant = currentTime;
+        return TRUE; 
+    }
+	else
+	{
+        return FALSE;
+    }
+}
+
+
+
+/**************************
+**	  TIMER FUNCTIONS	 **
+**************************/
+
+/**
+ * Function that handles what should happen after menu_timer timeout.
+ * Which in this case is because the menu buttons aren't hit for a while...
+ * So the menu is closed.
+ */
+static void menuButton_timer_callback(void *arg)
+{
+	menuButton_timer_stop();
+    ESP_LOGI(TAG, "Menu App inactive for too long, closing it...\n");
+    menuApp_sendMessage(MENU_CLOSE);
+	fg_isMenuActive = FALSE;
+}
+
+/**
+ * Function that creates the timer and sets its callback function.
+ */
+static void menuButton_timer_setup(void)
+{
+    // Configurar o callback do timer
+    esp_timer_create_args_t args = {
+        .callback = menuButton_timer_callback,
+        .name = "menu_timer"
+    };
+    ESP_ERROR_CHECK(esp_timer_create(&args, &menu_timer));
+}
+
+/**
+ * Function that starts the timer, until stop or timeout at TIMEOUT_MENU_INACTIVE_MILLIS.
+ */
+static void menuButton_timer_start(void)
+{
+    ESP_ERROR_CHECK(esp_timer_start_periodic(menu_timer, TIMEOUT_MENU_INACTIVE_MICROSECONDS));
+}
+
+/**
+ * Function that stops the timer menu_timer count down.
+ */
+static void menuButton_timer_stop(void)
+{
+	ESP_ERROR_CHECK(esp_timer_stop(menu_timer));
+}
+
+/**
+ * Function that resets the timer menu_timer count down.
+ */
+static void menuButton_timer_reset(void)
+{
+	menuButton_timer_stop();
+	menuButton_timer_start();
 }

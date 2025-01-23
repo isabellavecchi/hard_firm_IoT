@@ -8,21 +8,34 @@
 #ifndef MAIN_MENUBUTTON_H_
 #define MAIN_MENUBUTTON_H_
 
+/**************************
+**		  INCLUDES	 	 **
+**************************/
+
+// ESP libraries
+#include "driver/gpio.h"
+
+// Personal libraries
+#include "projectConfig.h"
+
 
 /**************************
 **		DEFINITIONS		 **
 **************************/
 
+// Interrupt Handler Function Name
+#define INTERRUPT_BUTTON_PUSH_FN(BUTTON) menuButton_ ## BUTTON ## isr_handler
+
+// Interval where a button cannot be pressed after any already has been.
+#define DEBOUNCE_DELAY_MS (200) // Debounce delay in milliseconds
+
 // Default Interrupt Flag
 #define ESP_INTR_FLAG_DEFAULT	0
 
-// Menu Button is the BOOT button on the chip
-#define MENU_BUTTON				0
-#define LEFT_BUTTON				
-#define RIGHT_BUTTON
-
 #define X_MACRO_APP_BUTTONS_LIST \
-	X(MENU_BUTTON, GPIO_MODE_INPUT, GPIO_INTR_NEGEDGE)
+	X(MENU_BUTTON, 	MENU_BUTTON_PIN,	GPIO_PULLUP_ENABLE, GPIO_PULLDOWN_DISABLE, GPIO_INTR_NEGEDGE)\
+	X(LEFT_BUTTON, 	LEFT_BUTTON_PIN, 	GPIO_PULLUP_ENABLE, GPIO_PULLDOWN_DISABLE, GPIO_INTR_NEGEDGE)\
+	X(RIGHT_BUTTON, RIGHT_BUTTON_PIN, 	GPIO_PULLUP_ENABLE, GPIO_PULLDOWN_DISABLE, GPIO_INTR_NEGEDGE)
 
 
 
