@@ -27,6 +27,7 @@
 
 // Personal libraries
 #include "tasks_common.h"
+#include "displayOled.h"
 #include "menuApp.h"
 
 
@@ -54,7 +55,11 @@ static QueueHandle_t menu_app_queue_handle_t;
 // State Machine functions
 static void MENU_STATE_FUNC_NAME(MENU_INIT)(menu_app_queue_message_t * st);
 static void MENU_STATE_FUNC_NAME(MENU_HOME)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_OK)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_P)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_N)(menu_app_queue_message_t * st);
 static void MENU_STATE_FUNC_NAME(MENU_CLOSE)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_DT_UPDATE)(menu_app_queue_message_t * st);
 static void menuApp_stateMachine_handler(menu_app_queue_message_t * msg);
 
 // App functions
@@ -75,7 +80,7 @@ static void menuApp_task(void * pvParameters);
 static void MENU_STATE_FUNC_NAME(MENU_INIT)(menu_app_queue_message_t * st)
 {	
 	ESP_LOGI(TAG, "MENU_INIT");
-	
+	displayOled_printAccessPoint();
 }
 
 /**
@@ -125,11 +130,21 @@ static void MENU_STATE_FUNC_NAME(MENU_N)(menu_app_queue_message_t * st)
 /**
  * State Machine Function Definition according to sm_menu_app_function
  * function that defines the behavior on 
- * [MENU_END] state
+ * [MENU_CLOSE] state
  */
 static void MENU_STATE_FUNC_NAME(MENU_CLOSE)(menu_app_queue_message_t * st)
 {	
 	ESP_LOGI(TAG, "MENU_CLOSE");
+}
+
+/**
+ * State Machine Function Definition according to sm_menu_app_function
+ * function that defines the behavior on 
+ * [MENU_DT_UPDATE] state
+ */
+static void MENU_STATE_FUNC_NAME(MENU_DT_UPDATE)(menu_app_queue_message_t * st)
+{	
+	ESP_LOGI(TAG, "MENU_DT_UPDATE");
 }
 
 

@@ -90,8 +90,7 @@ function connectWifi()
 		dataType: 'json',
 		method: 'POST',
 		cache: false,
-		// headers: {'c_ssid': selectedSSID, 'c_pwd': pwd},
-		data: JSON.stringify({ c_ssid: selectedSSID, c_pwd: pwd, timestamp: Date.now() }),
+		data: JSON.stringify({ c_ssid: selectedSSID, c_pwd: pwd}),
 	});
 	
 	startWifiConnectStatusInterval();

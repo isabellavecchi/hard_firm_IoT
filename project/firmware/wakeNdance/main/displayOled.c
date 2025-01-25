@@ -6,25 +6,138 @@
  * SPDX-License-Identifier: CC0-1.0
  */
 
+
+/**************************
+**		  INCLUDES	 	 **
+**************************/
+
+// C libraries
+#include <string.h>
+
+// Personal libraries
 #include "displayOled.h"
+#include "projectConfig.h"
 
-void displayOled_loop(void)
+
+/**************************
+**		DECLARATIONS	 **
+**************************/
+
+	/* Variables */
+
+static const char TAG[] = "display-oled";
+static lv_disp_t * disp = NULL;
+static lv_obj_t *scr = NULL;
+static lv_obj_t *labelDate  = NULL;
+static lv_obj_t *labelTime = NULL;
+static lv_obj_t *label_header = NULL;
+static lv_obj_t *label_body = NULL;
+
+
+
+/**************************
+**		APP FUNCTIONS	 **
+**************************/
+
+void displayOled_setup(void)
 {
-	lv_disp_t * disp = displayOled_init();
+    displayOled_init();
+    scr = lv_disp_get_scr_act(disp);
+    labelDate = lv_label_create(scr);
+    labelTime = lv_label_create(scr);
+    label_header = lv_label_create(scr);
+    label_body = lv_label_create(scr);
 
-
-	ESP_LOGI(TAG, "Display LVGL Scroll Text");
-	// Lock the mutex due to the LVGL APIs are not thread-safe
-	if (lvgl_port_lock(0)) {
-		// example_lvgl_demo_ui(disp);
-		displayOled_printTime(disp, "17:41");
-		displayOled_printAccessPoint(disp, "192.168.1.0");
-		// Release the mutex
-		lvgl_port_unlock();
-	}
+    lv_label_set_text(labelDate, "");
+    lv_label_set_text(labelTime, "");
+    lv_label_set_text(label_header, "");
+    lv_label_set_text(label_body, "");
 }
 
-lv_disp_t * displayOled_init(void)
+void displayOled_printDateTime(const char * date, const char * hora)
+{
+	// Lock the mutex due to the LVGL APIs are not thread-safe
+	if (lvgl_port_lock(0))
+    {
+        lv_label_set_text(labelDate, date);
+        /* Size of the screen (if you use rotation 90 or 270, please set disp->driver->ver_res) */
+        lv_obj_set_width(labelDate, disp->driver->hor_res);
+        lv_obj_align(labelDate, LV_ALIGN_TOP_LEFT, 0, 0);
+        
+        lv_label_set_text(labelTime, hora);
+        /* Size of the screen (if you use rotation 90 or 270, please set disp->driver->ver_res) */
+        lv_obj_set_width(labelTime, disp->driver->hor_res);
+        lv_obj_align(labelTime, LV_ALIGN_TOP_LEFT, 85, 0);
+		// Release the mutex
+        lvgl_port_unlock();
+    }
+}
+
+void displayOled_printHeaderNBody(const char * header, const char * body)
+{
+	// Lock the mutex due to the LVGL APIs are not thread-safe
+	if (lvgl_port_lock(0))
+    {
+        lv_label_set_text(label_header, header);
+        /* Size of the screen (if you use rotation 90 or 270, please set disp->driver->ver_res) */
+        lv_obj_set_width(label_header, disp->driver->hor_res);
+        lv_obj_align(label_header, LV_ALIGN_CENTER, 0, 0);
+        
+        lv_label_set_text(label_body, body);
+        /* Size of the screen (if you use rotation 90 or 270, please set disp->driver->ver_res) */
+        lv_obj_set_width(label_body, disp->driver->hor_res);
+        lv_obj_align(label_body, LV_ALIGN_BOTTOM_MID, 0, 0);
+		// Release the mutex
+        lvgl_port_unlock();
+    }
+}
+
+void displayOled_printAccessPoint(void)
+{
+    char _ssid[32] = "ssid: ";
+    char _passwd[32] = "passwd: ";
+    strcat(_ssid, WIFI_AP_SSID);
+    strcat(_passwd, WIFI_AP_PASSWORD);
+    displayOled_printHeaderNBody(_ssid, _passwd);
+}
+
+void displayOled_printWebPageAccess(void)
+{
+    char webPage[32] = "www.";
+    strcat(webPage, WIFI_AP_IP);
+    strcat(webPage, "/index.html");
+    displayOled_printDateTime("go to:", "");
+    displayOled_printHeaderNBody(webPage, "");
+}
+
+void displayOled_printMusicName(void)
+{
+	// Lock the mutex due to the LVGL APIs are not thread-safe
+	if (lvgl_port_lock(0))
+    {
+		// Release the mutex
+        lvgl_port_unlock();
+    }
+}
+
+void displayOled_printMenuList(void)
+{
+	// Lock the mutex due to the LVGL APIs are not thread-safe
+	if (lvgl_port_lock(0))
+    {
+		// Release the mutex
+        lvgl_port_unlock();
+    }
+}
+
+
+
+/**************************
+**		HAL FUNCTION	 **
+**************************/
+
+
+void displayOled_init(void)
 {
     ESP_LOGI(TAG, "Initialize I2C bus");
     i2c_master_bus_handle_t i2c_bus = NULL;
@@ -100,52 +213,8 @@ lv_disp_t * displayOled_init(void)
             .mirror_y = false,
         }
     };
-    lv_disp_t *disp = lvgl_port_add_disp(&disp_cfg);
+    disp = lvgl_port_add_disp(&disp_cfg);
 
     /* Rotation of the screen */
     lv_disp_set_rotation(disp, LV_DISP_ROT_180);
-
-    return disp;
-}
-
-void displayOled_printTime(lv_disp_t *disp, const char * hora)
-{
-    lv_obj_t *scr = lv_disp_get_scr_act(disp);
-    lv_obj_t *label = lv_label_create(scr);
-    lv_label_set_text(label, hora);
-    /* Size of the screen (if you use rotation 90 or 270, please set disp->driver->ver_res) */
-    lv_obj_set_width(label, disp->driver->hor_res);
-    lv_obj_align(label, LV_ALIGN_TOP_RIGHT, 0, 0);
-}
-
-void displayOled_printWifi(lv_disp_t *disp)
-{
-
-}
-
-void displayOled_printAccessPoint(lv_disp_t *disp, const char * ip)
-{
-    lv_obj_t *scr = lv_disp_get_scr_act(disp);
-    lv_obj_t *label = lv_label_create(scr);
-    lv_label_set_text(label, "connect to:");
-    /* Size of the screen (if you use rotation 90 or 270, please set disp->driver->ver_res) */
-    lv_obj_set_width(label, disp->driver->hor_res);
-    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-    
-    lv_obj_t *scr_ip = lv_disp_get_scr_act(disp);
-    lv_obj_t *label_ip = lv_label_create(scr_ip);
-    lv_label_set_text(label_ip, ip);
-    /* Size of the screen (if you use rotation 90 or 270, please set disp->driver->ver_res) */
-    lv_obj_set_width(label_ip, disp->driver->hor_res);
-    lv_obj_align(label_ip, LV_ALIGN_BOTTOM_MID, 0, 0);
-}
-
-void displayOled_printMusicName(lv_disp_t *disp)
-{
-
-}
-
-void displayOled_printMenuList(lv_disp_t *disp)
-{
-
 }
