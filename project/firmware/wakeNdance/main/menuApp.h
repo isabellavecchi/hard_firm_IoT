@@ -34,7 +34,8 @@
 	X(MENU_OK)	\
 	X(MENU_P)\
 	X(MENU_N)	\
-	X(MENU_CLOSE)
+	X(MENU_CLOSE)\
+	X(MENU_DT_UPDATE)
 
 
 

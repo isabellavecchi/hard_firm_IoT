@@ -33,14 +33,13 @@
 
 #define BUFFER_MAX_SIZE 100
 
-#define APP_URI_FUNCTION_HANDLER_NAME(uri) webRouter_##uri##_handler 
+#define APP_URI_FUNCTION_HANDLER_NAME(uri) webRouter_##uri##_handler
 
 #define X_MACRO_API_ROUTES_LIST \
 	X(0, wifi_connect_json, 			"/wifiConnect.json",		HTTP_POST, 		"application/json") \
 	X(1, wifi_connect_status_json,		"/wifiConnectStatus",		HTTP_POST, 		"application/json") \
 	X(2, get_wifi_connect_info_json,	"/wifiConnectInfo.json",	HTTP_GET,		"application/json") \
-	X(3, wifi_disconnect_json,			"/wifiDisconnect.json",		HTTP_DELETE,	"application/json") \
-	X(4, get_local_time_json,			"/localTime.json",			HTTP_GET,		"application/json")
+	X(3, wifi_disconnect_json,			"/wifiDisconnect.json",		HTTP_DELETE,	"application/json")
 
 
 /**************************
