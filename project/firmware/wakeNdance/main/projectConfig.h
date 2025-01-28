@@ -4,6 +4,17 @@
 #define TRUE    1
 #define FALSE   0
 
+// I2S
+#define I2S_BCLK    2
+#define I2S_DATA    4
+
+// RGB LED GPIOs
+#define RGB_LED_RED_GPIO	7
+#define RGB_LED_GREEN_GPIO	5
+#define RGB_LED_BLUE_GPIO	6
+    // RGB LED color mix channels
+#define RGB_LED_CHANNEL_NUM	3 ///> qty of led rgb pins
+
 // WI-FI
 #define WIFI_AP_SSID			"WAKE_N_DANCE"		// Access Point SSID
 #define WIFI_AP_PASSWORD		"12345678"			// AP password
