@@ -11,6 +11,7 @@ idf_component_register(
     		"menuButton.c"
     		"displayOled.c"
 			"dateTimeNTP.c"
+			"i2s.c"
     INCLUDE_DIRS	"."
     EMBED_FILES	"webPage/app.css"
     			"webPage/app.js"

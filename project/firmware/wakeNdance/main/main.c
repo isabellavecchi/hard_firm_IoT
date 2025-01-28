@@ -20,6 +20,7 @@
 #include "menuApp.h"
 #include "menuButton.h"
 #include "displayOled.h"
+#include "i2s.h"
 
 
 /**************************
@@ -59,6 +60,9 @@ void app_main(void)
 	
 	// Setting up the buttons handler for menu
 	menuButton_setup();
+
+	// Sound Task Start
+	i2s_start();
 
 }
 
