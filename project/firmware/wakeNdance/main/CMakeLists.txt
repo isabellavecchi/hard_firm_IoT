@@ -12,6 +12,7 @@ idf_component_register(
     		"displayOled.c"
 			"dateTimeNTP.c"
 			"i2s.c"
+			"spiffs_dma.c"
     INCLUDE_DIRS	"."
     EMBED_FILES	"webPage/app.css"
     			"webPage/app.js"
@@ -19,3 +20,4 @@ idf_component_register(
     			"webPage/index.html"
     			"webPage/jquery-3.3.1.min.js"
 )
+spiffs_create_partition_image(storage ../music FLASH_IN_PROJECT)

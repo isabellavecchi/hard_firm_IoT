@@ -26,17 +26,23 @@
 // Menu Task
 #define MENU_TASK_STACK_SIZE			4096
 #define MENU_TASK_PRIORITY				6
-#define MENU_TASK_CORE_ID				1
+#define MENU_TASK_CORE_ID				0
 
 // Menu Button Task
 #define MENU_BUTTON_TASK_STACK_SIZE		2048
 #define MENU_BUTTON_TASK_PRIORITY		6
-#define MENU_BUTTON_TASK_CORE_ID		1
+#define MENU_BUTTON_TASK_CORE_ID		0
 
 
 // NTP DateTime Task
 #define NTP_DATE_TIME_TASK_STACK_SIZE	4096
 #define NTP_DATE_TIME_TASK_PRIORITY     4
-#define NTP_DATE_TIME_TASK_CORE_ID		1
+#define NTP_DATE_TIME_TASK_CORE_ID		0
+
+// I2S Task
+#define I2S_TASK_STACK_SIZE             8192
+#define I2S_TASK_PRIORITY               7
+#define I2S_TASK_CORE_ID                1
+
 
 #endif /* MAIN_TASKS_COMMON_H_ */

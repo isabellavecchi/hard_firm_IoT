@@ -9,17 +9,15 @@
 
 #include "i2s.h"
 #include "projectConfig.h"
+#include "tasks_common.h"
+#include "spiffs_dma.h"
 
 // tag
 static const char TAG[] = "I2S";
 
 i2s_chan_handle_t tx_handle;
 
-
-QueueHandle_t xQueueData; // fila de dados e eventos para transferir entre as tarefas de leituras do youtube e envio de dados
-TaskHandle_t xTaskReadDataHandle; // handler para task de leitura de dados do youtube
-TaskHandle_t xTaskTransmitDataHandle; // handler para task de envio de dados a caixa de som
-
+uint8_t w_buf[BUF_SIZE]; // buffer para entrada de dados
 
 // configuracao do canal i2s 
 i2s_chan_config_t chan_cfg = {
@@ -32,7 +30,7 @@ i2s_chan_config_t chan_cfg = {
 
 // configuracoes de clock, slot e gpio para o i2s no modo normal (standard)
 i2s_std_config_t std_cfg = {
-    .clk_cfg = I2S_STD_CLK_DEFAULT_CONFIG(44100), // 44100 amostras por segundo
+    .clk_cfg = I2S_STD_CLK_DEFAULT_CONFIG(I2S_FREQ), // 44100 amostras por segundo
     .slot_cfg = I2S_STD_MSB_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO),
     .gpio_cfg = {
         .mclk = I2S_GPIO_UNUSED, // master clock (opcional)
@@ -48,6 +46,13 @@ i2s_std_config_t std_cfg = {
     },
 };
 
+// Semaphores for synchronization
+SemaphoreHandle_t xSemaphoreDataReady; // Signaled when new data is available
+SemaphoreHandle_t xSemaphoreSpaceAvailable; // Signaled when buffer is ready for new data
+
+TaskHandle_t xTaskWriteDataHandle; // handler para task de leitura de dados do youtube
+TaskHandle_t xTaskFetchDataHandle; // handler para task de envio de dados a caixa de som
+
 static void vTaskWriteData(void * pvParameters);
 static void vTaskFetchData(void * pvParameters);
 
@@ -60,26 +65,48 @@ void i2s_setup(void)
     i2s_channel_init_std_mode(tx_handle, &std_cfg);
 }
 
+// void i2s_preloadData(void)
+// {
+//     /* (Optional) Preload the data before enabling the TX channel, so that the valid data can be transmitted immediately */
+//     while (w_bytes == EXAMPLE_BUFF_SIZE) {
+//         /* Here we load the target buffer repeatedly, until all the DMA buffers are preloaded */
+//         ESP_ERROR_CHECK(i2s_channel_preload_data(tx_chan, w_buf, EXAMPLE_BUFF_SIZE, &w_bytes));
+//     }
+// }
+
 void i2s_start(void)
 {
     BaseType_t xReturnedTask[2];
 
     i2s_setup();
 
-    xQueueData = xQueueCreate(DMA_BUF_NUM, BUF_SIZE*sizeof(char)); 
-    if(xQueueData == NULL){ // testar se a criacao da fila falhou
-        ESP_LOGE(TAG, "Falha em criar fila de dados");
-        while(1);
+    xSemaphoreDataReady = xSemaphoreCreateBinary(); 
+    if (xSemaphoreDataReady == NULL) {
+        ESP_LOGE(TAG, "Failed to create data ready semaphore");
+        return;
     }
+
+    xSemaphoreSpaceAvailable = xSemaphoreCreateBinary();
+    if (xSemaphoreSpaceAvailable == NULL) {
+        ESP_LOGE(TAG, "Failed to create space available semaphore");
+        vSemaphoreDelete(xSemaphoreDataReady); 
+        return;
+    }
+
+    // **Initialize semaphores:**
+    // - xSemaphoreDataReady: Initially not signaled (no data available)
+    // - xSemaphoreSpaceAvailable: Initially signaled (buffer is available)
+    xSemaphoreGive(xSemaphoreSpaceAvailable); 
+
     
     xReturnedTask[0] = xTaskCreatePinnedToCore(
         vTaskWriteData, 
-        "taskREAD", 
-        configMINIMAL_STACK_SIZE+2048, 
+        "taskWriteSound", 
+        I2S_TASK_STACK_SIZE, 
         NULL, 
-        configMAX_PRIORITIES-1, 
-        &xTaskReadDataHandle, 
-        APP_CPU_NUM
+        I2S_TASK_PRIORITY, 
+        &xTaskWriteDataHandle, 
+        I2S_TASK_CORE_ID
     );
     
     
@@ -89,7 +116,7 @@ void i2s_start(void)
         configMINIMAL_STACK_SIZE+2048, 
         NULL, 
         configMAX_PRIORITIES-1, 
-        &xTaskTransmitDataHandle, 
+        &xTaskFetchDataHandle, 
         PRO_CPU_NUM
     );
     
@@ -105,30 +132,25 @@ static void vTaskWriteData(void * pvParameters)
 {
     size_t bytes_to_write = BUF_SIZE; // quantidades de bytes para ler
     size_t bytes_written; // quantidade de bytes lidos
-    uint8_t w_buf[BUF_SIZE]; // buffer para entrada de dados
 
-    /* Assign w_buf */
-    for (int i = 0; i < BUF_SIZE; i += 8) {
-        w_buf[i]     = 0x12;
-        w_buf[i + 1] = 0x34;
-        w_buf[i + 2] = 0x56;
-        w_buf[i + 3] = 0x78;
-        w_buf[i + 4] = 0x9A;
-        w_buf[i + 5] = 0xBC;
-        w_buf[i + 6] = 0xDE;
-        w_buf[i + 7] = 0xF0;
-    }
- 
     // iniciar o canal i2s
     i2s_channel_enable(tx_handle);
  
-    while (1) {
+    while (1)
+    {
+        // Wait for data to be available
+        xSemaphoreTake(xSemaphoreDataReady, portMAX_DELAY);
+
         // esperar para que o buffer de entrada (w_buf) seja totalmente preenchido
-        if (i2s_channel_write(tx_handle, (void*) w_buf, bytes_to_write, &bytes_written, portMAX_DELAY) == ESP_OK) {
-            xQueueSend(xQueueData, &w_buf, portMAX_DELAY); // enfileirar dados lidos para a tarefa de envio
-        } else {
+        if (i2s_channel_write(tx_handle, (void*) w_buf, bytes_to_write, &bytes_written, portMAX_DELAY) == ESP_OK)
+        {
+            // Signal that the buffer is available for new data
+            xSemaphoreGive(xSemaphoreSpaceAvailable);
+        }
+        else
+        {
+            xSemaphoreGive(xSemaphoreDataReady);
             ESP_LOGE(TAG, "Erro durante a leitura");
-            break;
         }
         vTaskDelay(1);
     }
@@ -142,5 +164,23 @@ static void vTaskWriteData(void * pvParameters)
 
 static void vTaskFetchData(void * pvParameters)
 {
+    while (1)
+    {
+        // Wait for space to be available
+        xSemaphoreTake(xSemaphoreSpaceAvailable, portMAX_DELAY); 
 
+        // Read data from SPIFFS
+        size_t bytes_read = fileSystem_readFile("A6 - Telegram Sam.flac", w_buf); 
+        if (bytes_read > 0)
+        {
+            // Signal that new data is available
+            xSemaphoreGive(xSemaphoreDataReady);
+        }
+        else
+        {
+            ESP_LOGE(TAG, "Error reading from SPIFFS");
+            // Handle error (e.g., break the loop)
+            xSemaphoreGive(xSemaphoreSpaceAvailable);
+        }
+    }
 }

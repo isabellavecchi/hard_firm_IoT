@@ -7,6 +7,9 @@
 // I2S
 #define I2S_BCLK    2
 #define I2S_DATA    4
+#define BUF_SIZE    4096 ///> tamanho [em bytes] dos buffers de entrada/transmissao
+#define I2S_FREQ    22050
+#define I2S_SAMPLE  I2S_DATA_BIT_WIDTH_24BIT
 
 // RGB LED GPIOs
 #define RGB_LED_RED_GPIO	7
