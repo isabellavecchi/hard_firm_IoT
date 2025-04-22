@@ -13,34 +13,35 @@ A placa utilizada foi a ESP32-S3 OTG.
 
 
   
-  Features:
+Features:
   
-    - Wi-Fi com conexão controlada;
-    
-    - serviço web construído de forma a dar manutenção facilitada;
-    
-    - tasks dos botões contruída, mas aguardando a função de leitura do cartão ser concluída, para ter as funcionalidades costuradas;
-    
-    - freeRTOS, com controle de queue entre tasks;
-    
-    - servidor HTTP controlando o serviço web;
-    
-    - back-end e front-end funcionando;
-    
-    - socket NTP;
-    
-    - LED atualizando de acordo com o status da conexão;
-    
-    - display OLED 1306 funcionando, e com funções default, como o botão, aguardando a resolução de bugs do DMA;
-    
-    - features implementadas no modelo POO.
+  - Wi-Fi com conexão controlada;
+  
+  - serviço web construído de forma a dar manutenção facilitada;
+  
+  - tasks dos botões contruída, mas aguardando a função de leitura do cartão ser concluída, para ter as funcionalidades costuradas;
+  
+  - freeRTOS, com controle de queue entre tasks;
+  
+  - servidor HTTP controlando o serviço web;
+  
+  - back-end e front-end funcionando;
+  
+  - socket NTP;
+  
+  - LED atualizando de acordo com o status da conexão;
+  
+  - display OLED 1306 funcionando, e com funções default, como o botão, aguardando a resolução de bugs do DMA;
+  
+  - features implementadas no modelo POO.
 
     
   
-  To finish:
-    - trocar a saída de som I2S por PDM, pelo fato de o módulo sendo utilizado, não ter tradução de I2S;
-    
-    - testar o DMA após a saída;
-    
-    - assim que as 2 camadas supracitadas estiverem funciando adequadamente, convertê-las para POO.
+To finish:
+  
+  - trocar a saída de som I2S por PDM, pelo fato de o módulo sendo utilizado, não ter tradução de I2S;
+  
+  - testar o DMA após a saída;
+  
+  - assim que as 2 camadas supracitadas estiverem funciando adequadamente, convertê-las para POO.
     
