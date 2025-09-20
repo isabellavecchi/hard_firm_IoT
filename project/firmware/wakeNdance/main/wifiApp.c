@@ -37,6 +37,7 @@
 // Personal libraries
 #include "wifiApp.h"
 #include "httpServer.h"
+#include "displayOled.h"
 #include "ledRGB.h"
 #include "tasks_common.h"
 
@@ -51,7 +52,7 @@
 static const char TAG[] = "wifi_app";
 
 // Wifi connected event callback
-//static wifi_connected_event_callback_t wifi_connected_event_cb;
+static wifi_connected_event_callback_t wifi_connected_event_cb = NULL;
 
 // Alocating Station WiFi credencials
 char ssid[WIFI_SSID_LENGTH];
@@ -150,13 +151,13 @@ static void wifiApp_setup(void)
 	wifiApp_softAP_config();
 }
 
-///**
-// * Sets the callback function
-// */
-// void wifiApp_setCallback(wifi_connected_event_callback_t callbackFunction)
-// {
-//	 wifi_connected_event_cb = callbackFunction;
-// }
+/**
+* Sets the callback function
+*/
+void wifiApp_setCallback(wifi_connected_event_callback_t callbackFunction)
+{
+	 wifi_connected_event_cb = callbackFunction;
+}
 
 
 
@@ -175,8 +176,6 @@ static void WIFI_STATE_FUNC_NAME(WIFI_APP_START_HTTP_SERVER)(wifi_app_queue_mess
 	
 	httpServer_start();
 	ledRGB_wifi_disconnected();
-	
-//	wifi_connected_event_cb();
 }
 
 /**
@@ -208,7 +207,13 @@ static void WIFI_STATE_FUNC_NAME(WIFI_APP_STA_CONNECTED_GOT_IP)(wifi_app_queue_m
 	ESP_LOGI(TAG, "%s", sm_wifi_app_state_names[WIFI_APP_STA_CONNECTED_GOT_IP]);
 	
  	ledRGB_wifi_connected();
+	displayOled_printHeaderNBody("CONNECTED!", "");
  	httpServer_monitor_sendMessage(HTTP_WIFI_CONNECT_SUCCESS);
+	
+	if(wifi_connected_event_cb != NULL)
+	{
+		wifi_connected_event_cb();
+	}
 }
 
 /**
@@ -360,6 +365,7 @@ void wifiApp_start(void)
 		 {
 			 case WIFI_EVENT_AP_START:
 			 	ESP_LOGI(TAG, "WIFI_EVENT_AP_START");
+				displayOled_printAccessPoint();
 			 	break;
 				
 			 case WIFI_EVENT_AP_STOP:
@@ -368,6 +374,7 @@ void wifiApp_start(void)
 				
 			 case WIFI_EVENT_AP_STACONNECTED:
 			 	ESP_LOGI(TAG, "WIFI_EVENT_AP_STACONNECTED");
+				displayOled_printWebPageAccess();
 			 	break;
 				
 			 case WIFI_EVENT_AP_STADISCONNECTED:

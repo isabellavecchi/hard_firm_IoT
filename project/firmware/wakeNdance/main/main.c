@@ -16,9 +16,11 @@
 // Personal libraries
 #include "ledRGB.h"
 #include "router.h"
+#include "dateTimeNTP.h"
 #include "menuApp.h"
 #include "menuButton.h"
 #include "displayOled.h"
+#include "i2s.h"
 
 
 /**************************
@@ -43,9 +45,15 @@ void app_main(void)
 	
 	// Initialize the LEDS
 	ledRGB_ledPWM_init();
-	
+
+	// Initialize the display OLED	
+	displayOled_setup();
+
 	// Web Router
 	router_setup();
+
+	// NTP clock setup
+	dateTimeNTP_setup();
 	
 	// Menu from button Setup
 	menuApp_start();
@@ -53,7 +61,9 @@ void app_main(void)
 	// Setting up the buttons handler for menu
 	menuButton_setup();
 
-	displayOled_loop();
+	// Sound Task Start
+	i2s_start();
+
 }
 
 

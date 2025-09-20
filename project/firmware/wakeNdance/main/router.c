@@ -17,18 +17,17 @@
 // ESP libraries
 #include "esp_err.h"
 #include "esp_http_server.h"
+#include "esp_http_client.h"
 #include "esp_log.h"
 #include "cJSON.h"
-
-// Personal libraries
 #include "esp_netif.h"
 #include "esp_netif_ip_addr.h"
 #include "esp_netif_types.h"
 #include "esp_wifi.h"
 #include "esp_wifi_types_generic.h"
+
+// Personal libraries
 #include "httpServer.h"
-#include "sntp_clock.h"
-#include "wifiApp.h"
 #include "router.h"
 
 
@@ -53,15 +52,11 @@ char localTimeJSON[BUFFER_MAX_SIZE] = {0};
 
 /* Static Functions */
 
-//App functions
-//static void router_wifiApp_connectedEvents(void);
-
 // URI handler functions
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_json)(httpd_req_t *req);
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_status_json)(httpd_req_t *req);
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_wifi_connect_info_json)(httpd_req_t *req);
 static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_disconnect_json)(httpd_req_t *req);
-static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_local_time_json)(httpd_req_t *req);
 static void router_uri_register(void);
 
 
@@ -72,32 +67,15 @@ static void router_uri_register(void);
 
 void router_setup(void)
 {
-	// Setup the SNTP operating mode
-//	sntp_clock_setup();
-	
 	// Allocate the api routes inside the httpServer code
 	httpServer_setApiRoutes(&router_uri_register);
-	
-	// Set the wifi connected event callback function
-//	wifiApp_setCallback(router_wifiApp_connectedEvents);
 	
 	// Start WiFi
 	wifiApp_start();
 	
-	// Start the SNTP
-//	sntp_timeSync_init();
-
 	// Clean localTimeJSON buffer
 	memset(localTimeJSON, 0, BUFFER_MAX_SIZE);
-	
-	
 }
-
-//static void router_wifiApp_connectedEvents(void)
-//{
-//	ESP_LOGI(TAG, "WiFi Application Connected!");
-//	sntp_clock_init();
-//}
 
 
 
@@ -156,22 +134,16 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_connect_json)(httpd_req_t *r
 
 
 	// Get SSID from body
-	// if (lenSSID > 1)
-	// {
-		ssid_p = wifiApp_getStationSSID();
-		memset(ssid_p, 0x00, WIFI_SSID_LENGTH);
-		ssid_p = ssid_json->valuestring;
-		lenSSID = strlen(ssid_p);
-	// // }
+	ssid_p = wifiApp_getStationSSID();
+	memset(ssid_p, 0x00, WIFI_SSID_LENGTH);
+	ssid_p = ssid_json->valuestring;
+	lenSSID = strlen(ssid_p);
 	
 	// Get Password from body
-	// if (lenPass > 1)
-	// {
-		pwd_p = wifiApp_getStationPassword();
-		memset(pwd_p, 0x00, WIFI_PASSWORD_LENGTH);
-		pwd_p = pwd_json->valuestring;
-		lenPass = strlen(pwd_p);
-	// }
+	pwd_p = wifiApp_getStationPassword();
+	memset(pwd_p, 0x00, WIFI_PASSWORD_LENGTH);
+	pwd_p = pwd_json->valuestring;
+	lenPass = strlen(pwd_p);
 	
 	// Update the WiFi networks configuration and let the WiFi applications know
 	wifi_config_p = wifiApp_getWifiConfig();
@@ -255,26 +227,6 @@ static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(wifi_disconnect_json)(httpd_req_t
 	ESP_LOGI(TAG, "/wifiDisconnect.json requested");
 	
 	wifiApp_sendMessage(WIFI_APP_USER_REQUESTED_STA_DISCONNECT);
-	
-	return ESP_OK;
-}
-
-/**
- * localTime.json handler responds by sending the local time.
- * @param req HTTP request for which the uri needs to be handled.
- * @return ESP_OK
- */
-static esp_err_t APP_URI_FUNCTION_HANDLER_NAME(get_local_time_json)(httpd_req_t *req)
-{
-//	ESP_LOGI(TAG, "/localTime.json requested");
-//	
-//	if(strlen(localTimeJSON) > 0)
-//	{
-//		sprintf(localTimeJSON, "{\"time\":\"%s\"}", sntp_clock_getTime());
-//	}
-//	
-//	httpd_resp_set_type(req, "application/json");
-//	httpd_resp_send(req, localTimeJSON, strlen(localTimeJSON));
 	
 	return ESP_OK;
 }

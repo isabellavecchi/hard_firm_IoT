@@ -29,9 +29,13 @@
 #define MENU_STATE_FUNC_NAME(state) menuApp_sm_ ## state ## _fn
 
 #define X_MACRO_MENU_STATE_LIST \
-	X(MENU_INIT) \
-	X(MENU_HOME) \
-	X(MENU_CLOSE)
+	X(MENU_INIT)\
+	X(MENU_HOME)\
+	X(MENU_OK)	\
+	X(MENU_P)\
+	X(MENU_N)	\
+	X(MENU_CLOSE)\
+	X(MENU_DT_UPDATE)
 
 
 

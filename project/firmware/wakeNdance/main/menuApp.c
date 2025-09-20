@@ -24,10 +24,10 @@
 #include "freertos/portmacro.h"
 #include "esp_err.h"
 #include "esp_log.h"
-#include "esp_timer.h"
 
 // Personal libraries
 #include "tasks_common.h"
+#include "displayOled.h"
 #include "menuApp.h"
 
 
@@ -49,74 +49,22 @@ static uint8_t g_qtd_states;
 // Queue handle used to manipulate the main queue of events
 static QueueHandle_t menu_app_queue_handle_t;
 
-// Timer structures
-static esp_timer_handle_t menu_timer;
-
 
 	/* Static Functions */
-
-// Timer functions
-static void menuApp_timer_callback(void *arg);
-static void menuApp_timer_setup(void);
-static void menuApp_timer_start(void);
-static void menuApp_timer_stop(void);
 
 // State Machine functions
 static void MENU_STATE_FUNC_NAME(MENU_INIT)(menu_app_queue_message_t * st);
 static void MENU_STATE_FUNC_NAME(MENU_HOME)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_OK)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_P)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_N)(menu_app_queue_message_t * st);
 static void MENU_STATE_FUNC_NAME(MENU_CLOSE)(menu_app_queue_message_t * st);
+static void MENU_STATE_FUNC_NAME(MENU_DT_UPDATE)(menu_app_queue_message_t * st);
 static void menuApp_stateMachine_handler(menu_app_queue_message_t * msg);
 
 // App functions
 static void menuApp_setup(void);
 static void menuApp_task(void * pvParameters);
-
-
-
-/**************************
-**	  TIMER FUNCTIONS	 **
-**************************/
-
-/**
- * Function that handles what should happen after menu_timer timeout.
- * Which in this case is because the menu buttons aren't hit for a while...
- * So the menu is closed.
- */
-static void menuApp_timer_callback(void *arg)
-{
-	menuApp_timer_stop();
-    ESP_LOGI(TAG, "Menu App inactive for too long, closing it...\n");
-    menuApp_sendMessage(MENU_CLOSE);
-}
-
-/**
- * Function that creates the timer and sets its callback function.
- */
-static void menuApp_timer_setup(void)
-{
-    // Configurar o callback do timer
-    esp_timer_create_args_t args = {
-        .callback = menuApp_timer_callback,
-        .name = "menu_timer"
-    };
-    ESP_ERROR_CHECK(esp_timer_create(&args, &menu_timer));
-}
-
-/**
- * Function that starts the timer, until stop or timeout at TIMEOUT_MENU_INACTIVE_MILLIS.
- */
-static void menuApp_timer_start(void)
-{
-    ESP_ERROR_CHECK(esp_timer_start_periodic(menu_timer, TIMEOUT_MENU_INACTIVE_MICROSECONDS));
-}
-
-/**
- * Function that stops the timer menu_timer count down.
- */
-static void menuApp_timer_stop(void)
-{
-	ESP_ERROR_CHECK(esp_timer_stop(menu_timer));
-}
 
 
 
@@ -132,9 +80,7 @@ static void menuApp_timer_stop(void)
 static void MENU_STATE_FUNC_NAME(MENU_INIT)(menu_app_queue_message_t * st)
 {	
 	ESP_LOGI(TAG, "MENU_INIT");
-	
-	// Reset timer
-	menuApp_timer_start();
+	displayOled_printAccessPoint();
 }
 
 /**
@@ -146,18 +92,59 @@ static void MENU_STATE_FUNC_NAME(MENU_HOME)(menu_app_queue_message_t * st)
 {	
 	ESP_LOGI(TAG, "MENU_HOME");
 	
-	// Reset timer
-	menuApp_timer_start();
 }
 
 /**
  * State Machine Function Definition according to sm_menu_app_function
  * function that defines the behavior on 
- * [MENU_END] state
+ * [MENU_OK] state
+ */
+static void MENU_STATE_FUNC_NAME(MENU_OK)(menu_app_queue_message_t * st)
+{	
+	ESP_LOGI(TAG, "MENU_OK");
+	
+}
+
+/**
+ * State Machine Function Definition according to sm_menu_app_function
+ * function that defines the behavior on 
+ * [MENU_P] state
+ */
+static void MENU_STATE_FUNC_NAME(MENU_P)(menu_app_queue_message_t * st)
+{	
+	ESP_LOGI(TAG, "MENU_P");
+	
+}
+
+/**
+ * State Machine Function Definition according to sm_menu_app_function
+ * function that defines the behavior on 
+ * [MENU_N] state
+ */
+static void MENU_STATE_FUNC_NAME(MENU_N)(menu_app_queue_message_t * st)
+{	
+	ESP_LOGI(TAG, "MENU_N");
+	
+}
+
+/**
+ * State Machine Function Definition according to sm_menu_app_function
+ * function that defines the behavior on 
+ * [MENU_CLOSE] state
  */
 static void MENU_STATE_FUNC_NAME(MENU_CLOSE)(menu_app_queue_message_t * st)
 {	
 	ESP_LOGI(TAG, "MENU_CLOSE");
+}
+
+/**
+ * State Machine Function Definition according to sm_menu_app_function
+ * function that defines the behavior on 
+ * [MENU_DT_UPDATE] state
+ */
+static void MENU_STATE_FUNC_NAME(MENU_DT_UPDATE)(menu_app_queue_message_t * st)
+{	
+	ESP_LOGI(TAG, "MENU_DT_UPDATE");
 }
 
 
@@ -199,8 +186,6 @@ static void menuApp_stateMachine_handler(menu_app_queue_message_t * msg)
   */
 static void menuApp_setup(void)
 {	
-	// Create a timer, so we can shutdown menu after it is not being used
-	menuApp_timer_setup();
 	
 	// Setup the OLED display
 //	oledDisplay_setup();

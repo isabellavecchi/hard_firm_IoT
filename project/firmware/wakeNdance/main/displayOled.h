@@ -9,7 +9,15 @@
 #ifndef __LIB_DISPLAY_OLED__
 #define __LIB_DISPLAY_OLED__
 
+
+/**************************
+**		  INCLUDES	 	 **
+**************************/
+
+// C libraries
 #include <stdio.h>
+
+// ESP libraries
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_lcd_panel_io.h"
@@ -20,13 +28,19 @@
 #include "esp_lvgl_port.h"
 #include "lvgl.h"
 
+// Personal libraries
+#include "projectConfig.h"
+
+
+/**************************
+**		DEFINITIONS		 **
+**************************/
+
 #if CONFIG_EXAMPLE_LCD_CONTROLLER_SH1107
 #include "esp_lcd_sh1107.h"
 #else
 #include "esp_lcd_panel_vendor.h"
 #endif
-
-static const char *TAG = "example";
 
 #define I2C_BUS_PORT  0
 
@@ -34,8 +48,8 @@ static const char *TAG = "example";
 //////////////////// Please update the following configuration according to your LCD spec //////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define EXAMPLE_LCD_PIXEL_CLOCK_HZ    (400 * 1000)
-#define EXAMPLE_PIN_NUM_SDA           17
-#define EXAMPLE_PIN_NUM_SCL           18
+#define EXAMPLE_PIN_NUM_SDA           DISPLAY_OLED_SDA_PIN
+#define EXAMPLE_PIN_NUM_SCL           DISPLAY_OLED_SCL_PIN
 #define EXAMPLE_PIN_NUM_RST           -1
 #define EXAMPLE_I2C_HW_ADDR           0x3C
 
@@ -51,13 +65,21 @@ static const char *TAG = "example";
 #define EXAMPLE_LCD_CMD_BITS           8
 #define EXAMPLE_LCD_PARAM_BITS         8
 
+
+
+/**************************
+**	     FUNCTIONS	     **
+**************************/
+
 void displayOled_loop(void);
 
-lv_disp_t * displayOled_init(void);
-void displayOled_printTime(lv_disp_t *disp, const char * hora);
-void displayOled_printWifi(lv_disp_t *disp);
-void displayOled_printAccessPoint(lv_disp_t *disp, const char * ip);
-void displayOled_printMusicName(lv_disp_t *disp);
-void displayOled_printMenuList(lv_disp_t *disp);
+void displayOled_setup(void);
+void displayOled_init(void);
+void displayOled_printDateTime(const char * date, const char * hora);
+void displayOled_printHeaderNBody(const char * header, const char * body);
+void displayOled_printAccessPoint(void);
+void displayOled_printWebPageAccess(void);
+void displayOled_printMusicName(void);
+void displayOled_printMenuList(void);
 
 #endif //__LIB_DISPLAY_OLED__

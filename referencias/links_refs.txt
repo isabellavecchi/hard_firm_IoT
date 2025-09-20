@@ -39,5 +39,8 @@ https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://webenc
 Curso na Udemy - ESP32 IOT FreeRTOS
 https://luxoft.udemy.com/course/iot-application-development-with-the-esp32-using-the-esp-idf
 
-OLED display - I2C 0.96 polegadas
-https://esp32tutorials.com/oled-esp32-esp-idf-tutorial/
+Client-Socket tutorial
+https://www.youtube.com/watch?v=sj-IuTQ0fJk
+
+NTP Protocol
+https://lettier.github.io/posts/2016-04-26-lets-make-a-ntp-client-in-c.html

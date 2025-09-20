@@ -16,6 +16,9 @@
 // C libraries
 #include <stdio.h>
 
+// Personal libraries
+#include "projectConfig.h"
+
 
 
 /**************************
@@ -27,15 +30,6 @@
 
 #define LED_PWM_SPEED LEDC_LOW_SPEED_MODE
 #define LED_PWM_TIMER_INDEX LEDC_TIMER_1
-
-// RGB LED GPIOs
-#define RGB_LED_RED_GPIO	4
-#define RGB_LED_GREEN_GPIO	5
-#define RGB_LED_BLUE_GPIO	6
-//#define RGB_LED				38                                                                              
-
-// RGB LED color mix channels
-#define RGB_LED_CHANNEL_NUM	3
 
 // X MACRO for LED
 #define X_MACRO_LED \

@@ -1,6 +1,13 @@
 {
     "files.associations": {
         "sdkconfig.h": "c",
-        "led_strip.h": "c"
+        "led_strip.h": "c",
+        "httpserver.h": "c",
+        "wifiapp.h": "c",
+        "tasks_common.h": "c",
+        "datetimentp.h": "c",
+        "menuapp.h": "c",
+        "displayoled.h": "c",
+        "projectconfig.h": "c"
     }
 }
